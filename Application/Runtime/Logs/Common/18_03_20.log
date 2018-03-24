@@ -1,0 +1,84 @@
+[ 2018-03-20T13:58:02+08:00 ] ::1 /test_t/index.php/home/index/test/?s1=sad
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+ERR: 无法加载模块:Home/index/test
+
+[ 2018-03-20T14:01:02+08:00 ] ::1 /test_t/?s=home/index/test/s1/ssss
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+ERR: 无法加载模块:Home/index/test/s1/ssss
+
+[ 2018-03-20T14:01:24+08:00 ] ::1 /test_t/?s=home-index-test-s1-ssss
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+ERR: 无法加载模块:Home-index-test-s1-ssss
+
+[ 2018-03-20T17:46:12+08:00 ] ::1 /test_t/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+ERR: 无法加载模块:Home/index
+
+[ 2018-03-20T17:46:24+08:00 ] ::1 /test_t/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+ERR: 无法加载模块:Home/index
+
+[ 2018-03-20T17:46:36+08:00 ] ::1 /test_t/home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+ERR: 无法加载模块:Home/Index
+
+[ 2018-03-20T17:46:54+08:00 ] ::1 /test_t/home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+ERR: 无法加载模块:Home/Index/index
+
+[ 2018-03-20T17:46:57+08:00 ] ::1 /test_t/home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000973s ]
+ERR: 无法加载模块:Home/index/index
+
+[ 2018-03-20T17:47:03+08:00 ] ::1 /test_t/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+ERR: 无法加载模块:Home/index
+
+[ 2018-03-20T17:47:24+08:00 ] ::1 /test_t/index.php/home/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+ERR: 无法加载模块:Home/index
+
+[ 2018-03-20T18:41:28+08:00 ] ::1 /test_t/home/form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+ERR: 无法加载模块:Home/form
+
+[ 2018-03-20T18:41:51+08:00 ] ::1 /test_t/home/form/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+ERR: 无法加载模块:Home/form
+
+[ 2018-03-20T18:41:54+08:00 ] ::1 /test_t/home/form/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+ERR: 无法加载模块:Home/form/add
+
+[ 2018-03-20T18:42:05+08:00 ] ::1 /test_t/home/index.php/form/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+ERR: 无法加载模块:Home/index.php/form/add
+

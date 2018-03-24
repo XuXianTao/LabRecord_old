@@ -1,0 +1,17 @@
+#main {
+	width: 980px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 100px;
+}
+
+input {
+	width: 20%;
+	line-height: 20px;
+	font-size: large;
+}
+
+button {
+	font-size: large;
+	width: 100px;
+}

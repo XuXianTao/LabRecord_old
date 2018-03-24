@@ -1,0 +1,19 @@
+#header_wrapper {
+	width: 100%;
+	background: #005825;
+}
+
+#header {
+	width: 980px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+#welcome {
+	position: relative;
+	left: 65%;
+	top: -40%;
+	font-size: large;
+	color: white;
+	width: 400px;
+}

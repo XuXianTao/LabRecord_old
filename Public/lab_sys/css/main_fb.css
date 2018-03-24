@@ -1,0 +1,22 @@
+#form {
+	width: 980px;
+	margin: 40px auto;
+}
+
+.choice, .btn_group {
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.choice {
+	text-align: center;
+}
+
+.btn {
+	width: 60px;
+	height: 30px;
+	margin: 0 auto;
+	position: relative;
+	left: 37%;
+}
