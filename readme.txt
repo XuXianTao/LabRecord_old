@@ -75,5 +75,23 @@ JS部分
 	2、init.js
 	设定body载入后的欢迎部分内容重置事件。
 	
-	3、btn.js
-	设定按键交互事件，未完成。
+
+DB部分
+
+	1、create.sql
+	数据库创建，暂缺课堂反馈表，最后根据问卷而定。
+
+	2、insert-stu.sql
+	插入学生信息。
+
+	3、insert-ass.sql
+	插入助理信息。
+
+	4、insert-tea.sql
+	插入教师信息。
+
+	5、insert-man.sql
+	插入管理信息。
+
+	6、insert-excp.sql
+	插入异常信息。
