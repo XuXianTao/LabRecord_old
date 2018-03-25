@@ -1,3 +1,4 @@
+use `lab_sys`;
 select * from ass;
 insert into ass(`cla`,`wDay`,`bTim`,`eTim`,`id`,`nam`) values('C104','1','07:30:00','12:00:00','15000000','张水清');
 insert into ass(`cla`,`wDay`,`bTim`,`eTim`,`id`,`nam`) values('C104','1','08:00:00','12:00:00','15000001','刘佳镕');

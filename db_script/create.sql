@@ -11,7 +11,7 @@ create table stu (
 /*助理*/
 create table ass (
 	cla 	varchar(200) not null,		/*课室*/
-    wDay	int,						/*周几，0日，1一，2二...*/
+    wDay	int,						/*周几，1一，2二...*/
     bTim	time,						/*值班开始时间*/
     eTim	time,						/*值班结束时间*/
     id		int not null,				/*学号*/
@@ -43,3 +43,8 @@ create table excp (
     foreign key(id) references stu(id)	/*外键*/
 );
 /*课堂*/
+create table fb (
+	dat		datetime,					/*时间*/
+    id		int not null,				/*学号*/
+    kno		int not null				/*知识点掌握程度，由完全掌握到完全不掌握1-5*/
+);
