@@ -44,7 +44,7 @@
     </div>
     <div id="navigation_wrapper">
         <div id="navigation">
-            <div class="nav"><a href="main">主页</a></div>
+            <div class="nav"><a href="main">主页{Login:$user.id}</a></div>
             <div class="nav"><a href="fb">课堂反馈</a></div>
             <div class="nav"><a href="excp">异常反馈</a></div>
         </div>

@@ -5,6 +5,6 @@ require 'JUMP_HTML.trait';
 class MainController extends Controller {
     use JUMP_HTML;
 	public function main(){
-        $this->display();
+		
 	}
 }
