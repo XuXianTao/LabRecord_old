@@ -9516,3 +9516,75 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001250s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001297s ]
 ERR: 非法操作:fb_
 
+[ 2018-03-25T16:32:48+08:00 ] 172.18.92.48 /sysulab/index.php/Home/main/fb_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001256s ]
+ERR: 非法操作:fb_
+
+[ 2018-03-25T16:32:49+08:00 ] 172.18.92.48 /sysulab/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001313s ]
+
+[ 2018-03-25T16:32:49+08:00 ] 172.18.92.48 /sysulab/index.php/Home/main/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001487s ]
+
+[ 2018-03-25T16:32:51+08:00 ] 172.18.92.48 /sysulab/index.php/Home/main/fb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001763s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: user C:\xampp\htdocs\sysulab\lab_sys\Runtime\Cache\Home\a22a4466748aeaa840e5f04a2dc4d68d.php 第 7 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001515s ]
+
+[ 2018-03-25T16:33:17+08:00 ] 172.18.92.48 /sysulab/index.php/Home/main/fb_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+ERR: 非法操作:fb_
+

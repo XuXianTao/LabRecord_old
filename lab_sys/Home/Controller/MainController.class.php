@@ -9,4 +9,9 @@ class MainController extends Controller {
 		$this->assign('user',$user);
 		$this->display();
 	}
+	public function fb_(){
+    	echo asdouhasoduiahsd;
+    	$knowc=I('knowledge');
+    	echo $knowc;
+    }
 }

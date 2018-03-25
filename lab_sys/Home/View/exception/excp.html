@@ -16,6 +16,10 @@
         window.onbeforeunload = function() {
             return "确认退出？";
         }
+
+        function onDestroy() {
+            window.onbeforeunload = null;
+        }
     </script>
     <style type="text/css">
         html,
@@ -57,7 +61,7 @@
         </div>
     </div>
     <div id="main">
-        <form id="form" action="excp" method="POST">
+        <form id="form" action="excp" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>异常反馈</legend>
                 <div class="choice">请选择异常仪器：

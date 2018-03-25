@@ -16,6 +16,10 @@
         window.onbeforeunload = function() {
             return "确认退出？";
         }
+
+        function onDestroy() {
+            window.onbeforeunload = null;
+        }
     </script>
     <style type="text/css">
         html,
@@ -57,7 +61,11 @@
         </div>
     </div>
     <div id="main">
+<<<<<<< HEAD
         <form id="form" action="fb_" method="POST">
+=======
+        <form id="form" action="fb" method="POST" onsubmit="return onDestroy()">
+>>>>>>> ac5ab86c3d150748a1072fea9a244a1a62450d3f
             <fieldset>
                 <legend>课堂反馈</legend>
                 <div class="choice">知识点掌握程度：
