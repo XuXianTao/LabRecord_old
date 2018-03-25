@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
 			case "btn_log": 
 				var num = jQuery("input").val();
 				if (num != "") {
-					jQuery.post("php/xxx.php",
+					jQuery.post("takeAccount",
 						{
 							"TYPE": "stu",
 							"NUM": num
