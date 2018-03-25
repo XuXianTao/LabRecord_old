@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <input type="hidden" name="uname" id="uname" value="{$user['nam']}"/>
+    <input type="hidden" name="uname" id="uname" value="{$user['nam']}" />
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
     <link rel="stylesheet" href="__PUBLIC__/css/main_fb.css">
-    <script src="http://pv.sohu.com/cityjson"></script>
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/ent.js"></script>
@@ -61,11 +60,7 @@
         </div>
     </div>
     <div id="main">
-<<<<<<< HEAD
-        <form id="form" action="fb_" method="POST">
-=======
-        <form id="form" action="fb" method="POST" onsubmit="return onDestroy()">
->>>>>>> ac5ab86c3d150748a1072fea9a244a1a62450d3f
+        <form id="form" action="fb_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>课堂反馈</legend>
                 <div class="choice">知识点掌握程度：
