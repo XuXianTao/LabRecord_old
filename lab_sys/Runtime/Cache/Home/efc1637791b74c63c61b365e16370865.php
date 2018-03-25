@@ -45,10 +45,10 @@
 		</div>
 		<div id="main">
 			<div class="btn_wrapper">
-				<a href="fb.html"><button id="btn1" name="btn_fb" class="btn">课堂反馈</button></a>
+				<a href="fb"><button id="btn1" name="btn_fb" class="btn">课堂反馈</button></a>
 			</div>
 			<div class="btn_wrapper">
-				<a href="excp.html"><button id="btn2" name="btn_excp" class="btn">异常反馈</button></a>
+				<a href="excp"><button id="btn2" name="btn_excp" class="btn">异常反馈</button></a>
 			</div>
 		</div>
 	</body>

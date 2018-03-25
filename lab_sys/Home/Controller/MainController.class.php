@@ -7,8 +7,4 @@ class MainController extends Controller {
 	public function main(){
         $this->display();
 	}
-    
-    public function test($s1){
-    	echo 'test'.$s1;
-    }
 }
