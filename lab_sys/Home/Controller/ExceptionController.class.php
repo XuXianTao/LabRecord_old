@@ -4,9 +4,11 @@ use Think\Controller;
 require 'JUMP_HTML.trait';
 class ExceptionController extends Controller {
     use JUMP_HTML;
-    public function test($s1){
-    	echo 'test'.$s1;
-    }
+    public function excp(){
+        $user=session('user');
+        $this->assign('user',$user);
+        $this->display();
+    }   
     public function excpsts_a(){
     	$Exc=M('excp');
     	$list=$Exc->limit(5)->select();
@@ -16,7 +18,5 @@ class ExceptionController extends Controller {
     public function excpsts_c(){
         $this->display();
     }
-    public function excp(){
-        $this->display();
-    }
+
 }

@@ -5,6 +5,8 @@ require 'JUMP_HTML.trait';
 class FeedbackController extends Controller {
     use JUMP_HTML;
     public function fb(){
+    	$user=session('user');
+    	$this->assign('user',$user);
     	$this->display();
     }
     public function fbsts_a(){
