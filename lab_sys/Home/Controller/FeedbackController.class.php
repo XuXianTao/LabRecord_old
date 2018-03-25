@@ -6,15 +6,18 @@ class FeedbackController extends Controller {
     use JUMP_HTML;
     public function fb(){
     	$user=session('user');
-    	$this->assign('user',$user);
-    	$this->display();
+    	if ($user){
+    		$this->assign('user',$user);
+    		$this->display();
+    	}else{$this->redirect('login/log');}
     }
     public function fbsts_a(){
     	$this->display();
     }
 	public function fb_(){
-    	echo asdouhasoduiahsd;
     	$knowc=I('knowledge');
-    	echo $knowc;
+    	if ($knowc){
+    		
+    	}else{$this->error('不能为空');}
     }
 }

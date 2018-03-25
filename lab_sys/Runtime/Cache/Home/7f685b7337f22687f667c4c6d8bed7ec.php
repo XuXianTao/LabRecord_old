@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>"/>
+    <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/main_fb.css">
-    <script src="http://pv.sohu.com/cityjson"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/init.js"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/ent.js"></script>
@@ -62,7 +61,7 @@
     </div>
     <div id="main">
 
-        <form id="form" action="fb" method="POST" onsubmit="return onDestroy()">
+        <form id="form" action="fb_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>课堂反馈</legend>
                 <div class="choice">知识点掌握程度：

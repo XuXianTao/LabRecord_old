@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
+    <input type="hidden" name="uname" id="uname" value="" />
     <script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script src="/sysulab/Public/lab_sys/js/init.js"></script>
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css" />
@@ -59,4 +59,4 @@
     </div>
 </body>
 
-</html>
+</html>感谢反馈~
