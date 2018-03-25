@@ -4,9 +4,9 @@ use Think\Controller;
 require 'JUMP_HTML.trait';
 class LoginController extends Controller {
     use JUMP_HTML;
-    public function login() {
-        if (session(MERCHANT)) {
-            $this->redirect(U('Home/main/main'));
+    public function log() {
+        if (session('user')) {
+            $this->redirect('main/main');
         } else {
             $this->display();
         }
@@ -18,7 +18,7 @@ class LoginController extends Controller {
 			$user=$Exc->where(" id=$account ")->select();
 			if ($user){
 				session('user',$user[0]);
-				$this->assign('user',$user);
+				$this->assign('user',$user[0]);
 	      		$this->display('main/main');
 			}else{
 				$this->error('学号不存在');

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <input type="hidden" name="uname" id="uname" value="<?php echo ($user[0]['nam']); ?>"/>
+    <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>"/>
     <script src="http://pv.sohu.com/cityjson"></script>
     <script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script src="/sysulab/Public/lab_sys/js/init.js"></script>

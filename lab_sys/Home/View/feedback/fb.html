@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
+    <input type="hidden" name="uname" id="uname" value="{$user['nam']}"/>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
     <link rel="stylesheet" href="__PUBLIC__/css/main_fb.css">
@@ -56,7 +57,7 @@
         </div>
     </div>
     <div id="main">
-        <form id="form" action="fb" method="POST">
+        <form id="form" action="fb_" method="POST">
             <fieldset>
                 <legend>课堂反馈</legend>
                 <div class="choice">知识点掌握程度：
