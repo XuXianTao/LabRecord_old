@@ -1,3 +1,4 @@
+use `lab_sys`;
 select * from stu order by cla, num ASC;
 insert into stu(`cla`,`num`,`id`,`nam`) values('C102','1','16000000','STU');
 insert into stu(`cla`,`num`,`id`,`nam`) values('C103','1','16301004','蔡泽帆');
