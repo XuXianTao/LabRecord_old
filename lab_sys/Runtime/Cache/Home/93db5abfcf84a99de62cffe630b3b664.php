@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>lab_sys</title>
 		<script src="http://pv.sohu.com/cityjson"></script>
-		<script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-		<script src="__PUBLIC__/js/init.js"></script>
-		<link rel="stylesheet" href="__PUBLIC__/css/header.css" />
-		<link rel="stylesheet" href="__PUBLIC__/css/nav.css" />
-		<link rel="stylesheet" href="__PUBLIC__/css/main_main.css" />
+		<script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+		<script src="/sysulab/Public/lab_sys/js/init.js"></script>
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css" />
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css" />
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/main_main.css" />
 		<style type="text/css">
 			html, body {
 				width: 100%;
@@ -32,15 +32,15 @@
 	<body onload="init()">
 		<div id="header_wrapper">
 			<div id="header">
-				<div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学" /></div>
+				<div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
 				<div id="welcome">欢迎！</div>
 			</div>
 		</div>
 		<div id="navigation_wrapper">
 			<div id="navigation">
-				<div class="nav"><a href="main">主页</a></div>
-				<div class="nav"><a href="fb">课堂反馈</a></div>
-				<div class="nav"><a href="excp">异常反馈</a></div>
+				<div class="nav"><a href="main.html">主页</a></div>
+				<div class="nav"><a href="fb.html">课堂反馈</a></div>
+				<div class="nav"><a href="excp.html">异常反馈</a></div>
 			</div>
 		</div>
 		<div id="main">

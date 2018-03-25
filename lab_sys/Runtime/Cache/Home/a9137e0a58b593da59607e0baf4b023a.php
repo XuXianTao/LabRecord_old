@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 	<meta charset="UTF-8">
 		<title>lab_sys</title>
 		<script src="http://pv.sohu.com/cityjson"></script>  
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/init.js"></script>
-		<link rel="stylesheet" href="__PUBLIC__/css/header.css">
-		<link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-		<link rel="stylesheet" href="__PUBLIC__/css/table.css" />
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/table.css" />
 		<script>
 			window.onbeforeunload = function() {
 				return "确认退出？";
@@ -45,16 +45,14 @@
 					<th>处理状态</th>
 					<th></th>
 				</tr>
-				<volist name="list" id="vo">
-				<tr>
-					<th>{$vo.id}</th>
-					<th>{$vo.dat}</th>
-					<th>{$vo.sts}</th>
-					<th>{$vo.pc}</th>
-					<th>{$vo.wire}</th>
-					<th>{$vo.box}</th>
-				</tr>
-				</volist>
+				<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+					<th><?php echo ($vo["id"]); ?></th>
+					<th><?php echo ($vo["dat"]); ?></th>
+					<th><?php echo ($vo["sts"]); ?></th>
+					<th><?php echo ($vo["pc"]); ?></th>
+					<th><?php echo ($vo["wire"]); ?></th>
+					<th><?php echo ($vo["box"]); ?></th>
+				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 			</table>
 		</div>
 	</body>

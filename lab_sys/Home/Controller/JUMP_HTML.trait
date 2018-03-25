@@ -1,0 +1,48 @@
+<?php
+namespace Home\Controller;
+trait JUMP_HTML {
+	public function main(){
+		$this->display('main/main');
+	}
+	public function main_a(){
+		$this->display('main/main_a');
+	}
+	public function main_m(){
+		$this->display('main/main_m');
+	}
+	public function main_t(){
+		$this->display('main/main_t');
+	}
+	public function log(){
+		$this->display('login/log');
+	}
+	public function loga(){
+		$this->display('login/loga');
+	}
+	public function logm(){
+		$this->display('login/logm');
+	}
+	public function logt(){
+		$this->display('login/logt');
+	}
+	public function fb(){
+		$this->display('feedback/fb');
+	}
+	public function fbsts_a(){
+		$this->display('feedback/fbsts_a');
+	}
+	public function fbsts_c(){
+		$this->display('feedback/fbsts_c');
+	}
+	public function excp(){
+		$this->display('exception/excp');
+	}
+	public function excpsts_a(){
+		$this->display('exception/excpsts_a');
+	}
+	public function excpsts_c(){
+		$this->display('exception/excpsts_c');
+	}
+}
+
+?>

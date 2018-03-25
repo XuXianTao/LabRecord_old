@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 	<meta charset="UTF-8">
 		<title>lab_sys</title>
 		<script src="http://pv.sohu.com/cityjson"></script>  
-		<script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-		<script src="__PUBLIC__/js/init.js"></script>
-		<link rel="stylesheet" href="__PUBLIC__/css/header.css">
-		<link rel="stylesheet" href="__PUBLIC__/css/nav.css">
+		<script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+		<script src="/sysulab/Public/lab_sys/js/init.js"></script>
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
 		<script>
 			window.onbeforeunload = function() {
 				return "确认退出？";

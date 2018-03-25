@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>lab_sys</title>
-		<link rel="stylesheet" href="__PUBLIC__/css/header.css">
-		<link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-		<link rel="stylesheet" href="__PUBLIC__/css/main_fb.css">
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
+		<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/main_excp.css">
 		<script src="http://pv.sohu.com/cityjson"></script>  
-		<script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/btn.js"></script>
-		<script type="text/javascript" src="__PUBLIC__/js/ent.js"></script>
+		<script type="text/javascript" src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/sysulab/Public/lab_sys/js/init.js"></script>
+		<script type="text/javascript" src="/sysulab/Public/lab_sys/js/btn.js"></script>
+		<script type="text/javascript" src="/sysulab/Public/lab_sys/js/ent.js"></script>
 		<script>
 			window.onbeforeunload = function() {
 				return "确认退出？";
@@ -39,7 +39,7 @@
 	<body onload="init()">
 		<div id="header_wrapper">
 			<div id="header">
-				<div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学" /></div>
+				<div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
 				<div id="welcome">欢迎！</div>
 			</div>
 		</div>
@@ -53,13 +53,13 @@
 		<div id="main">
 			<form id="form">
 				<fieldset>
-    				<legend>课堂反馈</legend>
-    				<div class="choice">知识点掌握程度：
-    					<input name="knowledge" type="radio" value="完全掌握">完全掌握
-    					<input name="knowledge" type="radio" value="大部分掌握">大部分掌握
-    					<input name="knowledge" type="radio" value="基本掌握">基本掌握
-    					<input name="knowledge" type="radio" value="大部分没掌握">大部分没掌握
-    					<input name="knowledge" type="radio" value="完全没掌握">完全没掌握
+    				<legend>异常反馈</legend>
+    				<div class="choice">请选择异常仪器：
+    					<input name="pc" 	value="pc"		type="checkbox">电脑
+    					<input name="wire" 	value="wire"	type="checkbox">导线
+    					<input name="box" 	value="box"		type="checkbox">电路箱
+    					<input name="oscp" 	value="oscp"	type="checkbox">示波器
+    					<input name="gen" 	value="gen"		type="checkbox">函数发生器
     				</div>
     				<div class="btn_group">
     					<button id="btn1" class="btn" name="btn1">提交</button>
