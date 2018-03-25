@@ -20,9 +20,13 @@ class LoginController extends Controller {
     	if ($account){
 			$Exc=M('stu');
 			$user=$Exc->where(" id=$account ")->select();
-			//dump($user);
-			$this->assign('user',$user);
-      		$this->display('main/main');
+			if ($user){
+				session('user',$user[0]);
+				$this->assign('user',$user);
+	      		$this->display('main/main');
+			}else{
+				$this->error('学号不存在');
+			}
     	}else $this->error('账号不能为空');
     }
 }
