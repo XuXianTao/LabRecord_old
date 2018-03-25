@@ -11,10 +11,6 @@ class LoginController extends Controller {
             $this->display();
         }
     }
-    public function main(){
-    	echo asdsa;
-    	
-    }
     public function log_(){
     	$account=$_POST['num'];
     	if ($account){
