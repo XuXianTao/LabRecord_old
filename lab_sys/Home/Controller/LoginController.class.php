@@ -11,6 +11,15 @@ class LoginController extends Controller {
             $this->display();
         }
     }
+    public function loga(){
+		$this->display();
+    }
+    public function logm(){
+		$this->display();
+    }
+    public function logt(){
+		$this->display();
+    }
     public function log_(){
     	$account=$_POST['num'];
     	if ($account){

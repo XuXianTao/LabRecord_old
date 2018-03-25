@@ -13,4 +13,10 @@ class ExceptionController extends Controller {
     	$this->assign('list',$list);
     	$this->display();
     }
+    public function excpsts_c(){
+        $this->display();
+    }
+    public function excp(){
+        $this->display();
+    }
 }

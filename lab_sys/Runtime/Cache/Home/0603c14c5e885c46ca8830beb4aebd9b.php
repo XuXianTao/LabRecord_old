@@ -43,7 +43,7 @@
         </div>
     </div>
     <div id="main">
-        <form id="login" action="/sysulab/index.php/Home/Login/log_" method="POST">
+        <form id="login" action="/sysulab/index.php/Home/Feedback/log_" method="POST">
             <p>请输入学号：</p><input type="text" name="num" id="num"/><br>
             <button id="btn1" name="btn_log" type="submit">登入</button>
         </form>
