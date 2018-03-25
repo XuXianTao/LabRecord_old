@@ -11,4 +11,7 @@ class LoginController extends Controller {
             $this->display();
         }
     }
+    public function takeAccount(){
+    	echo $_POST("type").$_POST("num");
+    }
 }
