@@ -5,51 +5,31 @@ img部分
 
 
 html部分
-
-	1、index.html
-	学生首页。
 	
-	2、log.html
-	学生登录页，打开学生首页将会跳转到该页。
+	1、log.html
+	学生登录页，默认首页。
 	
-	3、loga.html
-	管理登录页。
+	2、logm.html
+	管理、教师、助理登录页。
 	
-	4、logm.html
-	教师登录页。
-	
-	5、logt.html
-	助理登录页。
-	
-	6、main.html
+	3、main.html
 	学生主页，可选：课堂反馈，异常反馈。
 	
-	7、main_a.html
-	助理主页，可选：查看异常情况（对应实验室）。
+	4、main_m.html
+	管理、教师、助理主页，管理可选：查看异常情况（所有实验室），助理可选查看异常情况（对应实验室），教师可选查看异常情况（对应实验室），查看课堂反馈（对应实验室）。
+	点击自己不允许访问的连接则弹框拒绝。
 	
-	8、main_m.html
-	管理主页，可选：查看异常情况（所有实验室）。
-	
-	9、main_t.html
-	教师主页，可选：查看异常情况（对应实验室），查看课堂反馈（对应实验室）。
-	
-	10、fb.html
+	5、fb.html
 	学生课堂反馈页。
 	
-	11、excp.html
+	6、excp.html
 	学生异常反馈页。
 	
-	12、fbsts_c.html
-	教师课堂反馈查看页。
+	7、fbsts.html
+	课堂反馈查看页。
 	
-	13、fbsts_a.html
-	暂留。
-	
-	14、excpsts_c.html
-	教师、助理异常情况查看页。
-	
-	15、excpsts_a.html
-	管理异常情况查看页。
+	8、excpsts.html
+	助理异常情况查看页。
 
 
 CSS部分
@@ -74,6 +54,9 @@ JS部分
 	
 	2、init.js
 	设定body载入后的欢迎部分内容重置事件。
+
+	3、ent.js
+	设定回车事件。
 	
 
 DB部分
@@ -95,3 +78,6 @@ DB部分
 
 	6、insert-excp.sql
 	插入异常信息。
+
+	7、insert-fb.sql
+	插入反馈信息。
