@@ -4,34 +4,34 @@ use Think\Model;
 //model对应表名
 class ExcpModel extends Model{
 	protected $_auto=array(
-		array('dat','mydate',1,'callback'),
+		array('dat','myDate',1,'callback'),
 		array('id','getId',1,"callback"),
-		array('sts','0'),
-		array('pc','getpc',1,"callback"),
-		array('wire','getwire',1,"callback"),
-		array('box','getbox',1,"callback"),
-		array('oscp','getoscp',1,"callback"),
-		array('gen','getgen',1,"callback"),
+		array('sts','未处理'),
+		array('pc','getPc',1,"callback"),
+		array('wire','getWire',1,"callback"),
+		array('box','getBox',1,"callback"),
+		array('oscp','getOscp',1,"callback"),
+		array('gen','getGen',1,"callback"),
 	);
-	protected function mydate(){
+	protected function myDate(){
 		return date('Y-m-d H:i:s',time());
 	}
 	protected function getId(){
 		return session('user')['id'];
 	}
-	protected function getpc(){
+	protected function getPc(){
 		return I('pc')?1:0;
 	}
-	protected function getwire(){
+	protected function getWire(){
 		return I('wire')?1:0;
 	}
-	protected function getbox(){
+	protected function getBox(){
 		return I('box')?1:0;
 	}
-	protected function getoscp(){
+	protected function getOscp(){
 		return I('oscp')?1:0;
 	}
-	protected function getgen(){
+	protected function getGen(){
 		return I('gen')?1:0;
 	}
 }
