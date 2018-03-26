@@ -40,8 +40,8 @@ CSS部分
 	2、nav.css
 	设定导航栏。
 	
-	3、table.css
-	设定table。
+	3、tb_xx.css
+	设定xx.html的table，不存在共用。
 	
 	4、main_xx.css
 	设定xx.html的主要部分，存在共用。
@@ -64,20 +64,14 @@ DB部分
 	1、create.sql
 	数据库创建。
 
-	2、	insert-ass.sql
-	插入助理信息。
+	2、	insert-man.sql
+	插入助理、教师、管理信息。
 
-	3、insert-tea.sql
-	插入教师信息。
-
-	4、insert-man.sql
-	插入管理信息。
-
-	5、insert-stu.sql
+	3、insert-stu.sql
 	插入学生信息。
 
-	6、insert-excp.sql
+	4、insert-excp.sql
 	插入异常信息。
 
-	7、insert-fb.sql
+	5、insert-fb.sql
 	插入反馈信息，待更新。

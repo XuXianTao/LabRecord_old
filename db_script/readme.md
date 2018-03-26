@@ -2,14 +2,10 @@
 
 1、create
 
-2、insert-ass
+2、insert-man
 
-3、insert-tea
+3、insert-stu
 
-4、insert-man
+4、insert-excp
 
-5、insert-stu
-
-6、insert-excp
-
-7、insert-fb
+5、insert-fb
