@@ -297,6 +297,160 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003534s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003602s ]
 ERR: 非法操作:js
 
+<<<<<<< HEAD
+[ 2018-03-26T16:36:09+08:00 ] ::1 /sysulab/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001706s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002056s ]
+
+[ 2018-03-26T16:36:20+08:00 ] ::1 /sysulab/home/exception/excpsts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001339s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `excp` LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+NOTIC: [8] Undefined variable: user C:\xampp\htdocs\sysulab\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001431s ]
+
+[ 2018-03-26T16:36:21+08:00 ] ::1 /sysulab/home/exception/js/jquery-1.11.1.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000910s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004402s ]
+ERR: 非法操作:js
+
+[ 2018-03-26T16:36:21+08:00 ] ::1 /sysulab/home/exception/js/init.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001829s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001713s ]
+ERR: 非法操作:js
+
+[ 2018-03-26T16:38:32+08:00 ] ::1 /sysulab/home/exception/deal_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+ERR: 非法操作:deal_
+
+[ 2018-03-26T16:38:35+08:00 ] ::1 /sysulab/home/exception/js/jquery-1.11.1.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002011s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001299s ]
+ERR: 非法操作:js
+
+[ 2018-03-26T16:38:35+08:00 ] ::1 /sysulab/home/exception/js/init.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001673s ]
+ERR: 非法操作:js
+
+[ 2018-03-26T16:38:38+08:00 ] ::1 /sysulab/home/exception/fb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002302s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001995s ]
+
+[ 2018-03-26T16:38:38+08:00 ] ::1 /sysulab/index.php/Home/feedback/fb.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+
+[ 2018-03-26T16:38:38+08:00 ] ::1 /sysulab/index.php/Home/login/log.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011731s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002220s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002277s ]
+
+[ 2018-03-26T16:38:42+08:00 ] ::1 /sysulab/home/exception/js/jquery-1.11.1.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+ERR: 非法操作:js
+
+[ 2018-03-26T16:38:42+08:00 ] ::1 /sysulab/home/exception/js/init.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) C:\xampp\htdocs\sysulab\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001311s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001359s ]
+=======
 [ 2018-03-26T16:54:07+08:00 ] ::1 /lab_sys/home/exception/excpsts
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
@@ -471,5 +625,6 @@ NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STR
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+>>>>>>> e4dc61067421560d5d52b4a72d07ad856847b40f
 ERR: 非法操作:js
 

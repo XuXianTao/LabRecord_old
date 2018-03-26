@@ -5,9 +5,15 @@
 <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/init.js"></script>
+<<<<<<< HEAD
+<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
+<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
+<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/tb_excp.css" />
+=======
 <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
 <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
 <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/tb_excp.css" />
+>>>>>>> e4dc61067421560d5d52b4a72d07ad856847b40f
 <style type="text/css">
     html,
     body {
@@ -36,7 +42,11 @@
     <div id="main">
         <div id="header_wrapper">
             <div id="header">
+<<<<<<< HEAD
+                <div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+=======
                 <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+>>>>>>> e4dc61067421560d5d52b4a72d07ad856847b40f
                 <div id="welcome">欢迎！</div>
             </div>
         </div>
@@ -58,6 +68,10 @@
                 <th></th>
             </tr>
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+<<<<<<< HEAD
+                    <td>1234递增</td>
+=======
+>>>>>>> e4dc61067421560d5d52b4a72d07ad856847b40f
                     <td><?php echo ($vo["dat"]); ?></td>
                     <td><?php echo ($vo["id"]); ?></td>
                     <td>实验室号+机号</td>
