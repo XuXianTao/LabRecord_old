@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+tr {
+    text-align: center;
+    line-height: 30px;
+}
+
+td {
+    width: 200px;
+}
+
+#stat_data tr:last-child {
+    width: 320px;
+}
