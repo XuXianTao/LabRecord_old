@@ -19,14 +19,11 @@ class ExceptionController extends Controller {
         $this->show("<script>alert('感谢反馈');</script>");
         $this->redirect('main/main');
     }
-    public function excpsts_a(){
+    public function excpsts(){
     	$Exc=M('excp');
     	$list=$Exc->limit(5)->select();
     	$this->assign('list',$list);
     	$this->display();
-    }
-    public function excpsts_c(){
-        $this->display();
     }
 
 }
