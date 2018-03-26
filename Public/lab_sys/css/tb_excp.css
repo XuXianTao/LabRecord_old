@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+th,
+tr {
+    text-align: center;
+    line-height: 30px;
+}
+
+th:first-child,
+tr:first-child {
+    width: 100px;
+}
+
+th:nth-child(3),
+th:nth-child(6),
+tr:nth-child(3),
+tr:nth-child(6) {
+    width: 150px;
+}
+
+th:nth-child(2),
+th:nth-child(4),
+tr:nth-child(2),
+tr:nth-child(4) {
+    width: 180px;
+}
+
+th:nth-child(5),
+tr:nth-child(5) {
+    width: 200px;
+}
+
+th:last-child,
+tr:last-child {
+    width: 100px;
+}

@@ -62,22 +62,22 @@ JS部分
 DB部分
 
 	1、create.sql
-	数据库创建，暂缺课堂反馈表，最后根据问卷而定。
+	数据库创建。
 
-	2、insert-stu.sql
-	插入学生信息。
-
-	3、insert-ass.sql
+	2、	insert-ass.sql
 	插入助理信息。
 
-	4、insert-tea.sql
+	3、insert-tea.sql
 	插入教师信息。
 
-	5、insert-man.sql
+	4、insert-man.sql
 	插入管理信息。
+
+	5、insert-stu.sql
+	插入学生信息。
 
 	6、insert-excp.sql
 	插入异常信息。
 
 	7、insert-fb.sql
-	插入反馈信息。
+	插入反馈信息，待更新。
