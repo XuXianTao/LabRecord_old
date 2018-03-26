@@ -27,7 +27,7 @@ class LoginController extends Controller {
     public function logm_(){
         $account=$_POST['num'];
         if ($account){
-            $Exc=M('ass');
+            $Exc=M('man');
             $admin=$Exc->where("id=$account")->select();
             if ($admin){
                 session('admin',$admin[0]);
