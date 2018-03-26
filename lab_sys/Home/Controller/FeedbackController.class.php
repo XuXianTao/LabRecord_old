@@ -23,6 +23,10 @@ class FeedbackController extends Controller {
     	}else{$this->error('不能为空');}
     }
     public function fbsts(){
-        $this->display();
+        $admin=session('admin');
+        if ($admin){
+            $this->assign('admin',$admin);
+            $this->display();
+        }else $this->redirect('logm');
     }
 }

@@ -23,7 +23,11 @@ class ExceptionController extends Controller {
     	$Exc=M('excp');
     	$list=$Exc->select();
     	$this->assign('list',$list);
-    	$this->display();
+        $admin=session('admin');
+        if ($admin){
+            $this->assign('admin',$admin);
+    	    $this->display();
+        }else $this->redirect('logm');
     }
 
 }

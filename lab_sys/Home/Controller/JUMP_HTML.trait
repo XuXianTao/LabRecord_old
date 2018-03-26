@@ -4,44 +4,26 @@ trait JUMP_HTML {
 	public function main(){
 		$this->redirect('main/main');
 	}
-	public function main_a(){
-		$this->redirect('main/main_a');
-	}
 	public function main_m(){
 		$this->redirect('main/main_m');
-	}
-	public function main_t(){
-		$this->redirect('main/main_t');
 	}
 	public function log(){
 		$this->redirect('login/log');
 	}
-	public function loga(){
-		$this->redirect('login/loga');
-	}
 	public function logm(){
 		$this->redirect('login/logm');
-	}
-	public function logt(){
-		$this->redirect('login/logt');
 	}
 	public function fb(){
 		$this->redirect('feedback/fb');
 	}
-	public function fbsts_a(){
-		$this->redirect('feedback/fbsts_a');
-	}
-	public function fbsts_c(){
-		$this->redirect('feedback/fbsts_c');
+	public function fbsts(){
+		$this->redirect('feedback/fbsts');
 	}
 	public function excp(){
 		$this->redirect('exception/excp');
 	}
-	public function excpsts_a(){
-		$this->redirect('exception/excpsts_a');
-	}
-	public function excpsts_c(){
-		$this->redirect('exception/excpsts_c');
+	public function excpsts(){
+		$this->redirect('exception/excpsts');
 	}
 }
 

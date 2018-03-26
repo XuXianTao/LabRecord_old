@@ -10,6 +10,10 @@ class MainController extends Controller {
 		$this->display();
 	}
 	public function main_m(){
-		$this->display();
+		$admin=session('admin');
+        if ($admin){
+            $this->assign('admin',$admin);
+    	    $this->display();
+        }else $this->redirect('logm');
 	}
 }
