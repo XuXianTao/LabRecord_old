@@ -5,9 +5,9 @@
 <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/init.js"></script>
-<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
-<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
-<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/table.css" />
+<link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
+<link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
+<link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/tb_excp.css" />
 <style type="text/css">
     html,
     body {
@@ -34,10 +34,22 @@
 
 <body>
     <div id="main">
+        <div id="header_wrapper">
+            <div id="header">
+                <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+                <div id="welcome">欢迎！</div>
+            </div>
+        </div>
+        <div id="navigation_wrapper">
+            <div id="navigation">
+                <div class="nav"><a href="main">主页</a></div>
+                <div class="nav"><a href="fb">课堂反馈</a></div>
+                <div class="nav"><a href="excp">异常情况</a></div>
+            </div>
+        </div>
         <table border="1">
             <caption>实验室异常情况</caption>
             <tr>
-                <th>序号</th>
                 <th>提交时间</th>
                 <th>提交人</th>
                 <th>位置</th>
@@ -46,12 +58,12 @@
                 <th></th>
             </tr>
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                    <th><?php echo ($vo["id"]); ?></th>
-                    <th><?php echo ($vo["dat"]); ?></th>
-                    <th><?php echo ($vo["sts"]); ?></th>
-                    <th><?php echo ($vo["pc"]); ?></th>
-                    <th><?php echo ($vo["wire"]); ?></th>
-                    <th><?php echo ($vo["box"]); ?></th>
+                    <td><?php echo ($vo["dat"]); ?></td>
+                    <td><?php echo ($vo["id"]); ?></td>
+                    <td>实验室号+机号</td>
+                    <td>直接塞异常仪器</td>
+                    <td><?php echo ($vo["sts"]); ?></td>
+                    <td><a href="deal_"><button>处理完毕</button></a></td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </table>
     </div>
