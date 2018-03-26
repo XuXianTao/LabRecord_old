@@ -16,12 +16,12 @@ class ExceptionController extends Controller {
         if ($Exc->create()){
             $Exc->add();
         }else $this->error($Exc->getError());
-        $this->show("<script>alert('感谢反馈');</script>");
-        $this->redirect('main/main');
+        //$this->show("<script>alert('感谢反馈');</script>");
+        $this->redirect('main/main','',0.01,'<script>alert(\'感谢反馈\');</script>');
     }
     public function excpsts(){
     	$Exc=M('excp');
-    	$list=$Exc->limit(5)->select();
+    	$list=$Exc->select();
     	$this->assign('list',$list);
     	$this->display();
     }

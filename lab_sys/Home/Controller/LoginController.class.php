@@ -11,15 +11,6 @@ class LoginController extends Controller {
             $this->display();
         }
     }
-    public function loga(){
-		$this->display();
-    }
-    public function logm(){
-		$this->display();
-    }
-    public function logt(){
-		$this->display();
-    }
     public function log_(){
     	$account=$_POST['num'];
     	if ($account){
@@ -33,5 +24,8 @@ class LoginController extends Controller {
 				$this->error('学号不存在');
 			}
     	}else $this->error('账号不能为空');
+    }
+    public function logm(){
+        $this->display();
     }
 }

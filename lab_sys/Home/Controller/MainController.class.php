@@ -9,13 +9,7 @@ class MainController extends Controller {
 		$this->assign('user',$user);
 		$this->display();
 	}
-	public function main_a(){
-		$this->display();
-	}
 	public function main_m(){
-		$this->display();
-	}
-	public function main_t(){
 		$this->display();
 	}
 }

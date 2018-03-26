@@ -12,6 +12,9 @@ class ExcpModel extends Model{
 		array('box','getBox',1,"callback"),
 		array('oscp','getOscp',1,"callback"),
 		array('gen','getGen',1,"callback"),
+		array('nam','getNam',1,"callback"),
+		array('cla','getCla',1,"callback"),
+		array('num','getNum',1,"callback"),
 	);
 	protected function myDate(){
 		return date('Y-m-d H:i:s',time());
@@ -33,6 +36,15 @@ class ExcpModel extends Model{
 	}
 	protected function getGen(){
 		return I('gen')?1:0;
+	}
+	protected function getNam(){
+		return session('user')[nam];
+	}
+	protected function getCla(){
+		return session('user')[cla];
+	}
+	protected function getNum(){
+		return session('user')[num];
 	}
 }
 ?>

@@ -60,7 +60,6 @@
         </div>
     </div>
     <div id="main">
-
         <form id="form" action="fb_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>课堂反馈</legend>

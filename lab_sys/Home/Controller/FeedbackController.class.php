@@ -11,13 +11,18 @@ class FeedbackController extends Controller {
     		$this->display();
     	}else{$this->redirect('login/log');}
     }
-    public function fbsts_a(){
-    	$this->display();
-    }
 	public function fb_(){
     	$knowc=I('knowledge');
     	if ($knowc){
-    		
+    		$Fb=D('fb');
+            $Fb->create();
+            if ($Fb->where('id='.session('user')['id'])->select())$Fb->save();
+            else $Fb->add();
+            //$this->show("");
+            $this->redirect('main/main','',0.01,'<script>alert(\'感谢反馈\');</script>');
     	}else{$this->error('不能为空');}
+    }
+    public function fbsts(){
+        $this->display();
     }
 }
