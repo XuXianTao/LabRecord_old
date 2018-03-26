@@ -42,7 +42,7 @@
         </div>
     </div>
     <div id="main">
-        <form id="login" action="logm" method="POST">
+        <form id="login" action="/sysulab/index.php/Home/Login/logm_" method="POST">
             <p>请输入职工号/学号：</p><input type="text" name="num" /><br>
             <button id="btn1" name="btn_logm" type="submit">登入</button>
         </form>

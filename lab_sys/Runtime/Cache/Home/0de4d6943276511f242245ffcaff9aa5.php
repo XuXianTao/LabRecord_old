@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <title>lab_sys</title>
-<input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
+<input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
 <script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
 <script src="/sysulab/Public/lab_sys/js/init.js"></script>
 <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
@@ -40,9 +40,9 @@
     </div>
     <div id="navigation_wrapper">
         <div id="navigation">
-            <div class="nav"><a href="main">主页</a></div>
-            <div class="nav"><a href="fb">课堂反馈</a></div>
-            <div class="nav"><a href="excp">异常情况</a></div>
+            <div class="nav"><a href="main_m">主页</a></div>
+            <div class="nav"><a href="fbsts">课堂反馈</a></div>
+            <div class="nav"><a href="excpsts">异常情况</a></div>
         </div>
     </div>
     <div id="main">
