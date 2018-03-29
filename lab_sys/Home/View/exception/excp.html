@@ -11,6 +11,7 @@
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/ent.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/input.js"></script>
     <script>
         window.onbeforeunload = function() {
             return "确认退出？";
@@ -64,11 +65,13 @@
             <fieldset>
                 <legend>异常反馈</legend>
                 <div class="choice">请选择异常仪器：
-                    <input name="pc" value="pc" type="checkbox">电脑
-                    <input name="wire" value="wire" type="checkbox">导线
-                    <input name="box" value="box" type="checkbox">电路箱
-                    <input name="oscp" value="oscp" type="checkbox">示波器
-                    <input name="gen" value="gen" type="checkbox">函数发生器
+                    <input name="pc" value="pc" type="checkbox">电脑<br>
+                    <input name="wire" value="wire" type="checkbox">导线<br>
+                    <input name="box" value="box" type="checkbox">电路箱<br><br>
+                    <input name="oscp" value="oscp" type="checkbox">示波器<br>
+                    <input name="gen" value="gen" type="checkbox">函数发生器<br>
+                    <input name="oth" value="oth" type="checkbox">其他
+                    <input name="des" value="des" type="text" placeholder="输入文字进行描述" width="20px">
                 </div>
                 <div class="btn_group">
                     <button id="btn1" class="btn" type="submit" name="btn_excp">提交</button>

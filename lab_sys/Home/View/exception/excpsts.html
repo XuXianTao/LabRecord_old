@@ -54,16 +54,22 @@
                 <th>提交人</th>
                 <th>位置</th>
                 <th>异常描述</th>
+                <th>处理人</th>
                 <th>处理状态</th>
+                <th>处理方式</th>
+                <th>处理间隔</th>
                 <th></th>
             </tr>
             <volist name="list" id="vo">
                 <tr>
                     <td>{$vo.dat}</td>
-                    <td>{$vo.id} {$vo.nam}</td>
-                    <td>{$vo.cla}:{$vo.num}</td>
+                    <td>{$vo.id}<br>{$vo.nam}</td>
+                    <td>{$vo.cla} {$vo.num}号机</td>
                     <td>{:$vo[pc]?"电脑/":""}{:$vo[wire]?"网线/":""}{:$vo[box]?"电路箱/":""}{:$vo[oscp]?"示波器/":""}{:$vo[gen]?"函数发生器/":""}</td>
+                    <td></td>
                     <td>{$vo.sts}</td>
+                    <td></td>
+                    <td></td>
                     <td><a href="deal_"><button>处理完毕</button></a></td>
                 </tr>
             </volist>
