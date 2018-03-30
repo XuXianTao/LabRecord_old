@@ -3,38 +3,40 @@ table {
     margin: 30px auto;
 }
 
-th,
 tr {
     text-align: center;
     line-height: 30px;
 }
 
-th:first-child,
-tr:first-child {
-    width: 180px;
-}
-
-th:nth-child(2),
+tr:first-child,
 tr:nth-child(2) {
-    width: 160px;
+    width: 185px;
 }
 
-th:nth-child(3),
 tr:nth-child(3) {
     width: 150px;
 }
 
-th:nth-child(4),
 tr:nth-child(4) {
-    width: 200px;
+    width: 250px;
 }
 
-th:nth-child(5),
 tr:nth-child(5) {
-    width: 100px;
+    width: 160px;
 }
 
-th:last-child,
+tr:nth-child(6) {
+    width: 180px;
+}
+
+tr:nth-child(7) {
+    width: 220px;
+}
+
+tr:nth-child(8) {
+    width: 160px;
+}
+
 tr:last-child {
-    width: 100px;
+    width: 80px;
 }
