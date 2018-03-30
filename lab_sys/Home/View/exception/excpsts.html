@@ -5,6 +5,7 @@
 <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
 <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
 <script src="__PUBLIC__/js/init.js"></script>
+<script src="__PUBLIC__/js/con.js"></script>
 <link rel="stylesheet" href="__PUBLIC__/css/header.css">
 <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
 <link rel="stylesheet" href="__PUBLIC__/css/tb_excp.css" />
@@ -63,14 +64,22 @@
             <volist name="list" id="vo">
                 <tr>
                     <td>{$vo.dat}</td>
-                    <td>{$vo.id}<br>{$vo.nam}</td>
+                    <td>{$vo.id}&nbsp;{$vo.nam}</td>
                     <td>{$vo.cla}：{$vo.num}号机</td>
                     <td>{:$vo[pc]?"电脑/":""}{:$vo[wire]?"网线/":""}{:$vo[box]?"电路箱/":""}{:$vo[oscp]?"示波器/":""}{:$vo[gen]?"函数发生器/":""}</td>
                     <td>{$vo.delID} {$vo.delNam}</td>
                     <td>{$vo.sts}</td>
                     <td>{$vo.delWay}</td>
                     <td>{$vo.delInt}</td>
-                    <td><a href="deal_"><button>处理</button></a></td>
+                    <td>
+                        <a href="deal_inc" onclick='return con_inc();'>
+                            <button>已进行处理但不成功</button>
+                        </a>
+                        <br>
+                        <a href="deal_com" onclick='return con_com();'>
+                            <button>成功处理</button>
+                        </a>
+                    </td>
                 </tr>
             </volist>
         </table>

@@ -29,5 +29,10 @@ class ExceptionController extends Controller {
     	    $this->display();
         }else $this->redirect('logm');
     }
-
+    public function deal_inc() {
+        $this->redirect('exception/excpsts','',0.01,'<script>alert(\'确认已经进行处理，但处理不成功\');</script>');
+    }
+    public function deal_com() {
+        $this->redirect('exception/excpsts','',0.01,'<script>alert(\'确认已经进行处理，并处理成功\');</script>');
+    }
 }
