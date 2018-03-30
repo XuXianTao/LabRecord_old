@@ -23,7 +23,7 @@ create table excp (
 */
 use `lab_sys`;
 select * from excp order by dat ASC;
-insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-20 14:20:00','16000000','STU','C102','1','未处理','0','1','1','0','0','0','');
-insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-21 9:30:01','16301004','蔡泽帆','C103','1','未处理','0','0','0','0','1','0','');
+insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-20 14:20:00','16000000','STU','C102','1','处理不成功','0','1','1','0','0','0','');
+insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-21 9:30:01','16301004','蔡泽帆','C103','1','处理成功','0','0','0','0','1','0','');
 insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values(now(),'16301082','刘竞妍','C104','24','未处理','0','0','0','1','0','0','');
 insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values(now(),'16301056','康生晶','C103','18','未处理','0','0','0','1','0','0','');
