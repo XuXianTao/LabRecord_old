@@ -59,7 +59,7 @@
                 <th>处理人</th>
                 <th>处理状态</th>
                 <th>处理方式</th>
-                <th>处理间隔</th>
+                <th>处理时间</th>
                 <th></th>
             </tr>
             <volist name="list" id="vo">
@@ -71,14 +71,16 @@
                     <td>{$vo.delID} {$vo.delNam}</td>
                     <td name="sts">{$vo.sts}</td>
                     <td>{$vo.delWay}</td>
-                    <td>{$vo.delInt}</td>
+                    <td>{$vo.delTim}</td>
                     <td>
-                        <a href="deal_inc" onclick='return cfm_inc();'>
-                            <button name="btn1">处理不成功</button>
-                        </a>
-                        <a href="deal_com" onclick='return cfm_com();'>
-                            <button name="btn2">处理成功</button>
-                        </a>
+                        <form action="__URL__/deal_inc" style="display: inline-block;">
+                            <input type="hidden" name="delWay1">
+                            <button name="btn1" type="submit" onclick="return cfm_inc(event);">处理不成功</button>
+                        </form>
+                        <form action="__URL__/deal_com" style="display: inline-block;">
+                            <input type="hidden" name="delWay2">
+                            <button name="btn2" type="submit" onclick="return cfm_com(event);">处理成功</button>
+                        </form>
                     </td>
                 </tr>
             </volist>

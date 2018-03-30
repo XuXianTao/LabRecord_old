@@ -34,7 +34,7 @@ create table excp (
     delNam	varchar(200),				#处理人姓名
     sts		varchar(200) not null,		#处理状态，完全未处理，处理不成功，处理完毕
     delWay	varchar(200),				#处理方式
-    delInt	time,						#处理间隔
+    delTim	datetime,					#处理时间
     pc		boolean,					#电脑，0没问题，1有问题
     wire	boolean,					#导线，0没问题，1有问题
     box		boolean,					#电路箱，0没问题，1有问题
