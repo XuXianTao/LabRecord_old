@@ -3,11 +3,14 @@
 <meta charset="UTF-8">
 <title>lab_sys</title>
 <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
-<script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
-<script src="/sysulab/Public/lab_sys/js/init.js"></script>
-<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
-<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
-<link rel="stylesheet" href="/sysulab/Public/lab_sys/css/tb_excp.css" />
+<script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+<script src="/lab_sys/Public/lab_sys/js/init.js"></script>
+<script src="/lab_sys/Public/lab_sys/js/cfm.js"></script>
+<script src="/lab_sys/Public/lab_sys/js/disp.js"></script>
+<script src="/lab_sys/Public/lab_sys/js/set_val.js"></script>
+<link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
+<link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
+<link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/tb_excp.css" />
 <style type="text/css">
     html,
     body {
@@ -32,11 +35,11 @@
     }
 </style>
 
-<body>
+<body onload="init();disp();set_val()">
     <div id="main">
         <div id="header_wrapper">
             <div id="header">
-                <div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+                <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
                 <div id="welcome">欢迎！</div>
             </div>
         </div>
@@ -54,16 +57,35 @@
                 <th>提交人</th>
                 <th>位置</th>
                 <th>异常描述</th>
+                <th>处理人</th>
                 <th>处理状态</th>
+                <th>处理方式</th>
+                <th>处理时间</th>
                 <th></th>
             </tr>
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                    <td><?php echo ($vo["dat"]); ?></td>
-                    <td><?php echo ($vo["id"]); ?> <?php echo ($vo["nam"]); ?></td>
-                    <td><?php echo ($vo["cla"]); ?>:<?php echo ($vo["num"]); ?></td>
-                    <td><?php echo $vo[pc]?"电脑/":""; echo $vo[wire]?"网线/":""; echo $vo[box]?"电路箱/":""; echo $vo[oscp]?"示波器/":""; echo $vo[gen]?"函数发生器/":"";?></td>
-                    <td><?php echo ($vo["sts"]); ?></td>
-                    <td><a href="deal_"><button>处理完毕</button></a></td>
+                    <td name="dat"><?php echo ($vo["dat"]); ?></td>
+                    <td name="id"><?php echo ($vo["id"]); ?>&nbsp;<?php echo ($vo["nam"]); ?></td>
+                    <td><?php echo ($vo["cla"]); ?>：<?php echo ($vo["num"]); ?>号机</td>
+                    <td><?php echo $vo[pc]?"&nbsp;电脑":""; echo $vo[wire]?"&nbsp;网线":""; echo $vo[box]?"&nbsp;电路箱":""; echo $vo[oscp]?"&nbsp;示波器":""; echo $vo[gen]?"&nbsp;函数发生器":"";?></td>
+                    <td><?php echo ($vo["delID"]); ?> <?php echo ($vo["delNam"]); ?></td>
+                    <td name="sts"><?php echo ($vo["sts"]); ?></td>
+                    <td><?php echo ($vo["delWay"]); ?></td>
+                    <td><?php echo ($vo["delTim"]); ?></td>
+                    <td>
+                        <form action="/lab_sys/index.php/Home/Exception/deal_inc" method="POST" style="display: inline-block;">
+                            <input type="hidden" name="vo_id1">
+                            <input type="hidden" name="vo_dat1">
+                            <input type="hidden" name="delWay1">
+                            <button name="btn1" type="submit" onclick="return cfm_inc(event);">处理不成功</button>
+                        </form>
+                        <form action="/lab_sys/index.php/Home/Exception/deal_com" method="POST" style="display: inline-block;">
+                            <input type="hidden" name="vo_id2">
+                            <input type="hidden" name="vo_dat2">
+                            <input type="hidden" name="delWay2">
+                            <button name="btn2" type="submit" onclick="return cfm_com(event);">处理成功</button>
+                        </form>
+                    </td>
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </table>
     </div>

@@ -34,14 +34,14 @@ class ExceptionController extends Controller {
         $excp = M('excp');
         $admin=session('admin');
         if($admin){
-            $vo_id = $_POST['vo_id'];
-            $vo_dat = $_POST['vo_dat'];
+            $vo_id = $_POST['vo_id1'];
+            $vo_dat = $_POST['vo_dat1'];
             $data['delId'] = $admin['id'];
             $data['delNam'] = $admin['nam'];
             $data['sts'] = '处理不成功';
             $data['delWay'] = $_POST['delWay1'];
             $data['delTim'] = 'now()';
-            $excp->where('dat = $vo_dat and id = $vo_id')->save($data);
+            $excp->where("dat = \"$vo_dat\" and id = $vo_id")->save($data);
             $this->redirect('exception/excpsts','',0.01,'<script>alert(\'确认已经进行处理，但处理不成功\');</script>');
         }else{
             $this->redirect('logm');
@@ -52,14 +52,14 @@ class ExceptionController extends Controller {
         $excp = M('excp');
         $admin=session('admin');
         if($admin){
-            $vo_id = $_POST['vo_id'];
-            $vo_dat = $_POST['vo_dat'];
+            $vo_id = $_POST['vo_id2'];
+            $vo_dat = $_POST['vo_dat2'];
             $data['delId'] = $admin['id'];
             $data['delNam'] = $admin['nam'];
             $data['sts'] = '处理成功';
             $data['delWay'] = $_POST['delWay2'];
             $data['delTim'] = 'now()';
-            $excp->where('dat = $vo_dat and id = $vo_id')->save($data);
+            $excp->where("dat = \"$vo_dat\" and id = $vo_id")->save($data);
             $this->redirect('exception/excpsts','',0.01,'<script>alert(\'确认已经进行处理，并处理成功\');</script>');
         }else{
             $this->redirect('logm');
