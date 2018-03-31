@@ -4,6 +4,7 @@ function cfm_inc(event) {
     if (delWay != null && delWay != "") {
         var delWay1 = target.previousElementSibling;
         delWay1.value = delWay;
+        alert(delWay1.value);
         return true;
     } else
         return false;
@@ -15,6 +16,7 @@ function cfm_com(event) {
     if (delWay != null && delWay != "") {
         var delWay2 = target.previousElementSibling;
         delWay2.value = delWay;
+        alert(delWay2.value);
         return true;
     } else
         return false;

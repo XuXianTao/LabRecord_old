@@ -7,6 +7,7 @@
 <script src="__PUBLIC__/js/init.js"></script>
 <script src="__PUBLIC__/js/cfm.js"></script>
 <script src="__PUBLIC__/js/disp.js"></script>
+<script src="__PUBLIC__/js/set_val.js"></script>
 <link rel="stylesheet" href="__PUBLIC__/css/header.css">
 <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
 <link rel="stylesheet" href="__PUBLIC__/css/tb_excp.css" />
@@ -34,7 +35,7 @@
     }
 </style>
 
-<body onload="init();disp()">
+<body onload="init();disp();set_val()">
     <div id="main">
         <div id="header_wrapper">
             <div id="header">
@@ -64,8 +65,8 @@
             </tr>
             <volist name="list" id="vo">
                 <tr>
-                    <td>{$vo.dat}</td>
-                    <td>{$vo.id}&nbsp;{$vo.nam}</td>
+                    <td name="dat">{$vo.dat}</td>
+                    <td name="id">{$vo.id}&nbsp;{$vo.nam}</td>
                     <td>{$vo.cla}：{$vo.num}号机</td>
                     <td>{:$vo[pc]?"&nbsp;电脑":""}{:$vo[wire]?"&nbsp;网线":""}{:$vo[box]?"&nbsp;电路箱":""}{:$vo[oscp]?"&nbsp;示波器":""}{:$vo[gen]?"&nbsp;函数发生器":""}</td>
                     <td>{$vo.delID} {$vo.delNam}</td>
@@ -73,11 +74,15 @@
                     <td>{$vo.delWay}</td>
                     <td>{$vo.delTim}</td>
                     <td>
-                        <form action="__URL__/deal_inc" style="display: inline-block;">
+                        <form action="__URL__/deal_inc" method="POST" style="display: inline-block;">
+                            <input type="hidden" name="vo_id1">
+                            <input type="hidden" name="vo_dat1">
                             <input type="hidden" name="delWay1">
                             <button name="btn1" type="submit" onclick="return cfm_inc(event);">处理不成功</button>
                         </form>
-                        <form action="__URL__/deal_com" style="display: inline-block;">
+                        <form action="__URL__/deal_com" method="POST" style="display: inline-block;">
+                            <input type="hidden" name="vo_id2">
+                            <input type="hidden" name="vo_dat2">
                             <input type="hidden" name="delWay2">
                             <button name="btn2" type="submit" onclick="return cfm_com(event);">处理成功</button>
                         </form>
