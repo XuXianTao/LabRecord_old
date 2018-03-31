@@ -8,6 +8,7 @@
     <input type="hidden" name="num_list" id="num_list" value="{$num_list}" />
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/main_bd.css">
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/page_change.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
@@ -48,37 +49,38 @@
             <div class="nav"><a href="main_m">主页</a></div>
             <div class="nav"><a href="fbsts">课堂反馈</a></div>
             <div class="nav"><a href="excpsts">异常情况</a></div>
+            <div class="nav"><a href="bd">故障统计</a></div>
         </div>
     </div>
-    <div>
-        <p class="title">各课室机器故障情况表</p>
-    </div>
-    <table border="1">
-        <tr>
-            <th>课室</th>
-            <th>机号</th>
-            <th>电脑故障数</th>
-            <th>导线故障数</th>
-            <th>电路箱故障数</th>
-            <th>示波器故障数</th>
-            <th>函数发生器故障数</th>
-            <th>其他故障数</th>
-        </tr>
-        <volist name="list" id="vo" offset='0' length='10'>
+    <div id="main">
+        <table border="1">
+            <caption>故障统计</caption>
             <tr>
-                <td name="cla">{$vo.cla}</td>
-                <td name="num">{$vo.num}</td>
-                <td>{$vo.pc}</td>
-                <td>{$vo.wire}</td>
-                <td>{$vo.box}</td>
-                <td>{$vo.oscp}</td>
-                <td>{$vo.gen}</td>
-                <td>{$vo.oth}</td>
+                <th>课室</th>
+                <th>机号</th>
+                <th>电脑故障数</th>
+                <th>导线故障数</th>
+                <th>电路箱故障数</th>
+                <th>示波器故障数</th>
+                <th>函数发生器故障数</th>
+                <th>其他故障数</th>
             </tr>
-        </volist>
-    </table>
-    <button name="btn1" type="submit" onclick="return page_down(event);">上一页</button>
-    <button name="btn2" type="submit" onclick="return page_up(event);">下一页</button>
+            <volist name="list" id="vo" offset="0" length="2">
+                <tr>
+                    <td name="cla">{$vo.cla}</td>
+                    <td name="num">{$vo.num}</td>
+                    <td>{$vo.pc}</td>
+                    <td>{$vo.wire}</td>
+                    <td>{$vo.box}</td>
+                    <td>{$vo.oscp}</td>
+                    <td>{$vo.gen}</td>
+                    <td>{$vo.oth}</td>
+                </tr>
+            </volist>
+        </table>
+        <button name="btn1" type="submit" onclick="return page_down(event);">上一页</button>
+        <button name="btn2" type="submit" onclick="return page_up(event);">下一页</button>
+    </div>
 </body>
 
 </html>
