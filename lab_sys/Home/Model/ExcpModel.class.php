@@ -40,8 +40,8 @@ class ExcpModel extends Model{
 	protected function getDelId() {
 		return I('delId');
 	}
-	protected function getDelNum() {
-		return I('delNum');
+	protected function getDelNam() {
+		return I('delNam');
 	}
 	protected function getSts() {
 		return I('sts');

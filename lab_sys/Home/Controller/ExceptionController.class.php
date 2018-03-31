@@ -14,7 +14,12 @@ class ExceptionController extends Controller {
     public function excp_(){
         $Exc=D('excp');
         if ($Exc->create()){
-            $Exc->add();
+            $data["dat"] = 'now()';
+            $data["id"] = $user['id'];
+            $data["cla"] = $user['cla'];
+            $data["nam"] = $user['nam'];
+            $data["sts"] = $user['sts'];
+            $Exc->add($data);
         }else $this->error($Exc->getError());
         //$this->show("<script>alert('感谢反馈');</script>");
         $this->redirect('main/main','',0.01,'<script>alert(\'感谢反馈\');</script>');

@@ -53,6 +53,8 @@
     <div>
         <p class="title">各课室机器故障情况表</p>
     </div>
+    <div>第{$page}页/共{$num}页</div>
+    
     <table border="1">
         <tr>
             <th>课室</th>
@@ -77,8 +79,11 @@
             </tr>
         </volist>
     </table>
-    <button name="btn1" type="submit" onclick="return page_down(event);">上一页</button>
-    <button name="btn2" type="submit" onclick="return page_up(event);">下一页</button>
+    <form action="__URL__/pagechange" method="POST" style="display: inline-block;">
+        <button name="btn" type="submit" value = "0">上一页</button>
+        <button name="btn" type="submit" value = "1">下一页</button>
+    </form>
+    
 </body>
 
 </html>
