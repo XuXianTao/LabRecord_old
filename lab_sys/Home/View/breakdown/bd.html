@@ -6,7 +6,7 @@
     <title>lab_sys</title>
     <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
-    <link rel="stylesheet" href="__PUBLIC__/css/main_log.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
     <style type="text/css">
@@ -41,8 +41,17 @@
             <div id="welcome">欢迎！</div>
         </div>
     </div>
-    <div><p class = "title">各课室机器故障情况表</p></div>
-    <table border = "1">
+    <div id="navigation_wrapper">
+        <div id="navigation">
+            <div class="nav"><a href="main_m">主页</a></div>
+            <div class="nav"><a href="fbsts">课堂反馈</a></div>
+            <div class="nav"><a href="excpsts">异常情况</a></div>
+        </div>
+    </div>
+    <div>
+        <p class="title">各课室机器故障情况表</p>
+    </div>
+    <table border="1">
         <tr>
             <th>课室</th>
             <th>机号</th>
@@ -55,8 +64,8 @@
         </tr>
         <volist name="list" id="vo" offset="{$page}" length='10'>
             <tr>
-                <td name = "cla">{$vo.cla}</td>
-                <td name = "num">{$vo.num}</td>
+                <td name="cla">{$vo.cla}</td>
+                <td name="num">{$vo.num}</td>
                 <td>{$vo.pc}</td>
                 <td>{$vo.wire}</td>
                 <td>{$vo.box}</td>
@@ -67,13 +76,13 @@
         </volist>
     </table>
     <form action="__URL__/page_change" method="POST" style="display: inline-block;">
-        <input name = "page_change" type = "hidden" value = 0/>
-        <button name="btn1" type="submit" >上一页</button>
+        <input name="page_change" type="hidden" value=0 />
+        <button name="btn1" type="submit">上一页</button>
     </form>
     <form action="__URL__/page_change" method="POST" style="display: inline-block;">
-        <input name = "page_change" type = "hidden" value = 1/>
-        <button name="btn2" type="submit" >下一页</button>
-    </form> 
+        <input name="page_change" type="hidden" value=1 />
+        <button name="btn2" type="submit">下一页</button>
+    </form>
 </body>
 
 </html>

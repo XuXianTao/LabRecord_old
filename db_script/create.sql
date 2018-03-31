@@ -62,9 +62,38 @@ create table bd (
     num		int not null,				#机号
     pc		int,						#电脑故障数
     wire	int,						#导线故障数
-    box		int,						#电路箱故障数
+    box		int,						#电路箱故障数 
     oscp	int,						#示波器故障数
     gen		int,						#函数发生器故障数
-    oth		int,						#其他故障数
-    des		varchar(200)				#描述
+    oth		int							#其他故障数
 ) engine=InnoDB;
+
+DELIMITER //
+create trigger `tri_insert_bd` after insert on `excp` for each row
+begin
+    select count(*) into @cnt from bd where cla=new.cla and num=new.num;
+    if @cnt<>0 then
+		if new.pc<>0 then
+			update bd set pc=pc+1 where cla=new.cla and num=new.num;
+		end if;
+		if new.wire<>0 then
+			update bd set wire=wire+1 where cla=new.cla and num=new.num;
+		end if;
+		if new.box<>0 then
+			update bd set box=box+1 where cla=new.cla and num=new.num;
+		end if;
+        if new.oscp<>0 then
+			update bd set oscp=oscp+1 where cla=new.cla and num=new.num;
+		end if;
+        if new.gen<>0 then
+			update bd set gen=gen+1 where cla=new.cla and num=new.num;
+		end if;
+        if new.oth<>0 then
+			update bd set oth=oth+1 where cla=new.cla and num=new.num;
+		end if;
+    else
+		insert into bd(cla,num,pc,wire,box,oscp,gen,oth) values(new.cla,new.num,new.pc,new.wire,new.box,new.oscp,new.gen,new.oth);
+    end if;
+end;
+//
+DELIMITER ;

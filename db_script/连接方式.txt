@@ -1,5 +1,5 @@
-NavicatÁ¬½Ó£º
+Navicatè¿žæŽ¥ï¼š
 172.18.92.48:3306
 
-MySQLÃüÁîÐÐÁ¬½Ó
-mysql -h 172.18.92.48 -P 3306 -u ¡¾ÓÃ»§Ãû¡¿ -p
+MySQLå‘½ä»¤è¡Œè¿žæŽ¥
+mysql -h 172.18.92.48 -P 3306 -u ã€ç”¨æˆ·åã€‘ -p

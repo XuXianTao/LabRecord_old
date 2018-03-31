@@ -25,6 +25,9 @@ trait JUMP_HTML {
 	public function excpsts(){
 		$this->redirect('exception/excpsts');
 	}
+	public function bd() {
+		$this->redirect('breakdown/bd')
+	}
 }
 
 ?>
