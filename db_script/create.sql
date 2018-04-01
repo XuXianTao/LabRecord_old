@@ -14,8 +14,6 @@ create table man (
 ) engine=InnoDB;
 #学生
 create table stu (
-	cla 	varchar(200) not null,		#课室
-    num		int not null,				#机号
     id		int not null primary key,	#学号
     nam 	varchar(200) not null,		#名字
     wDay	int,						#上课是周几，1一，2二...
@@ -66,6 +64,11 @@ create table bd (
     oscp	int,						#示波器故障数
     gen		int,						#函数发生器故障数
     oth		int							#其他故障数
+) engine=InnoDB;
+#IP表
+create table ip (
+	ip		varchar(200) not null,		#ip地址
+    loc		varchar(200) not null		#位置
 ) engine=InnoDB;
 
 DELIMITER //
