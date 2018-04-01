@@ -68,7 +68,8 @@ create table bd (
 #IP表
 create table ip (
 	ip		varchar(200) not null,		#ip地址
-    loc		varchar(200) not null		#位置
+    cla     varchar(200) not null,      #课室
+    num		varchar(200) not null		#机位
 ) engine=InnoDB;
 
 DELIMITER //
