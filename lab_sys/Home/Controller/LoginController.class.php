@@ -11,11 +11,21 @@ class LoginController extends Controller {
     	$account=$_POST['num'];
     	if ($account){
 			$Exc=M('stu');
-			$user=$Exc->where(" id=$account ")->select();
+            $user=$Exc->where(" id=$account ")->select();
+            $ip = get_client_ip();
+            $Exc=M('ip');
+            $loc = $Exc->where(" ip='$ip' ")->select();
 			if ($user){
-				session('user',$user[0]);
-				$this->assign('user',$user[0]);
-	      		$this->redirect('main/main');
+                //if($loc){
+                    $cla = 'cla';
+                    $num = 'num';
+                    cookie('cla',$cla);
+                    cookie('num',$num);
+                    session('user',$user[0]);
+                    $this->assign('user',$user[0]);
+                    $this->redirect('main/main');
+                //}else
+                 //   $this->error('不存在的ip地址');
 			}else{
 				$this->error('学号不存在');
 			}

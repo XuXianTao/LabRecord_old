@@ -1,0 +1,1397 @@
+[ 2018-04-02T00:46:11+08:00 ] ::1 /lab_sys/index.php/Home/Breakdown/main_m
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.032626s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003320s ]
+
+[ 2018-04-02T00:46:11+08:00 ] ::1 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+
+[ 2018-04-02T00:46:11+08:00 ] ::1 /lab_sys/index.php/Home/Main/logm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+
+[ 2018-04-02T00:46:11+08:00 ] ::1 /lab_sys/index.php/Home/login/logm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.039412s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.039548s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015724s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.025009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025107s ]
+
+[ 2018-04-02T00:46:21+08:00 ] ::1 /lab_sys/index.php/Home/login/log.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001305s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001033s ]
+
+[ 2018-04-02T00:46:29+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001970s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0306s ]
+SQL: SELECT * FROM `stu` WHERE (  id=123  )  [ RunTime:0.0139s ]
+ERR: 1146:Table 'lab_sys.ip' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ip`
+ERR: 1146:Table 'lab_sys.ip' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `ip`
+
+[ 2018-04-02T00:49:55+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001609s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `stu` WHERE (  id=123  )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0087s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.0.0  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=0.0.0.0  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.0.0  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=0.0.0.0  ) 
+
+[ 2018-04-02T00:50:09+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000829s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `stu` WHERE (  id=123  )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0586s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.0.0  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=0.0.0.0  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.0.0  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=0.0.0.0  ) 
+
+[ 2018-04-02T10:04:14+08:00 ] ::1 /lab_sys/index.php/Home/Breakdown/main_m
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.018695s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006499s ]
+
+[ 2018-04-02T10:04:14+08:00 ] ::1 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001214s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001739s ]
+
+[ 2018-04-02T10:04:14+08:00 ] ::1 /lab_sys/index.php/Home/Main/logm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002692s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002834s ]
+
+[ 2018-04-02T10:04:14+08:00 ] ::1 /lab_sys/index.php/Home/login/logm.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001304s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001933s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.040183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.040289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111071s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.018363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004458s ]
+
+[ 2018-04-02T10:04:21+08:00 ] ::1 /lab_sys/index.php/Home/login/log.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000881s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033587s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033646s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001373s ]
+
+[ 2018-04-02T10:04:37+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002453s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003925s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0595s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0207s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0\'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0\'  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0\'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0\'  ) 
+
+[ 2018-04-02T10:04:58+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `ip` WHERE (  ip='0.0.0.0'  )  [ RunTime:0.0354s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042068s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003875s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004003s ]
+
+[ 2018-04-02T10:10:23+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000932s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0322s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0893s ]
+SQL: SELECT * FROM `ip` WHERE (  ip='0.0.0.0'  )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002852s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002932s ]
+
+[ 2018-04-02T10:10:33+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001129s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001707s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0457s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.1458s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0'  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0'  ) 
+
+[ 2018-04-02T10:12:32+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0068s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0'  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0'  ) 
+
+[ 2018-04-02T10:12:38+08:00 ] ::1 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0087s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0'  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'0.0.0.0'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'0.0.0.0'  ) 
+
+[ 2018-04-02T10:14:21+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+NOTIC: [8] Undefined index: num D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\LoginController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000054s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+
+[ 2018-04-02T10:14:32+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000822s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001788s ]
+
+[ 2018-04-02T10:14:45+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001897s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001887s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0055s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'172.19.103.215'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'172.19.103.215'  ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '\'172.19.103.215'  )' at line 1
+ [ SQL语句 ] : SELECT * FROM `ip` WHERE (  ip=\'172.19.103.215'  ) 
+
+[ 2018-04-02T10:43:16+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001129s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001430s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301005  )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `ip` WHERE (  ip='172.19.103.215'  )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010968s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001058s ]
+
+[ 2018-04-02T10:43:30+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/logm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001358s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001586s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009234s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001597s ]
+
+[ 2018-04-02T10:43:33+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/logm_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `man` [ RunTime:0.0417s ]
+SQL: SELECT * FROM `man` WHERE ( id=10000 )  [ RunTime:0.0101s ]
+
+[ 2018-04-02T10:43:33+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/logm_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000961s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001612s ]
+SQL: SHOW COLUMNS FROM `man` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `man` WHERE ( id=10000 )  [ RunTime:0.0004s ]
+
+[ 2018-04-02T10:43:34+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001108s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001376s ]
+
+[ 2018-04-02T10:43:40+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/fbsts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+
+[ 2018-04-02T10:43:41+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/fbsts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000962s ]
+
+[ 2018-04-02T11:02:57+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/bd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000137s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001421s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001685s ]
+
+[ 2018-04-02T11:02:57+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/breakdown/bd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `bd` [ RunTime:0.0258s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bd` LIMIT 1   [ RunTime:0.0424s ]
+SQL: SELECT * FROM `bd` LIMIT 0,2   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined variable: num_list D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\186eed250df429a82aa88064cb64cdc6.php 第 14 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002980s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003566s ]
+
+[ 2018-04-02T11:02:59+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/breakdown/fbsts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+
+[ 2018-04-02T11:02:59+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/fbsts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001151s ]
+
+[ 2018-04-02T11:10:01+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/fbsts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002329s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002720s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005165s ]
+
+[ 2018-04-02T11:10:03+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/main_m
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+
+[ 2018-04-02T11:10:03+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000793s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001183s ]
+
+[ 2018-04-02T11:10:24+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main_m
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001654s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000986s ]
+
+[ 2018-04-02T11:10:35+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001394s ]
+
+[ 2018-04-02T11:11:27+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301004  )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `ip` WHERE (  ip='172.19.103.215'  )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\LoginController.class.php 第 20 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\LoginController.class.php 第 21 行.
+
+[ 2018-04-02T11:11:27+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001757s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002686s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044321s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001869s ]
+
+[ 2018-04-02T11:11:29+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/fb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000943s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001840s ]
+
+[ 2018-04-02T11:11:29+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/fb.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001046s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001545s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.094612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003050s ]
+
+[ 2018-04-02T11:11:35+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/feedback/excp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+
+[ 2018-04-02T11:11:35+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001474s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001479s ]
+
+[ 2018-04-02T11:11:41+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0569s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1015 行.
+NOTIC: [8] Undefined index: validate D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Use of undefined constant nam - assumed 'nam' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 32 行.
+NOTIC: [2] Use of undefined constant cla - assumed 'cla' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [8] Undefined index: cla D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [2] Use of undefined constant num - assumed 'num' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: num D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+ERR: Think\Model:getDelNam方法不存在！
+
+[ 2018-04-02T11:12:15+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0107s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1015 行.
+NOTIC: [8] Undefined index: validate D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Use of undefined constant nam - assumed 'nam' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 32 行.
+NOTIC: [2] Use of undefined constant cla - assumed 'cla' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [8] Undefined index: cla D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [2] Use of undefined constant num - assumed 'num' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: num D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: oth D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\ExceptionController.class.php 第 29 行.
+ERR: 1048:Column 'cla' cannot be null
+ [ SQL语句 ] : INSERT INTO `excp` (`cla`,`num`,`id`,`nam`,`sts`,`dat`,`pc`,`wire`,`box`,`oscp`,`gen`,`oth`) VALUES (NULL,NULL,'10000','MAN','未处理','now()','0','1','1','1','1','0')
+ERR: 1048:Column 'cla' cannot be null
+ [ SQL语句 ] : INSERT INTO `excp` (`cla`,`num`,`id`,`nam`,`sts`,`dat`,`pc`,`wire`,`box`,`oscp`,`gen`,`oth`) VALUES (NULL,NULL,'10000','MAN','未处理','now()','0','1','1','1','1','0')
+
+[ 2018-04-02T11:13:59+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002290s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001369s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001403s ]
+
+[ 2018-04-02T11:14:19+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001820s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301004  )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `ip` WHERE (  ip='172.19.103.215'  )  [ RunTime:0.0004s ]
+
+[ 2018-04-02T11:14:19+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007838s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2018-04-02T11:14:21+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/excp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+
+[ 2018-04-02T11:14:21+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008577s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001227s ]
+
+[ 2018-04-02T11:14:38+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003971s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0053s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1015 行.
+NOTIC: [8] Undefined index: validate D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Use of undefined constant nam - assumed 'nam' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 32 行.
+NOTIC: [2] Use of undefined constant cla - assumed 'cla' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [8] Undefined index: cla D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [2] Use of undefined constant num - assumed 'num' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: num D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: gen D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\ExceptionController.class.php 第 28 行.
+NOTIC: [8] Undefined index: oth D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\ExceptionController.class.php 第 29 行.
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`lab_sys`.`excp`, CONSTRAINT `excp_ibfk_1` FOREIGN KEY (`id`) REFERENCES `stu` (`id`))
+ [ SQL语句 ] : INSERT INTO `excp` (`cla`,`num`,`id`,`nam`,`sts`,`dat`,`pc`,`wire`,`box`,`oscp`,`gen`,`oth`) VALUES ('cla','0','10000','MAN','未处理','now()','0','1','1','1','0','0')
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`lab_sys`.`excp`, CONSTRAINT `excp_ibfk_1` FOREIGN KEY (`id`) REFERENCES `stu` (`id`))
+ [ SQL语句 ] : INSERT INTO `excp` (`cla`,`num`,`id`,`nam`,`sts`,`dat`,`pc`,`wire`,`box`,`oscp`,`gen`,`oth`) VALUES ('cla','0','10000','MAN','未处理','now()','0','1','1','1','0','0')
+
+[ 2018-04-02T11:16:24+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001308s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001883s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0087s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1015 行.
+NOTIC: [8] Undefined index: validate D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Use of undefined constant nam - assumed 'nam' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 32 行.
+NOTIC: [2] Use of undefined constant cla - assumed 'cla' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [8] Undefined index: cla D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 35 行.
+NOTIC: [2] Use of undefined constant num - assumed 'num' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: num D:\xampp\htdocs\lab_sys\lab_sys\Home\Model\ExcpModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: gen D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\ExceptionController.class.php 第 28 行.
+NOTIC: [8] Undefined index: oth D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\ExceptionController.class.php 第 29 行.
+SQL: INSERT INTO `excp` (`cla`,`num`,`id`,`nam`,`sts`,`dat`,`pc`,`wire`,`box`,`oscp`,`gen`,`oth`) VALUES ('cla','0','16301004','蔡泽帆','未处理','now()','0','1','1','1','0','0') [ RunTime:0.0922s ]
+
+[ 2018-04-02T11:16:25+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011762s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001801s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001590s ]
+
+[ 2018-04-02T11:16:34+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/logm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001304s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001848s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001768s ]
+
+[ 2018-04-02T11:16:38+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/logm_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `man` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `man` WHERE ( id=10000 )  [ RunTime:0.0004s ]
+
+[ 2018-04-02T11:16:38+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010086s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001736s ]
+
+[ 2018-04-02T11:16:38+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/logm_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000929s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001580s ]
+SQL: SHOW COLUMNS FROM `man` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `man` WHERE ( id=10000 )  [ RunTime:0.0004s ]
+
+[ 2018-04-02T11:16:38+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001355s ]
+
+[ 2018-04-02T11:16:40+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/bd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001452s ]
+
+[ 2018-04-02T11:16:40+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/breakdown/bd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001479s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001746s ]
+SQL: SHOW COLUMNS FROM `bd` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bd` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `bd` LIMIT 0,2   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [8] Undefined variable: num_list D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\186eed250df429a82aa88064cb64cdc6.php 第 14 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001577s ]
+
+[ 2018-04-02T11:16:42+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/breakdown/main_m
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001621s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+
+[ 2018-04-02T11:16:42+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main_m.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2018-04-02T11:16:44+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/excpsts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001035s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001440s ]
+
+[ 2018-04-02T11:16:44+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excpsts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001026s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `excp`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069387s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003163s ]
+
+[ 2018-04-02T11:19:43+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004614s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003108s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001834s ]
+
+[ 2018-04-02T11:19:56+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Login/log_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002301s ]
+SQL: SHOW COLUMNS FROM `stu` [ RunTime:0.7413s ]
+SQL: SELECT * FROM `stu` WHERE (  id=16301004  )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `ip` [ RunTime:0.3471s ]
+SQL: SELECT * FROM `ip` WHERE (  ip='172.19.103.215'  )  [ RunTime:0.0010s ]
+
+[ 2018-04-02T11:19:56+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001159s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001750s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001224s ]
+
+[ 2018-04-02T11:19:57+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/main/excp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+
+[ 2018-04-02T11:19:57+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excp.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2018-04-02T11:20:32+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excpsts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001490s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `excp`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001318s ]
+
+[ 2018-04-02T11:20:49+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/Exception/deal_com
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0084s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\xampp\htdocs\lab_sys\ThinkPHP\Library\Think\Model.class.php 第 445 行.
+SQL: UPDATE `excp` SET `delId`='10000',`delNam`='MAN',`sts`='处理成功',`delWay`='asffa',`delTim`='now()' WHERE ( dat = "2018-03-28 21:52'MAN'5" and id = 16301056 ) [ RunTime:0.1351s ]
+
+[ 2018-04-02T11:20:51+08:00 ] 172.19.103.215 /lab_sys/index.php/Home/exception/excpsts.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000652s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `excp` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `excp`  [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+NOTIC: [2] Use of undefined constant pc - assumed 'pc' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant wire - assumed 'wire' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant box - assumed 'box' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant oscp - assumed 'oscp' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [2] Use of undefined constant gen - assumed 'gen' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 77 行.
+NOTIC: [8] Undefined index: delID D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delNam D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 78 行.
+NOTIC: [8] Undefined index: delWay D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 80 行.
+NOTIC: [8] Undefined index: delTim D:\xampp\htdocs\lab_sys\lab_sys\Runtime\Cache\Home\a5a14055ce9fb5b618757cc4711010b2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001391s ]
+

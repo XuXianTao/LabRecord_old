@@ -14,7 +14,21 @@ class ExceptionController extends Controller {
     public function excp_(){
         $Exc=D('excp');
         if ($Exc->create()){
-            $Exc->add();
+            $user = session('user');
+            $data['cla'] = cookie('cla');
+            $data['num'] = cookie('num');
+            $data['id'] = $user['id'];
+            $data['nam'] = $user['nam'];
+            $data['sts'] = '未处理';
+            $data['dat'] = 'now()';
+            $data['pc'] = ($_POST['pc']=='pc')?"1":"0";
+            $data['wire'] = ($_POST['wire']=='wire')?"1":"0";
+            $data['box'] = ($_POST['box']=='box')?"1":"0";
+            $data['oscp'] = ($_POST['oscp']=='oscp')?"1":"0";
+            $data['gen'] = ($_POST['gen']=='gen')?"1":"0";
+            $data['oth'] = ($_POST['oth']=='oth')?"1":"0";
+            $data['pc'] = $_POST['pc'];
+            $Exc->add($data);
         }else $this->error($Exc->getError());
         //$this->show("<script>alert('感谢反馈');</script>");
         $this->redirect('main/main','',0.01,'<script>alert(\'感谢反馈\');</script>');
