@@ -51,13 +51,14 @@
             <div class="nav"><a href="main_m">主页</a></div>
             <div class="nav"><a href="fbsts">课堂反馈</a></div>
             <div class="nav"><a href="excpsts">异常情况</a></div>
+            <div class="nav"><a href="bd">故障统计</a></div>
         </div>
     </div>
     <div>
         <p class="title">各课室机器故障情况表</p>
     </div>
     <div>第{$page}页/共{$num}页</div>
-    
+
     <table border="1">
         <tr>
             <th>课室</th>
@@ -69,7 +70,7 @@
             <th>函数发生器故障数</th>
             <th>其他故障数</th>
         </tr>
-        <volist name="list" id="vo" offset='0' length='10'>
+        <volist name="list" id="vo" offset="0" length="10">
             <tr>
                 <td name="cla">{$vo.cla}</td>
                 <td name="num">{$vo.num}</td>
@@ -83,10 +84,11 @@
         </volist>
     </table>
     <form action="__URL__/bd" method="GET" style="display: inline-block;">
-        <button name="btn" type="submit" value = "{$page-1}" >上一页</button>
-        <button name="btn" type="submit" value = "{$page+1}">下一页</button>
-        
+        <button name="btn" type="submit" value="{$page-1}">上一页</button>
+        <button name="btn" type="submit" value="{$page+1}">下一页</button>
+
     </form>
-    
+
 </body>
+
 </html>
