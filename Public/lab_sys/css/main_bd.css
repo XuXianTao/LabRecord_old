@@ -2,15 +2,28 @@
     width: 980px;
     margin: 0 auto;
     text-align: center;
-    padding: 100px;
+    padding: 50px;
 }
 
 table {
     border-collapse: collapse;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 
-tr {
+tr,
+th {
     text-align: center;
     line-height: 30px;
+}
+
+tr:first-child,
+th:first-child,
+tr:nth-child(2),
+th:nth-child(2) {
+    width: 50px;
+}
+
+tr:nth-child(n+3),
+th:nth-child(n+3) {
+    width: 160px;
 }

@@ -54,41 +54,40 @@
             <div class="nav"><a href="bd">故障统计</a></div>
         </div>
     </div>
-    <div>
-        <p class="title">各课室机器故障情况表</p>
-    </div>
-    <div>第{$page}页/共{$num}页</div>
-
-    <table border="1">
-        <tr>
-            <th>课室</th>
-            <th>机号</th>
-            <th>电脑故障数</th>
-            <th>导线故障数</th>
-            <th>电路箱故障数</th>
-            <th>示波器故障数</th>
-            <th>函数发生器故障数</th>
-            <th>其他故障数</th>
-        </tr>
-        <volist name="list" id="vo" offset="0" length="10">
+    <div id="main">
+        <table border="1">
+            <caption>机器故障统计表</caption>
             <tr>
-                <td name="cla">{$vo.cla}</td>
-                <td name="num">{$vo.num}</td>
-                <td>{$vo.pc}</td>
-                <td>{$vo.wire}</td>
-                <td>{$vo.box}</td>
-                <td>{$vo.oscp}</td>
-                <td>{$vo.gen}</td>
-                <td>{$vo.oth}</td>
+                <th>课室</th>
+                <th>机号</th>
+                <th>电脑故障数</th>
+                <th>导线故障数</th>
+                <th>电路箱故障数</th>
+                <th>示波器故障数</th>
+                <th>函数发生器故障数</th>
+                <th>其他故障数</th>
             </tr>
-        </volist>
-    </table>
-    <form action="__URL__/bd" method="GET" style="display: inline-block;">
-        <button name="btn" type="submit" value="{$page-1}">上一页</button>
-        <button name="btn" type="submit" value="{$page+1}">下一页</button>
-
-    </form>
-
+            <volist name="list" id="vo" offset="0" length="10">
+                <tr>
+                    <td name="cla">{$vo.cla}</td>
+                    <td name="num">{$vo.num}</td>
+                    <td>{$vo.pc}</td>
+                    <td>{$vo.wire}</td>
+                    <td>{$vo.box}</td>
+                    <td>{$vo.oscp}</td>
+                    <td>{$vo.gen}</td>
+                    <td>{$vo.oth}</td>
+                </tr>
+            </volist>
+        </table>
+        <br>
+        <div>第{$page}页/共{$num}页</div>
+        <br>
+        <form action="__URL__/bd" method="GET" style="display: inline-block;">
+            <button name="btn" type="submit" value="{$page-1}">上一页</button>
+            <button name="btn" type="submit" value="{$page+1}">下一页</button>
+        </form>
+    </div>
 </body>
 
 </html>
