@@ -12,7 +12,7 @@ class BreakdownController extends Controller {
         $bd=M('bd');
         $num_list = $bd->count();
         $num = ceil($num_list / 2);
-        if($page>$num_list)$page-=2;
+        if($page>=$num_list)$page-=2;
         $this->assign('page',$page/2+1);
         $list=$bd->limit($page,2)->select();
         $this->assign('list',$list);
