@@ -1,21 +1,24 @@
-function page_down(event) {
-    var offset = document.getElementsByName("vo");
-    alert(offset);
-    if (offset >= 2) {
-        offset = list.offset - 2;
+function pagedown(event) {
+    var offset = document.getElementsByName("btn");
+    if ({$page} > 1)
+    {
+        alert({$page});
+        var page = {$page} - 1;
+        offset.value = page;
     } else {
         alert('已是第一页');
+        offset.value = 1;
     }
 }
 
-function page_up(event) {
-    var offset = document.getElementById("vo");
-    var num_list = jQuery("#num_list")[0].value;
-    alert(offset);
-    alert(num_list);
-    if (offset < num_list) {
-        offset = offset + 2;
+function pageup(event) {
+    //var offset = document.getElementsByName("btn");
+    alert({$page});
+    if ({$page} < {$num}) {
+        var page = {$page} + 1;
+        offset.value = page;
     } else {
         alert('已是最后一页');
+        offset.value = {$num};
     }
 }

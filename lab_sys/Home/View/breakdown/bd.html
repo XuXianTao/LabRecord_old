@@ -82,11 +82,10 @@
             </tr>
         </volist>
     </table>
-    <form action="__URL__/pagechange" method="POST" style="display: inline-block;">
-        <button name="btn" type="submit" value = "0">上一页</button>
-        <button name="btn" type="submit" value = "1">下一页</button>
+    <form action="__URL__/bd" method="GET" style="display: inline-block;">
+        <button name="btn" type="submit" value = "{$page-1}" >上一页</button>
+        <button name="btn" type="submit" value = "{$page+1}">下一页</button>
     </form>
     
 </body>
-
 </html>

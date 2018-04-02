@@ -32,10 +32,10 @@ class ExcpModel extends Model{
 		return session('user')[nam];
 	}
 	protected function getCla() {
-		return session('user')[cla];
+		return cookie('cla');
 	}
 	protected function getNum() {
-		return session('user')[num];
+		return cookie('num');
 	}
 	protected function getDelId() {
 		return I('delId');
@@ -44,7 +44,7 @@ class ExcpModel extends Model{
 		return I('delNam');
 	}
 	protected function getSts() {
-		return I('sts');
+		return '未处理';
 	}
 	protected function getDelWay() {
 		return I('delWay');

@@ -17,15 +17,15 @@ class LoginController extends Controller {
             $loc = $Exc->where(" ip='$ip' ")->select();
 			if ($user){
                 //if($loc){
-                    $cla = 'cla';
-                    $num = 'num';
+                    $cla = 'B103';
+                    $num = '4';
                     cookie('cla',$cla);
                     cookie('num',$num);
                     session('user',$user[0]);
                     $this->assign('user',$user[0]);
                     $this->redirect('main/main');
                 //}else
-                 //   $this->error('不存在的ip地址');
+                    //$this->error('不存在的ip地址 '.$ip);
 			}else{
 				$this->error('学号不存在');
 			}

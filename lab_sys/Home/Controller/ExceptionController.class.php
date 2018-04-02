@@ -12,23 +12,9 @@ class ExceptionController extends Controller {
         }else{$this->redirect('login/log');}
     }   
     public function excp_(){
-        $Exc=D('excp');
+        $Exc=D('excp');//在model中自动处理post的数值
         if ($Exc->create()){
-            $user = session('user');
-            $data['cla'] = cookie('cla');
-            $data['num'] = cookie('num');
-            $data['id'] = $user['id'];
-            $data['nam'] = $user['nam'];
-            $data['sts'] = '未处理';
-            $data['dat'] = 'now()';
-            $data['pc'] = ($_POST['pc']=='pc')?"1":"0";
-            $data['wire'] = ($_POST['wire']=='wire')?"1":"0";
-            $data['box'] = ($_POST['box']=='box')?"1":"0";
-            $data['oscp'] = ($_POST['oscp']=='oscp')?"1":"0";
-            $data['gen'] = ($_POST['gen']=='gen')?"1":"0";
-            $data['oth'] = ($_POST['oth']=='oth')?"1":"0";
-            $data['pc'] = $_POST['pc'];
-            $Exc->add($data);
+            $Exc->add();
         }else $this->error($Exc->getError());
         //$this->show("<script>alert('感谢反馈');</script>");
         $this->redirect('main/main','',0.01,'<script>alert(\'感谢反馈\');</script>');
@@ -54,7 +40,7 @@ class ExceptionController extends Controller {
             $data['delNam'] = $admin['nam'];
             $data['sts'] = '处理不成功';
             $data['delWay'] = $_POST['delWay1'];
-            $data['delTim'] = 'now()';
+            $data['delTim'] = date('Y-m-d H:i:s',time());
             $excp->where("dat = \"$vo_dat\" and id = $vo_id")->save($data);
             $this->redirect('exception/excpsts','',0.01,'<script>alert(\'确认已经进行处理，但处理不成功\');</script>');
         }else{
@@ -72,7 +58,7 @@ class ExceptionController extends Controller {
             $data['delNam'] = $admin['nam'];
             $data['sts'] = '处理成功';
             $data['delWay'] = $_POST['delWay2'];
-            $data['delTim'] = 'now()';
+            $data['delTim'] = date('Y-m-d H:i:s',time());
             $excp->where("dat = \"$vo_dat\" and id = $vo_id")->save($data);
             $this->redirect('exception/excpsts','',0.01,'<script>alert(\'确认已经进行处理，并处理成功\');</script>');
         }else{
