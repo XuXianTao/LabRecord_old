@@ -9,11 +9,9 @@ class ExcpModel extends Model{
 		array('nam','getNam',1,"callback"),
 		array('cla','getCla',1,"callback"),
 		array('num','getNum',1,"callback"),
-		array('delId','getDelId',1,"callback"),
 		array('delNam','getDelNam',1,"callback"),
 		array('sts','getSts',1,"callback"),
 		array('delWay','getDelWay',1,"callback"),
-		array('delTim','getDelTim',1,"callback"),
 		array('pc','getPc',1,"callback"),
 		array('wire','getWire',1,"callback"),
 		array('box','getBox',1,"callback"),
@@ -50,7 +48,7 @@ class ExcpModel extends Model{
 		return I('delWay');
 	}
 	protected function getDelTim() {
-		return I('delTim');
+		return '';
 	}
 	protected function getPc() {
 		return I('pc')?1:0;
