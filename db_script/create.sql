@@ -70,6 +70,7 @@ create table ip (
 	ip		varchar(200) not null,		#ip地址
     cla     varchar(200) not null,      #课室
     num		varchar(200) not null		#机位
+    
 ) engine=InnoDB;
 
 DELIMITER //

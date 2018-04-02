@@ -4,6 +4,7 @@ create table ip (
     cla,num		varchar(200) not null		#位置
 ) engine=InnoDB;
 */
+
 insert into ip(ip,cla,num) values('172.18.204.101','C103','01号机');
 insert into ip(ip,cla,num) values('172.18.204.102','C103','02号机');
 insert into ip(ip,cla,num) values('172.18.204.103','C103','03号机');
