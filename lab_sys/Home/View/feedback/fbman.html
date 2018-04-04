@@ -7,7 +7,7 @@
 <script src="__PUBLIC__/js/init.js"></script>
 <link rel="stylesheet" href="__PUBLIC__/css/header.css">
 <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-<link rel="stylesheet" href="__PUBLIC__/css/main_fbsts.css" />
+<link rel="stylesheet" href="__PUBLIC__/css/main_fbman.css" />
 <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
 <input type="hidden" name="ip" id="ip" />
 <style type="text/css">
@@ -50,27 +50,26 @@
         </div>
     </div>
     <div id="main">
-        <table id="stat_data" border="1">
-            <caption>统计数据</caption>
-            <tr>
-                <td>标题</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>问题1</td>
-                <td>问题1反馈</td>
-            </tr>
-        </table>
-        <table id="stu_list" border="1">
-            <caption>未上交名单</caption>
-            <tr>
-                <td>学号</td>
-                <td>姓名</td>
-                <td>上课课室</td>
-                <td>任课教师</td>
-                <td>上课时段</td>
-            </tr>
-        </table>
+        <form>
+            <div class="btn_group">
+                <button id="btn1" class="btn" type="submit" name="btn_fbcre">创建问卷</button>
+                <button id="btn2" class="btn" type="submit" name="btn_fbrls">发放问卷</button>
+            </div>
+            <table>
+                <tr>
+                    <th>问卷</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="fbupdt"><button>修改</button></a></td>
+                    <td><button type="submit">删除</button></td>
+                    <td><a href="fbsts"><button>查看统计</button></a></td>
+                </tr>
+            </table>
+        </form>
     </div>
 </body>
 

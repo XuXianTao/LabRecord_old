@@ -1,28 +1,40 @@
 <?php
 namespace Home\Controller;
 trait JUMP_HTML {
-	public function main(){
+	public function main() {
 		$this->redirect('main/main');
 	}
-	public function main_m(){
+	public function main_m() {
 		$this->redirect('main/main_m');
 	}
-	public function log(){
+	public function log() {
 		$this->redirect('login/log');
 	}
-	public function logm(){
+	public function logm() {
 		$this->redirect('login/logm');
 	}
-	public function fb(){
+	public function fb() {
 		$this->redirect('feedback/fb');
 	}
-	public function fbsts(){
+	public function fbcre() {
+		$this->redirect('feedback/fbcre');
+	}
+	public function fbrls() {
+		$this->redirect('feedback/fbrls');
+	}
+	public function fbsts() {
 		$this->redirect('feedback/fbsts');
 	}
-	public function excp(){
+	public function fbupdt() {
+		$this->redirect('feedback/fbupdt');
+	}
+	public function fbman() {
+		$this->redirect('feedback/fbman');
+	}
+	public function excp() {
 		$this->redirect('exception/excp');
 	}
-	public function excpsts(){
+	public function excpsts() {
 		$this->redirect('exception/excpsts');
 	}
 	public function bd() {

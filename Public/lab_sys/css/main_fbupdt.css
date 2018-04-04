@@ -3,15 +3,19 @@
     margin: 40px auto;
 }
 
-.choice,
+.qu {
+    width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    width: 50%;
+}
+
 .btn_group {
     width: 80%;
     margin: 0 auto;
     padding: 10px;
-}
-
-.choice {
-    text-align: center;
 }
 
 .btn {

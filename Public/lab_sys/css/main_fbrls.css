@@ -6,12 +6,8 @@
 .choice,
 .btn_group {
     width: 80%;
-    margin: 0 auto;
     padding: 10px;
-}
-
-.choice {
-    text-align: center;
+    margin: 0 auto;
 }
 
 .btn {
