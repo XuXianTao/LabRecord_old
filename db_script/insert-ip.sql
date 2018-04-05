@@ -1,10 +1,11 @@
 /*
 create table ip (
 	ip		varchar(200) not null,		#ip地址
-    cla,num		varchar(200) not null		#位置
+    cla     varchar(200) not null,      #课室
+    num		varchar(200) not null		#座位号
 ) engine=InnoDB;
 */
-
+use `lab_sys`;
 insert into ip(ip,cla,num) values('172.18.204.101','C103','01号机');
 insert into ip(ip,cla,num) values('172.18.204.102','C103','02号机');
 insert into ip(ip,cla,num) values('172.18.204.103','C103','03号机');
@@ -166,3 +167,5 @@ insert into ip(ip,cla,num) values('172.18.203.207','C104','77号机');
 insert into ip(ip,cla,num) values('172.18.203.208','C104','78号机');
 insert into ip(ip,cla,num) values('172.18.203.209','C104','79号机');
 insert into ip(ip,cla,num) values('172.18.203.210','C104','80号机');
+
+select * from ip;

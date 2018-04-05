@@ -11,15 +11,13 @@ create table man (
 ) engine=InnoDB;
 */
 use `lab_sys`;
-select * from man;
-insert into man(`typ`,`id`,`nam`) values('0','10000','MAN');
 
+insert into man(`typ`,`id`,`nam`) values('0','10000','MAN');
 
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('1','100000','man0','C102','1','10:00','11:40');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('1','100001','man1','C103','2','14:20','16:00');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('1','100002','man2','C104','3','14:20','16:00');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('1','100003','man3','C303','4','10:00','11:40');
-
 
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('2','15000000','张水清','C104','1','07:30','12:00');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('2','15000001','刘佳镕','C104','1','08:00','12:00');
@@ -90,3 +88,5 @@ insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('2','1500002
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('2','15000023','申浩','C102','5','19:00','21:40');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('2','15000011','黄棉烽','C303','5','18:00','22:00');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`bTim`,`eTim`) values('2','15000024','杨晓铃','C303','5','19:00','22:00');
+
+select * from man;

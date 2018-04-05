@@ -6,6 +6,10 @@
 
 3、insert-stu
 
-4、insert-excp
+4、insert-ip
 
-5、insert-fb
+5、insert-excp
+
+6、insert-fb
+
+7、insert-qnr

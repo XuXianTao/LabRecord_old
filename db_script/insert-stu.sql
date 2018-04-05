@@ -5,12 +5,11 @@ create table stu (
     wDay	int,						#上课是周几，1一，2二...
     bTim	time,						#上课时间
     eTim	time,						#下课时间
-    teaId	int not null,				#上课教师
-    foreign key(teaId) references tea(id)
-);
+    teaId	int not null				#上课教师
+) engine=InnoDB;
 */
 use `lab_sys`;
-select * from stu order by id,teaId ASC;
+
 insert into stu(`id`,`nam`,`wDay`,`bTim`,`eTim`,`teaId`) values('16000000','STU','1','10:00','11:40','100000');
 
 insert into stu(`id`,`nam`,`wDay`,`bTim`,`eTim`,`teaId`) values('16301004','蔡泽帆','2','14:20','16:00','100001');
@@ -137,3 +136,5 @@ insert into stu(`id`,`nam`,`wDay`,`bTim`,`eTim`,`teaId`) values('16301191','朱�
 insert into stu(`id`,`nam`,`wDay`,`bTim`,`eTim`,`teaId`) values('16301192','朱泳澜','3','14:20','16:00','100002');
 
 insert into stu(`id`,`nam`,`wDay`,`bTim`,`eTim`,`teaId`) values('16000001','STU','4','10:00','11:40','100003');
+
+select * from stu order by id,teaId ASC;
