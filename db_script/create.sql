@@ -250,30 +250,30 @@ create table fbrls (
 ) auto_increment=1 engine=InnoDB;
 
 DELIMITER //
-create trigger `tri_insert_bd` after insert on `excp` for each row
+create trigger `tri_insert_excpsta` after insert on `excp` for each row
 begin
-    select count(*) into @cnt from bd where cla=new.cla and num=new.num;
+    select count(*) into @cnt from excpsta where cla=new.cla and num=new.num;
     if @cnt<>0 then
 		if new.pc<>0 then
-			update bd set pc=pc+1 where cla=new.cla and num=new.num;
+			update excpsta set pc=pc+1 where cla=new.cla and num=new.num;
 		end if;
 		if new.wire<>0 then
-			update bd set wire=wire+1 where cla=new.cla and num=new.num;
+			update excpsta set wire=wire+1 where cla=new.cla and num=new.num;
 		end if;
 		if new.box<>0 then
-			update bd set box=box+1 where cla=new.cla and num=new.num;
+			update excpsta set box=box+1 where cla=new.cla and num=new.num;
 		end if;
         if new.oscp<>0 then
-			update bd set oscp=oscp+1 where cla=new.cla and num=new.num;
+			update excpsta set oscp=oscp+1 where cla=new.cla and num=new.num;
 		end if;
         if new.gen<>0 then
-			update bd set gen=gen+1 where cla=new.cla and num=new.num;
+			update excpsta set gen=gen+1 where cla=new.cla and num=new.num;
 		end if;
         if new.oth<>0 then
-			update bd set oth=oth+1 where cla=new.cla and num=new.num;
+			update excpsta set oth=oth+1 where cla=new.cla and num=new.num;
 		end if;
     else
-		insert into bd(cla,num,pc,wire,box,oscp,gen,oth) values(new.cla,new.num,new.pc,new.wire,new.box,new.oscp,new.gen,new.oth);
+		insert into excpsta(cla,num,pc,wire,box,oscp,gen,oth) values(new.cla,new.num,new.pc,new.wire,new.box,new.oscp,new.gen,new.oth);
     end if;
 end;
 //
