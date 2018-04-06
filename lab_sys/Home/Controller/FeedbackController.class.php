@@ -70,6 +70,7 @@ class FeedbackController extends Controller {
             $this->display();
         }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
+    //管理员问卷显示
     public function fbman() {
         $this->display();
     }
