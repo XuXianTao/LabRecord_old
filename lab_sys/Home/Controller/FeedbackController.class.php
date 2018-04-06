@@ -36,7 +36,7 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbori = D('fbori');
-            if($fbori->creadte()){
+            if($fbori->create()){
                 $fbori->add();
                 $this->redirect('fbman','',0,'<script>alert(\'问卷创建成功！\');</script>');
             }
@@ -54,7 +54,7 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbori = D('fbrls');
-            if($fbori->creadte()){
+            if($fbori->create()){
                 $fbori->add();
                 $this->redirect('fbman','',0,'<script>alert(\'问卷发布成功成功！\');</script>');
             }
@@ -66,7 +66,7 @@ class FeedbackController extends Controller {
         if($admin && $admin['typ']=='1' ){
             $fbori = M('fbori');
             $old = $fbori->where(" id='$id' ")->select();
-            $this->assign()
+            //$this->assign();
             $this->display();
         }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }

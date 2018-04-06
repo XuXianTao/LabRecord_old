@@ -62,88 +62,88 @@
         <form id="form" action="fbupdt_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>问卷修改：务必进行核对后再提交修改！</legend>
-                <div id="qnr0" name="qnr0" class="qu">
-                    <br> 标题：<input id="qu0" name="qu0" type="text" placeholder="这里输入问卷标题">
+                <div id="qnr0" name="qnr0" class="q">
+                    <br> 标题：<input id="q0" name="tit" type="text" placeholder="这里输入问卷标题">
                 </div>
-                <div id="qnr1" name="qnr1" class="qu">
-                    <br> 问题1： <input id="qu1" name="qu1" type="text" placeholder="这里输入问题1"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu1" name="ans" type="text" placeholder="这里输入问题1的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu1" name="ans" type="text" placeholder="这里输入问题1的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu1" name="ans" type="text" placeholder="这里输入问题1的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu1" name="ans" type="text" placeholder="这里输入问题1的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu1" name="ans" type="text" placeholder="这里输入问题1的第五个选项">
+                <div id="qnr1" name="qnr1" class="q">
+                    <br> 问题1： <input id="q1" name="q1" type="text" class="a" placeholder="这里输入问题1"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q1" name="a1_q1" type="text" class="a" placeholder="这里输入问题1的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q1" name="a2_q1" type="text" class="a" placeholder="这里输入问题1的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q1" name="a3_q1" type="text" class="a" placeholder="这里输入问题1的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q1" name="a4_q1" type="text" class="a" placeholder="这里输入问题1的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q1" name="a5_q1" type="text" class="a" placeholder="这里输入问题1的第五个选项">
                 </div>
-                <div id="qnr2" name="qnr1" class="qu">
-                    <br> 问题2： <input id="qu2" name="qu2" type="text" placeholder="这里输入第二个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu2" name="ans" type="text" placeholder="这里输入问题2的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu2" name="ans" type="text" placeholder="这里输入问题2的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu2" name="ans" type="text" placeholder="这里输入问题2的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu2" name="ans" type="text" placeholder="这里输入问题2的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu2" name="ans" type="text" placeholder="这里输入问题2的第五个选项">
+                <div id="qnr2" name="qnr1" class="q">
+                    <br> 问题2： <input id="q2" name="q2" type="text" placeholder="这里输入第二个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q2" name="a1_q2" type="text" class="a" placeholder="这里输入问题2的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q2" name="a2_q2" type="text" class="a" placeholder="这里输入问题2的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q2" name="a3_q2" type="text" class="a" placeholder="这里输入问题2的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q2" name="a4_q2" type="text" class="a" placeholder="这里输入问题2的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q2" name="a5_q2" type="text" class="a" placeholder="这里输入问题2的第五个选项">
                 </div>
-                <div id="qnr3" name="qnr1" class="qu">
-                    <br> 问题3： <input id="qu3" name="qu3" type="text" placeholder="这里输入第三个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu3" name="ans" type="text" placeholder="这里输入问题3的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu3" name="ans" type="text" placeholder="这里输入问题3的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu3" name="ans" type="text" placeholder="这里输入问题3的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu3" name="ans" type="text" placeholder="这里输入问题3的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu3" name="ans" type="text" placeholder="这里输入问题3的第五个选项">
+                <div id="qnr3" name="qnr1" class="q">
+                    <br> 问题3： <input id="q3" name="q3" type="text" placeholder="这里输入第三个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q3" name="a1_q3" type="text" class="a" placeholder="这里输入问题3的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q3" name="a2_q3" type="text" class="a" placeholder="这里输入问题3的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q3" name="a3_q3" type="text" class="a" placeholder="这里输入问题3的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q3" name="a4_q3" type="text" class="a" placeholder="这里输入问题3的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q3" name="a5_q3" type="text" class="a" placeholder="这里输入问题3的第五个选项">
                 </div>
-                <div id="qnr4" name="qnr1" class="qu">
-                    <br> 问题4： <input id="qu4" name="qu4" type="text" placeholder="这里输入第四个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu4" name="ans" type="text" placeholder="这里输入问题4的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu4" name="ans" type="text" placeholder="这里输入问题4的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu4" name="ans" type="text" placeholder="这里输入问题4的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu4" name="ans" type="text" placeholder="这里输入问题4的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu4" name="ans" type="text" placeholder="这里输入问题4的第五个选项">
+                <div id="qnr4" name="qnr1" class="q">
+                    <br> 问题4： <input id="q4" name="q4" type="text" placeholder="这里输入第四个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q4" name="a1_q4" type="text" class="a" placeholder="这里输入问题4的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q4" name="a2_q4" type="text" class="a" placeholder="这里输入问题4的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q4" name="a3_q4" type="text" class="a" placeholder="这里输入问题4的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q4" name="a4_q4" type="text" class="a" placeholder="这里输入问题4的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q4" name="a5_q4" type="text" class="a" placeholder="这里输入问题4的第五个选项">
                 </div>
-                <div id="qnr5" name="qnr1" class="qu">
-                    <br> 问题5： <input id="qu5" name="qu5" type="text" placeholder="这里输入第五个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu5" name="ans" type="text" placeholder="这里输入问题5的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu5" name="ans" type="text" placeholder="这里输入问题5的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu5" name="ans" type="text" placeholder="这里输入问题5的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu5" name="ans" type="text" placeholder="这里输入问题5的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu5" name="ans" type="text" placeholder="这里输入问题5的第五个选项">
+                <div id="qnr5" name="qnr1" class="q">
+                    <br> 问题5： <input id="q5" name="q5" type="text" placeholder="这里输入第五个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q5" name="a1_q5" type="text" class="a" placeholder="这里输入问题5的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q5" name="a2_q5" type="text" class="a" placeholder="这里输入问题5的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q5" name="a3_q5" type="text" class="a" placeholder="这里输入问题5的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q5" name="a4_q5" type="text" class="a" placeholder="这里输入问题5的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q5" name="a5_q5" type="text" class="a" placeholder="这里输入问题5的第五个选项">
                 </div>
-                <div id="qnr6" name="qnr1" class="qu">
-                    <br> 问题6： <input id="qu6" name="qu6" type="text" placeholder="这里输入第六个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu6" name="ans" type="text" placeholder="这里输入问题6的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu6" name="ans" type="text" placeholder="这里输入问题6的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu6" name="ans" type="text" placeholder="这里输入问题6的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu6" name="ans" type="text" placeholder="这里输入问题6的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu6" name="ans" type="text" placeholder="这里输入问题6的第五个选项">
+                <div id="qnr6" name="qnr1" class="q">
+                    <br> 问题6： <input id="q6" name="q6" type="text" placeholder="这里输入第六个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q6" name="a1_q6" type="text" class="a" placeholder="这里输入问题6的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q6" name="a2_q6" type="text" class="a" placeholder="这里输入问题6的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q6" name="a3_q6" type="text" class="a" placeholder="这里输入问题6的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q6" name="a4_q6" type="text" class="a" placeholder="这里输入问题6的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q6" name="a5_q6" type="text" class="a" placeholder="这里输入问题6的第五个选项">
                 </div>
-                <div id="qnr7" name="qnr1" class="qu">
-                    <br> 问题7： <input id="qu7" name="qu7" type="text" placeholder="这里输入第七个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu7" name="ans" type="text" placeholder="这里输入问题7的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu7" name="ans" type="text" placeholder="这里输入问题7的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu7" name="ans" type="text" placeholder="这里输入问题7的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu7" name="ans" type="text" placeholder="这里输入问题7的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu7" name="ans" type="text" placeholder="这里输入问题7的第五个选项">
+                <div id="qnr7" name="qnr1" class="q">
+                    <br> 问题7： <input id="q7" name="q7" type="text" placeholder="这里输入第七个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q7" name="a1_q7" type="text" class="a" placeholder="这里输入问题7的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q7" name="a2_q7" type="text" class="a" placeholder="这里输入问题7的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q7" name="a3_q7" type="text" class="a" placeholder="这里输入问题7的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q7" name="a4_q7" type="text" class="a" placeholder="这里输入问题7的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q7" name="a5_q7" type="text" class="a" placeholder="这里输入问题7的第五个选项">
                 </div>
-                <div id="qnr8" name="qnr1" class="qu">
-                    <br> 问题8： <input id="qu8" name="qu8" type="text" placeholder="这里输入第八个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu8" name="ans" type="text" placeholder="这里输入问题8的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu8" name="ans" type="text" placeholder="这里输入问题8的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu8" name="ans" type="text" placeholder="这里输入问题8的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu8" name="ans" type="text" placeholder="这里输入问题8的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu8" name="ans" type="text" placeholder="这里输入问题8的第五个选项">
+                <div id="qnr8" name="qnr1" class="q">
+                    <br> 问题8： <input id="q8" name="q8" type="text" placeholder="这里输入第八个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q8" name="a1_q8" type="text" class="a" placeholder="这里输入问题8的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q8" name="a2_q8" type="text" class="a" placeholder="这里输入问题8的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q8" name="a3_q8" type="text" class="a" placeholder="这里输入问题8的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q8" name="a4_q8" type="text" class="a" placeholder="这里输入问题8的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q8" name="a5_q8" type="text" class="a" placeholder="这里输入问题8的第五个选项">
                 </div>
-                <div id="qnr9" name="qnr1" class="qu">
-                    <br> 问题9： <input id="qu9" name="qu9" type="text" placeholder="这里输入第九个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu9" name="ans" type="text" placeholder="这里输入问题9的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu9" name="ans" type="text" placeholder="这里输入问题9的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu9" name="ans" type="text" placeholder="这里输入问题9的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu9" name="ans" type="text" placeholder="这里输入问题9的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu9" name="ans" type="text" placeholder="这里输入问题9的第五个选项">
+                <div id="qnr9" name="qnr1" class="q">
+                    <br> 问题9： <input id="q9" name="q9" type="text" placeholder="这里输入第九个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q9" name="a1_q9" type="text" class="a" placeholder="这里输入问题9的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q9" name="a2_q9" type="text" class="a" placeholder="这里输入问题9的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q9" name="a3_q9" type="text" class="a" placeholder="这里输入问题9的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q9" name="a4_q9" type="text" class="a" placeholder="这里输入问题9的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q9" name="a5_q9" type="text" class="a" placeholder="这里输入问题9的第五个选项">
                 </div>
-                <div id="qnr10" name="qnr1" class="qu">
-                    <br> 问题10： <input id="qu10" name="qu10" type="text" placeholder="这里输入第十个问题"> <br><br> &emsp;&emsp;第一个选项：
-                    <input id="ans1_qu10" name="ans" type="text" placeholder="这里输入问题10的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
-                    <input id="ans2_qu10" name="ans" type="text" placeholder="这里输入问题10的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
-                    <input id="ans3_qu10" name="ans" type="text" placeholder="这里输入问题10的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
-                    <input id="ans4_qu10" name="ans" type="text" placeholder="这里输入问题10的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
-                    <input id="ans5_qu10" name="ans" type="text" placeholder="这里输入问题10的第五个选项">
+                <div id="qnr10" name="qnr1" class="q">
+                    <br> 问题10： <input id="q10" name="q10" type="text" placeholder="这里输入第十个问题"> <br><br> &emsp;&emsp;第一个选项：
+                    <input id="a1_q10" name="a1_q10" type="text" class="a" placeholder="这里输入问题10的第一个选项"> <br><br> &emsp;&emsp;第二个选项：
+                    <input id="a2_q10" name="a2_q10" type="text" class="a" placeholder="这里输入问题10的第二个选项"> <br><br> &emsp;&emsp;第三个选项：
+                    <input id="a3_q10" name="a3_q10" type="text" class="a" placeholder="这里输入问题10的第三个选项"> <br><br> &emsp;&emsp;第四个选项：
+                    <input id="a4_q10" name="a4_q10" type="text" class="a" placeholder="这里输入问题10的第四个选项"> <br><br> &emsp;&emsp;第五个选项：
+                    <input id="a5_q10" name="a5_q10" type="text" class="a" placeholder="这里输入问题10的第五个选项">
                 </div>
                 <div class="btn_group">
                     <button id="btn1" class="btn" type="submit" name="btn_fbupdt">修改</button>

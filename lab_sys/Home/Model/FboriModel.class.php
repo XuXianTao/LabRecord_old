@@ -4,16 +4,13 @@ use Think\Model;
 //model对应表名
 class FboriModel extends Model{
 	protected $_auto=array(
-		array('id','getId',1,"callback"),
-		array('kno','getKno',1,"callback"),
+		array('bId','getBId',1,"callback"),
+		array('bNam','getNam',1,"callback"),
 	);
-	protected function myDate(){
-		return date('Y-m-d H:i:s',time());
+	protected function getBId(){
+		return session('admin')['id'];
 	}
-	protected function getId(){
-		return session('user')['id'];
-	}
-	protected function getKno(){
-		return I('knowledge');
+	protected function getNam(){
+		return session('admin')['nam'];
 	}
 }
