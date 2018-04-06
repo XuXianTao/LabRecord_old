@@ -23,4 +23,5 @@ class BreakdownController extends Controller {
     	    $this->display();
         }else $this->redirect('logm');
     }
+    
 }
