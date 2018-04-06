@@ -89,7 +89,7 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbrls = M('fbrls');
-            $id = $admin['id'];
+            $id = $admin['id']
             $situation = $fbrls->where("id = '$id'")->select();
             $this->assign('situation',$situation);
             $this->display();
