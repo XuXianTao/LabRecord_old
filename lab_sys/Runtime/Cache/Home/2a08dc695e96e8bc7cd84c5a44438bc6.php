@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><script>alert('问卷发布成功！');</script>

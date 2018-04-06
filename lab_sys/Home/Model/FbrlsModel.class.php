@@ -3,18 +3,28 @@ namespace Home\Model;
 use Think\Model;
 //model对应表名
 class FbrlsModel extends Model{
+	protected $field = true;
 	protected $_auto=array(
-		array('dat','myDate',1,'callback'),
-		array('id','getId',1,"callback"),
-		array('kno','getKno',1,"callback"),
+		array('teaId','getTeaId',1,'callback'),
+		array('teaName','getTeaname',1,"callback"),
+		array('wDay','getWDay',1,"callback"),
+		array('bTim','getBTim',1,'callback'),
+		array('eTim','getETim',1,'callback'),
+		array('styNum','0'),
 	);
-	protected function myDate(){
-		return date('Y-m-d H:i:s',time());
+	protected function getTeaId(){
+		return session('admin')['id'];
 	}
-	protected function getId(){
-		return session('user')['id'];
+	protected function getTeaname(){
+		return session('admin')['nam'];
 	}
-	protected function getKno(){
-		return I('knowledge');
+	protected function getWDay(){
+		return I('wDay');
+	}
+	protected function getBTim(){
+		return I('timInt');
+	}
+	protected function getETim(){
+		return I('timInt');
 	}
 }

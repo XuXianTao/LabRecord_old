@@ -33,7 +33,20 @@
         text-decoration: none;
     }
 </style>
-
+<script>
+function del()
+{
+  if(confirm("确定要删除吗？")) 
+  {
+    alert('删除成功');
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+</script>
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
@@ -52,22 +65,26 @@
     <div id="main">
         <form>
             <div class="btn_group">
-                <button id="btn1" class="btn" type="submit" name="btn_fbcre">创建问卷</button>
-                <button id="btn2" class="btn" type="submit" name="btn_fbrls">发放问卷</button>
+                <button id="btn1" class="btn" type="submit" name="btn_fbcre" value="true">创建问卷</button>
+                <button id="btn2" class="btn" type="submit" name="btn_fbrls" value="true">查看已发布问卷/反馈</button>
+                <div clear="both"></div>
             </div>
             <table>
+                <caption>已经制定的问卷原型</caption>
                 <tr>
-                    <th>问卷</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>问卷标题</th>
+                    <th>制定人</th>
+                    <th>操作</th>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td><a href="fbupdt"><button>修改</button></a></td>
-                    <td><button type="submit">删除</button></td>
-                    <td><a href="fbsts"><button>查看统计</button></a></td>
-                </tr>
+                <?php if(is_array($old)): $i = 0; $__LIST__ = $old;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><a href="?update=<?php echo ($vo["id"]); ?>"><?php echo ($vo["tit"]); ?></a></td>
+                        <td><?php echo ($vo["bnam"]); ?>(<?php echo ($vo["bid"]); ?>)</td>
+                        <td>
+                            <button type="submit" name="update" value="<?php echo ($vo["id"]); ?>">修改</button>
+                            <button type="submit" name="publish" value="<?php echo ($vo["id"]); ?>">发布</button>
+                            <button type="submit" name="delete" value="<?php echo ($vo["id"]); ?>" onclick="return del();">删除</button>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
         </form>
     </div>

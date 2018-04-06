@@ -46,7 +46,20 @@ class FeedbackController extends Controller {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
-            $this->display();
+            if(I('btn_reback')) $this->redirect(fbman);//返回
+            else if(I('btn_fbrls')) {//发布
+                $fbrls=D('fbrls');
+                $fbori=M('fbori');
+                $quetit=I('que');
+                $data=$fbori->where("tit='$quetit'")->find();
+                unset($data['bId']);
+                unset($data['bNam']);
+                unset($data['id']);
+                if ($data+=$fbrls->create()){
+                    $fbrls->add($data);
+                    $this->redirect('main/main_m','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
+                }
+            }else  $this->display();
         }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbcls_() {
@@ -58,7 +71,7 @@ class FeedbackController extends Controller {
                 $fbrls->add();
                 $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功成功！\');</script>');
             }
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbupdt() {
         $admin=session('admin');
@@ -78,10 +91,27 @@ class FeedbackController extends Controller {
         if($admin && $admin['typ']=='1' ){
             $fbori = M('fbori');
             $id = $_POST['id'];
-            $old = $fbori->select();
+            $old = $fbori->order('id desc')->select();
             $this->assign('old',$old);
-            $this->display();
+            //按钮判断
+            if(I('btn_fbcre')) $this->redirect(fbcre);
+            //操作判断
+            $update=I('update');
+            $publish=I('publish');
+            $delete=I('delete');
+            if($update){//更新
+                $this->redirect("fbupdt?update=$update");
+            }else if ($publish){//发布
+                $que=$fbori->where("id=$publish")->find();
+                $this->redirect('fbrls',array('que'=>$que['tit']));
+            }else if ($delete){//删除
+                $fbori->where("id=$delete")->delete();
+                $this->redirect($this);
+            }
 
+            else{
+                $this->display();
+            }
         }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbsts(){
@@ -89,7 +119,7 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbrls = M('fbrls');
-            $id = $admin['id']
+            $id = $admin['id'];
             $situation = $fbrls->where("id = '$id'")->select();
             $this->assign('situation',$situation);
             $this->display();

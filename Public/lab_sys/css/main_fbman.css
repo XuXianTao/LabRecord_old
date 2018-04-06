@@ -1,0 +1,45 @@
+.btn_group{
+	float:right;
+	margin-top:-80px;
+	margin-right:10px;
+}
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+tr {
+    text-align: center;
+    line-height: 30px;
+}
+td:first-child{
+	width:400px;
+	text-align: left;
+	padding-left:10px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+th:nth-child(2),
+td:nth-child(2) {
+    width: 180px;
+}
+th:nth-child(3),
+td:nth-child(3) {
+    width: 200px;
+}
+th,td{
+    border:1px solid black;
+}
+td:first-child>a:link{
+	color:blue;
+	text-decoration:underline; 
+}
+td:first-child>a:visited{
+	color:purple;
+}
+td:first-child>a:hover{
+	color:green;
+	font-weight: bold;
+}
+td:first-child>a:active{
+	color:red;
+}

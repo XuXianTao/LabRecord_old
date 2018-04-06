@@ -58,6 +58,9 @@
             <fieldset>
                 <legend>问卷发布：务必进行核对后再进行发布！</legend>
                 <div class="choice">
+                    问卷：<b><?php echo I('que');;?></b>
+                </div>
+                <div class="choice">
                     上课课室：
                     <select name="cla">
                         <option value="C102">C102</option>
@@ -83,9 +86,10 @@
                     </select>
                 </div>
                 <div class="btn_group">
-                    <button id="btn1" class="btn" type="submit" name="btn_fbrls">发布</button>
-                    <button id="btn2" class="btn" type="reset">重置</button>
+                    <button id="btn1" class="btn" type="submit" name="btn_fbrls" value="true">发布</button>
+                    <button id="btn2" class="btn" type="submit" name="btn_reback" value="true">返回</button>
                 </div>
+                <input type="hidden" name="que" value="<?php echo I('que');?>">
             </fieldset>
         </form>
     </div>

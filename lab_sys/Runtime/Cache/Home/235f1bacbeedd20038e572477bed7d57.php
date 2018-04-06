@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><script>alert('删除成功');</script>
