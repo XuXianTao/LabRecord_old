@@ -2,14 +2,10 @@
 
 1、create
 
-2、insert-man
+2、insert-ip
 
-3、insert-stu
+3、insert-man
 
-4、insert-ip
+4、insert-stu
 
 5、insert-excp
-
-6、insert-fb
-
-7、insert-qnr
