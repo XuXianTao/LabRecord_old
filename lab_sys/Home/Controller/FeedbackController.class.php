@@ -25,13 +25,50 @@ class FeedbackController extends Controller {
         }
     }
     public function fbcre() {
-        $this->display();
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $this->display();
+        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+    }
+    public function fbcre_() {
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $fbori = D('fbori');
+            if($fbori->creadte()){
+                $fbori->add();
+                $this->redirect('fbman','',0,'<script>alert(\'问卷创建成功！\');</script>');
+            }
+        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbrls() {
-        $this->display();
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $this->display();
+        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+    }
+    public function fbcls_() {
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $fbori = D('fbrls');
+            if($fbori->creadte()){
+                $fbori->add();
+                $this->redirect('fbman','',0,'<script>alert(\'问卷发布成功成功！\');</script>');
+            }
+        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbupdt() {
-        $this->display();
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $fbori = M('fbori');
+            $old = $fbori->where(" id='$id' ")->select();
+            $this->assign()
+            $this->display();
+        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbman() {
         $this->display();
