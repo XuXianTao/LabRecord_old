@@ -1,52 +1,56 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
-<title>lab_sys</title>
-<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-<script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-<script src="__PUBLIC__/js/init.js"></script>
-<link rel="stylesheet" href="__PUBLIC__/css/header.css">
-<link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-<link rel="stylesheet" href="__PUBLIC__/css/main_fbupdt.css" />
-<input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
-<input type="hidden" name="ip" id="ip" />
-<script>
-    window.onbeforeunload = function() {
-        return "确认退出？";
-    }
 
-    function onDestroy() {
-        window.onbeforeunload = null;
-    }
-</script>
-<style type="text/css">
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    * {
-        font-family: Arial, sans-serif, "微软雅黑";
-        font-size: large;
-    }
-    
-    p {
-        display: inline-block;
-    }
-    
-    a {
-        color: black;
-        text-decoration: none;
-    }
-</style>
+<head>
+    <meta charset="UTF-8">
+    <title>lab_sys</title>
+    <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
+    <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
+    <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/main_fbcre.css">
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript" src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/sysulab/Public/lab_sys/js/init.js"></script>
+    <script type="text/javascript" src="/sysulab/Public/lab_sys/js/ent.js"></script>
+    <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
+    <input type="hidden" name="ip" id="ip" />
+    <script>
+        window.onbeforeunload = function() {
+            return "确认退出？";
+        }
+
+        function onDestroy() {
+            window.onbeforeunload = null;
+        }
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        * {
+            font-family: Arial, sans-serif, "微软雅黑";
+            font-size: large;
+        }
+        
+        p {
+            display: inline-block;
+        }
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
 
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学" /></div>
+            <div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>
@@ -59,11 +63,11 @@
         </div>
     </div>
     <div id="main">
-        <form id="form" action="fbupdt_" method="POST" onsubmit="return onDestroy()">
+        <form id="form" action="fbcre_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
-                <legend>问卷修改：务必进行核对后再提交修改！</legend>
+                <legend>问卷创建：务必进行核对后再提交修改！</legend>
                 <div id="qnr0" name="qnr0" class="q">
-                    <br> 标题：<input id="q0" name="tit" type="text" placeholder="这里输入问卷标题">
+                    <br> 标题： <input id="q0" name="tit" type="text" placeholder="这里输入问卷标题">
                 </div>
                 <div id="qnr1" name="qnr1" class="q">
                     <br> 问题1： <input id="q1" name="q1" type="text" placeholder="这里输入问题1"> <br><br> &emsp;&emsp;第一个选项：
@@ -146,7 +150,7 @@
                     <input id="a5_q10" name="a" type="text" placeholder="这里输入问题10的第五个选项">
                 </div>
                 <div class="btn_group">
-                    <button id="btn1" class="btn" type="submit" name="btn_fbupdt">修改</button>
+                    <button id="btn1" class="btn" type="submit" name="btn_fbcre">保存</button>
                     <button id="btn2" class="btn" type="reset">重置</button>
                 </div>
             </fieldset>

@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css">
     <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/main_excp.css">
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/init.js"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/ent.js"></script>
+    <script type="text/javascript" src="/sysulab/Public/lab_sys/js/input.js"></script>
+    <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
+    <input type="hidden" name="ip" id="ip" />
     <script>
         window.onbeforeunload = function() {
             return "确认退出？";
@@ -45,7 +48,7 @@
     </style>
 </head>
 
-<body onload="init()">
+<body onload="init();input()">
     <div id="header_wrapper">
         <div id="header">
             <div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
@@ -63,12 +66,14 @@
         <form id="form" action="excp_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>异常反馈</legend>
-                <div class="choice">请选择异常仪器：
-                    <input name="pc" value="pc" type="checkbox">电脑
-                    <input name="wire" value="wire" type="checkbox">导线
-                    <input name="box" value="box" type="checkbox">电路箱
-                    <input name="oscp" value="oscp" type="checkbox">示波器
-                    <input name="gen" value="gen" type="checkbox">函数发生器
+                <div class="choice">请选择异常仪器：<br>
+                    <input name="pc" value="pc" type="checkbox">电脑<br>
+                    <input name="wire" value="wire" type="checkbox">导线<br>
+                    <input name="box" value="box" type="checkbox">电路箱<br>
+                    <input name="oscp" value="oscp" type="checkbox">示波器<br>
+                    <input name="gen" value="gen" type="checkbox">函数发生器<br>
+                    <input name="oth" value="oth" type="checkbox">其他
+                    <input name="des" type="text" placeholder="输入文字进行描述" width="20px">
                 </div>
                 <div class="btn_group">
                     <button id="btn1" class="btn" type="submit" name="btn_excp">提交</button>

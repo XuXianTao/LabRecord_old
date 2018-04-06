@@ -2,7 +2,7 @@
 namespace Home\Model;
 use Think\Model;
 //model对应表名
-class FbModel extends Model{
+class FbrlsModel extends Model{
 	protected $_auto=array(
 		array('dat','myDate',1,'callback'),
 		array('id','getId',1,"callback"),

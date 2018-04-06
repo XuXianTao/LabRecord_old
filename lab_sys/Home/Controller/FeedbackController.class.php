@@ -33,6 +33,7 @@ class FeedbackController extends Controller {
     public function fbupdt() {
         $this->display();
     }
+    //管理员问卷显示
     public function fbman() {
         $this->display();
     }
