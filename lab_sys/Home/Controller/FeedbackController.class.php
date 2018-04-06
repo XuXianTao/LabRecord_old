@@ -29,56 +29,70 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $this->display();
-        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbcre_() {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbori = D('fbori');
-            if($fbori->creadte()){
+            if($fbori->create()){
                 $fbori->add();
-                $this->redirect('fbman','',0,'<script>alert(\'问卷创建成功！\');</script>');
+                $this->redirect('fbman','',0.01,'<script>alert(\'问卷创建成功！\');</script>');
             }
-        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbrls() {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $this->display();
-        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbcls_() {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
-            $fbori = D('fbrls');
-            if($fbori->creadte()){
-                $fbori->add();
-                $this->redirect('fbman','',0,'<script>alert(\'问卷发布成功成功！\');</script>');
+            $fbrls = D('fbrls');
+            if($fbrls->create()){
+                $fbrls->add();
+                $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功成功！\');</script>');
             }
-        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbupdt() {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbori = M('fbori');
+            $id = $_POST['id'];
             $old = $fbori->where(" id='$id' ")->select();
-            $this->assign()
+            $this->assign('old',$old[0]);
             $this->display();
-        }else $this->redirect('logm',0,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     //管理员问卷显示
     public function fbman() {
-        $this->display();
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $fbori = M('fbori');
+            $id = $_POST['id'];
+            $old = $fbori->select();
+            $this->assign('old',$old);
+            $this->display();
+
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbsts(){
         $admin=session('admin');
-        if ($admin){
-            $this->assign('admin',$admin);
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $fbrls = M('fbrls');
+            $id = $admin['id']
+            $situation = $fbrls->where("id = '$id'")->select();
+            $this->assign('situation',$situation);
             $this->display();
-        } else $this->redirect('logm');
+        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
 }
