@@ -14,17 +14,15 @@ create table man (
     nam			varchar(200) not null,			#名字
     cla			varchar(200),					#课室
     wDay		int,							#上班是周几，1一，2二
-    bTim		time,							#开始时间
-    eTim		time,							#结束时间
-    primary 	key(typ,id,wDay,bTim,eTim)
+    claTim		varchar(200),					#上班时段
+    primary 	key(typ,id,wDay,claTim)
 ) engine=InnoDB;
 #学生
 create table stu (
     id			int not null primary key,		#学号
     nam 		varchar(200) not null,			#名字
-    wDay		int,							#上课是周几，1一，2二...
-    bTim		time,							#上课时间
-    eTim		time,							#下课时间
+    wDay		int not null,					#上课是周几，1一，2二...
+    claTim		varchar(200) not null,			#上课时段
     teaId		int not null					#上课教师
 ) engine=InnoDB;
 #异常
@@ -132,9 +130,9 @@ create table fbrls (
 	id			int primary key auto_increment,	#问卷id
     teaId		int not null,					#发布者id
     teaName		varchar(200) not null,			#发布者名字
+    cla			varchar(200) not null,			#问卷发放到的班级的所在课室
     wDay		int,							#问卷发放到的班级的对应上课日，1一，2二
-    bTim		time,							#问卷发放到的班级的上课时间
-    eTim		time,							#问卷发放到的班级的下课时间
+    claTim		varchar(200),					#问卷发放到的班级的上课时段
     stuNum		int default 0,					#问卷已填写人数
     tit			varchar(200) default null,		#问卷标题
     q1			varchar(200) default null,		#问题1
