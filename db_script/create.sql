@@ -61,6 +61,7 @@ create table excpsta (
 #原始问卷
 create table fbori (
 	id			int primary key auto_increment, #问卷id
+    creTim      datetime,                       #创建时间
     bId			int,							#创建人id
     bNam		varchar(200),					#创建人名字
 	tit			varchar(200) default null,		#问卷标题
@@ -130,6 +131,7 @@ create table fbrls (
 	id			int primary key auto_increment,	#问卷id
     teaId		int not null,					#发布者id
     teaName		varchar(200) not null,			#发布者名字
+    rlsTim      datetime,                       #发布时间
     cla			varchar(200) not null,			#问卷发放到的班级的所在课室
     wDay		int,							#问卷发放到的班级的对应上课日，1一，2二
     claTim		varchar(200),					#问卷发放到的班级的上课时段

@@ -19,7 +19,7 @@ class FeedbackController extends Controller {
             if ($Fb->where('id='.session('user')['id'])->select()) $Fb->save();
             else $Fb->add();
             //$this->show("");
-            $this->redirect('main/main', '', 0.01, '<script>alert(\'感谢反馈\');</script>');
+            $this->redirect('main/main','', 0.01, '<script>alert(\'感谢反馈\');</script>');
     	} else {
             $this->error('不能为空');
         }
@@ -29,7 +29,7 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $this->display();
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbcre_() {
         $admin=session('admin');
@@ -40,9 +40,16 @@ class FeedbackController extends Controller {
                 $fbori->add();
                 $this->redirect('fbman','',0.01,'<script>alert(\'问卷创建成功！\');</script>');
             }
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbrls() {
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $this->display();
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+    }
+    public function fbrls_() {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
@@ -57,19 +64,8 @@ class FeedbackController extends Controller {
                 unset($data['id']);
                 if ($data+=$fbrls->create()){
                     $fbrls->add($data);
-                    $this->redirect('main/main_m','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
+                    $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
                 }
-            }else  $this->display();
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
-    }
-    public function fbcls_() {
-        $admin=session('admin');
-        $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            $fbrls = D('fbrls');
-            if($fbrls->create()){
-                $fbrls->add();
-                $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功成功！\');</script>');
             }
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
@@ -78,11 +74,24 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbori = M('fbori');
-            $id = $_POST['id'];
-            $old = $fbori->where(" id='$id' ")->select();
+            $id = I('update');
+            $old = $fbori->where(" id=$id ")->select();
             $this->assign('old',$old[0]);
             $this->display();
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+    }
+    public function fbupdt_() {
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            if(I('btn_fbupdt')) {//修改
+                $fbori=D('fbori');
+                if($fbori->create()){
+                    $data=$fbori->add();
+                    $this->redirect('fbman','',0.01,'<script>alert(\'问卷修改成功！\');</script>');
+                }
+            }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷修改失败！\');</script>');
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     //管理员问卷显示
     public function fbman() {
@@ -100,7 +109,7 @@ class FeedbackController extends Controller {
             $publish=I('publish');
             $delete=I('delete');
             if($update){//更新
-                $this->redirect("fbupdt?update=$update");
+                $this->redirect("fbupdt?update=$update",'',0.01,'');
             }else if ($publish){//发布
                 $que=$fbori->where("id=$publish")->find();
                 $this->redirect('fbrls',array('que'=>$que['tit']));
@@ -112,7 +121,37 @@ class FeedbackController extends Controller {
             else{
                 $this->display();
             }
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+    }
+    //已发布问卷显示
+    public function fbman() {
+        $admin=session('admin');
+        $this->assign('admin',$admin);
+        if($admin && $admin['typ']=='1' ){
+            $fbrls = M('fbrls');
+            $id = $_POST['id'];
+            $new = $fbrls->order('id desc')->select();
+            $this->assign('old',$new);
+            //按钮判断
+            if(I('btn_fbcre')) $this->redirect(fbcre);
+            //操作判断
+            $update=I('update');
+            $publish=I('publish');
+            $delete=I('delete');
+            if($update){//更新
+                $this->redirect("fbupdt?update=$update",'',0.01,'');
+            }else if ($publish){//发布
+                $que=$fbori->where("id=$publish")->find();
+                $this->redirect('fbrls',array('que'=>$que['tit']));
+            }else if ($delete){//删除
+                $fbori->where("id=$delete")->delete();
+                $this->redirect($this);
+            }
+
+            else{
+                $this->display();
+            }
+        }else $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbsts(){
         $admin=session('admin');
@@ -123,6 +162,6 @@ class FeedbackController extends Controller {
             $situation = $fbrls->where("id = '$id'")->select();
             $this->assign('situation',$situation);
             $this->display();
-        }else $this->redirect('logm',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+        }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
 }
