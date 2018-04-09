@@ -27,5 +27,4 @@ insert into excp(dat,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,o
 insert into excp(dat,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-21 9:30:01','16301004','蔡泽帆','C103','1','10000','MAN','处理成功','线松','2018-03-21 9:37:46','0','0','0','0','1','0','');
 insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-30 15:00:39','16301082','刘竞妍','C104','24','未处理','0','0','0','1','0','0','');
 insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-28 21:52:15','16301056','康生晶','C103','18','未处理','0','0','0','1','0','0','');
-select * from bd;
 select * from excp order by dat ASC;

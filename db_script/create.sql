@@ -23,7 +23,8 @@ create table stu (
     nam 		varchar(200) not null,			#名字
     wDay		int not null,					#上课是周几，1一，2二...
     claTim		varchar(200) not null,			#上课时段
-    teaId		int not null					#上课教师
+    teaId		int not null,					#上课教师
+    flag		boolean default false			#是否填写问卷
 ) engine=InnoDB;
 #异常
 create table excp (
@@ -132,6 +133,7 @@ create table fbrls (
     teaId		int not null,					#发布者id
     teaName		varchar(200) not null,			#发布者名字
     rlsTim      datetime,                       #发布时间
+    ddl			datetime,						#截止时间
     cla			varchar(200) not null,			#问卷发放到的班级的所在课室
     wDay		int,							#问卷发放到的班级的对应上课日，1一，2二
     claTim		varchar(200),					#问卷发放到的班级的上课时段

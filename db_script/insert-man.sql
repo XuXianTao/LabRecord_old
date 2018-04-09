@@ -12,9 +12,9 @@ create table man (
 */
 use `lab_sys`;
 
-insert into man(`typ`,`id`,`nam`) values('0-10000-MAN');
+insert into man(`typ`,`id`,`nam`) values('0','10000','MAN');
 
-insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`claTim`) values('1','100000-man0-C102','1','10:00-11:40');
+insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`claTim`) values('1','100000','man0','C102','1','10:00-11:40');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`claTim`) values('1','100001','man1','C103','2','14:20-16:00');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`claTim`) values('1','100002','man2','C104','3','14:20-16:00');
 insert into man(`typ`,`id`,`nam`,`cla`,`wDay`,`claTim`) values('1','100003','man3','C303','4','10:00-11:40');

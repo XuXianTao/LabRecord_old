@@ -3,10 +3,15 @@
     margin: 40px auto;
 }
 
+.choice {
+    height: 50px;
+    vertical-align: baseline;
+}
+
 .choice,
 .btn_group {
     width: 80%;
-    padding: 10px;
+    padding: 5px;
     margin: 0 auto;
 }
 
