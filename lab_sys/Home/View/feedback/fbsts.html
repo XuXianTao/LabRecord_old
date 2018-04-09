@@ -227,6 +227,15 @@
                 <td>任课教师</td>
                 <td>上课时段</td>
             </tr>
+            <volist name='slist' id='vo'>
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.nam}</td>
+                    <td>{$vo.cla}</td>
+                    <td>{$vo.tnam}</td>
+                    <td>{$vo.claTim}</td>
+                </tr>
+            </volist>
         </table>
     </div>
 </body>

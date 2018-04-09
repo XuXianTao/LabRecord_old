@@ -10,7 +10,6 @@
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/sysulab/Public/lab_sys/js/init.js"></script>
-    <script type="text/javascript" src="/sysulab/Public/lab_sys/js/ent.js"></script>
     <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
     <input type="hidden" name="ip" id="ip" />
     <script>
@@ -58,8 +57,9 @@
         <div id="navigation">
             <div class="nav"><a href="main_m">主页</a></div>
             <div class="nav"><a href="excpsts">异常情况</a></div>
-            <div class="nav"><a href="bd">故障统计</a></div>
-            <div class="nav"><a href="fbman">问卷管理</a></div>
+            <div class="nav"><a href="excpsta">故障统计</a></div>
+            <div class="nav"><a href="fbman">原始问卷管理</a></div>
+            <div class="nav"><a href="fbman2">已发布问卷管理</a></div>
         </div>
     </div>
     <div id="main">

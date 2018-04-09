@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <title>lab_sys</title>
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script src="/sysulab/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
-    <script src="/sysulab/Public/lab_sys/js/init.js"></script>
-    <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/header.css" />
-    <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/nav.css" />
-    <link rel="stylesheet" href="/sysulab/Public/lab_sys/css/main_main.css" />
+    <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+    <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css" />
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css" />
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_main.css" />
     <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
     <input type="hidden" name="ip" id="ip" />
     <style type="text/css">
@@ -40,7 +40,7 @@
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="/sysulab/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+            <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>

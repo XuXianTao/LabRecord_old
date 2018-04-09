@@ -43,6 +43,10 @@ class FeedbackController extends Controller {
                     $fbrls = M('fbrls');
                     $id = I('id');
                     $rls = $fbrls->where("id = $id")->select();
+                    //更新学生flag
+                    $stu=M('stu');
+                    $rls1=$rls[0];
+                    $sdata=$stu->where("nam='{$user['nam']}' and wDay={$rls1['wday']} and claTim='{$rls1['clatim']}'")->setField('flag','1');
                     $date1 = date('Y-m-d H:i:s',time());
                     $date2 = $rls[0]['ddl'];
                     if(strtotime($date2)>=strtotime($date1)){
@@ -238,14 +242,15 @@ class FeedbackController extends Controller {
                                     break;
                             }
                         }
+
                         $fbrls->save($data);
                         $user_fb = M('stu');
                         $user_['flag']=true;
-                        //$user_id = $user['id'];
-                        //$user_fb->where("id = $user_id")->save($user_);
-                        //$user = $user_fb->where("id = $user_id")->select();
-                        //session('user',$user[0]);
-                        //$this->redirect('main/main','',0.01,'<script>alert(\'感谢你的反馈！\');</script>');
+                        $user_id = $user['id'];
+                        $user_fb->where("id = $user_id")->save($user_);
+                        $user = $user_fb->where("id = $user_id")->select();
+                        session('user',$user[0]);
+                        $this->redirect('main/main','',0.01,'<script>alert(\'感谢你的反馈！\');</script>');
                     }else{
                         $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
@@ -434,6 +439,10 @@ class FeedbackController extends Controller {
                 $rls = $fbrls->where("id = '$id'")->select();
                 $this->assign('rls',$rls[0]);
                 $this->assign('id',$id);
+                $sql="select stu.id, stu.nam, stu.claTim, man.cla as cla, man.nam as tnam from man,stu where man.id=stu.teaId and stu.wDay={$rls[0]['wday']} and stu.claTim='{$rls[0]['clatim']}' and flag=0;";
+                $slist=M()->query($sql);
+
+                $this->assign('slist',$slist);
                 $this->display();
             }else
                 $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');

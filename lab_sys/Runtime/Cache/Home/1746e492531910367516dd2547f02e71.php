@@ -55,28 +55,29 @@
         </div>
     </div>
     <div id="main">
-        <form action="/lab_sys/index.php/Home/Feedback/fbman" method="POST">
+        <form>
             <div class="btn_group">
                 <button id="btn1" class="btn" type="submit" name="btn_fbcre" value="true">创建问卷</button>
-                <button id="btn2" class="btn" type="submit" name="btn_fbrls" value="true">查看已发布问卷/反馈</button>
+                <button id="btn2" class="btn" type="submit" name="btn_fbori" value="true">查看原始问卷</button>
                 <div clear="both"></div>
             </div>
+            
             <table>
-                <caption>已经发布的问卷</caption>
+                <caption>已经制定的问卷原型</caption>
                 <tr>
-                    <th>创建时间</th>
+                    <th>发布时间</th>
                     <th>问卷标题</th>
-                    <th>制定人</th>
-                    <th>操作</th>
+                    <th>发布人</th>
+                    <th>对应上课时段</th>
+                    <th></th>
                 </tr>
-                <?php if(is_array($old)): $i = 0; $__LIST__ = $old;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($vo["cretim"]); ?></td>
+                <?php if(is_array($new)): $i = 0; $__LIST__ = $new;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($vo["rlstim"]); ?></td>
                         <td><a href="?update=<?php echo ($vo["id"]); ?>"><?php echo ($vo["tit"]); ?></a></td>
-                        <td><?php echo ($vo["bnam"]); ?>(<?php echo ($vo["bid"]); ?>)</td>
+                        <td><?php echo ($vo["teaname"]); ?>(<?php echo ($vo["teaid"]); ?>)</td>
+                        <td>周<?php echo ($vo["wday"]); ?>&nbsp;<?php echo ($vo["clatim"]); ?></td>
                         <td>
-                            <button type="submit" name="update" value="<?php echo ($vo["id"]); ?>">修改</button>
-                            <button type="submit" name="publish" value="<?php echo ($vo["id"]); ?>">发布</button>
-                            <button type="submit" name="delete" value="<?php echo ($vo["id"]); ?>" onclick="return del();">删除</button>
+                            <button id="btn3" class="btn" type="submit" name="btn_fbsts" value="<?php echo ($vo["id"]); ?>">查看反馈情况</button>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </table>
