@@ -7,22 +7,301 @@ class FeedbackController extends Controller {
     public function fb(){
     	$user=session('user');
     	if ($user){
-    		$this->assign('user',$user);
-    		$this->display();
-    	}else{$this->redirect('login/log');}
+            if($user['flag']==false){
+                $fbrls = M('fbrls');
+                $data['teaid']=$user['teaid'];
+                $data['wday']=$user['wday'];
+                $data['clatim']=$user['clatim'];
+                $rls = $fbrls->order('id desc')->where($data)->select();
+                if($rls){
+                    $date1 = date('Y-m-d H:i:s',time());
+                    $date2 = $rls[0]['ddl'];
+                    if(strtotime($date2)>=strtotime($date1)){
+                        $this->assign('user',$user);
+                        $this->assign('rls',$rls[0]);
+    
+                        $this->display();
+                    }else{
+                        $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
+                    }
+                }else{
+                    $this->redirect('main/main','',0.01,'<script>alert(\'没有需要填写的问卷\');</script>');
+                }
+            }else{
+                $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
+            }
+            
+    	}else{$this->redirect('login/log','',0.01,'<script>alert(\'登陆失效，请重新输入学号\');</script>');}
     }
 	public function fb_(){
-    	$knowc=I('knowledge');
-    	if ($knowc) {
-    		$Fb=D('fb');
-            $Fb->create();
-            if ($Fb->where('id='.session('user')['id'])->select()) $Fb->save();
-            else $Fb->add();
-            //$this->show("");
-            $this->redirect('main/main','', 0.01, '<script>alert(\'感谢反馈\');</script>');
-    	} else {
-            $this->error('不能为空');
+    	$user=session('user');
+    	if ($user){
+            if($user['flag']==false){
+                if(I('btn_back')){
+                    $this->redirect('fbman','',0.01);
+                }else{
+                    $fbrls = M('fbrls');
+                    $id = I('id');
+                    $rls = $fbrls->where("id = $id")->select();
+                    $date1 = date('Y-m-d H:i:s',time());
+                    $date2 = $rls[0]['ddl'];
+                    if(strtotime($date2)>=strtotime($date1)){
+                        $data = array(
+                            "a1_q1_num" => $rls[0]['a1_q1_num'],
+                            "a2_q1_num" => $rls[0]['a2_q1_num'],
+                            "a3_q1_num" => $rls[0]['a3_q1_num'],
+                            "a4_q1_num" => $rls[0]['a4_q1_num'],
+                            "a5_q1_num" => $rls[0]['a5_q1_num'],
+                            "a1_q2_num" => $rls[0]['a1_q2_num'],
+                            "a2_q2_num" => $rls[0]['a2_q2_num'],
+                            "a3_q2_num" => $rls[0]['a3_q2_num'],
+                            "a4_q2_num" => $rls[0]['a4_q2_num'],
+                            "a5_q2_num" => $rls[0]['a5_q2_num'],
+                            "a1_q3_num" => $rls[0]['a1_q3_num'],
+                            "a2_q3_num" => $rls[0]['a2_q3_num'],
+                            "a3_q3_num" => $rls[0]['a3_q3_num'],
+                            "a4_q3_num" => $rls[0]['a4_q3_num'],
+                            "a5_q3_num" => $rls[0]['a5_q3_num'],
+                            "a1_q4_num" => $rls[0]['a1_q4_num'],
+                            "a2_q4_num" => $rls[0]['a2_q4_num'],
+                            "a3_q4_num" => $rls[0]['a3_q4_num'],
+                            "a4_q4_num" => $rls[0]['a4_q4_num'],
+                            "a5_q4_num" => $rls[0]['a5_q4_num'],
+                            "a1_q5_num" => $rls[0]['a1_q5_num'],
+                            "a2_q5_num" => $rls[0]['a2_q5_num'],
+                            "a3_q5_num" => $rls[0]['a3_q5_num'],
+                            "a4_q5_num" => $rls[0]['a4_q5_num'],
+                            "a5_q5_num" => $rls[0]['a5_q5_num'],
+                            "a1_q6_num" => $rls[0]['a1_q6_num'],
+                            "a2_q6_num" => $rls[0]['a2_q6_num'],
+                            "a3_q6_num" => $rls[0]['a3_q6_num'],
+                            "a4_q6_num" => $rls[0]['a4_q6_num'],
+                            "a5_q6_num" => $rls[0]['a5_q6_num'],
+                            "a1_q7_num" => $rls[0]['a1_q7_num'],
+                            "a2_q7_num" => $rls[0]['a2_q7_num'],
+                            "a3_q7_num" => $rls[0]['a3_q7_num'],
+                            "a4_q7_num" => $rls[0]['a4_q7_num'],
+                            "a5_q7_num" => $rls[0]['a5_q7_num'],
+                            "a1_q8_num" => $rls[0]['a1_q8_num'],
+                            "a2_q8_num" => $rls[0]['a2_q8_num'],
+                            "a3_q8_num" => $rls[0]['a3_q8_num'],
+                            "a4_q8_num" => $rls[0]['a4_q8_num'],
+                            "a5_q8_num" => $rls[0]['a5_q8_num'],
+                            "a1_q9_num" => $rls[0]['a1_q9_num'],
+                            "a2_q9_num" => $rls[0]['a2_q9_num'],
+                            "a3_q9_num" => $rls[0]['a3_q9_num'],
+                            "a4_q9_num" => $rls[0]['a4_q9_num'],
+                            "a5_q9_num" => $rls[0]['a5_q9_num'],
+                            "a1_q10_num" => $rls[0]['a1_q10_num'],
+                            "a2_q10_num" => $rls[0]['a2_q10_num'],
+                            "a3_q10_num" => $rls[0]['a3_q10_num'],
+                            "a4_q10_num" => $rls[0]['a4_q10_num'],
+                            "a5_q10_num" => $rls[0]['a5_q10_num'],
+                        );
+                        if($rls['q1']!=null){
+                            switch(I('q1_num')){
+                                case 1:
+                                    $data['a1_q1_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q1_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q1_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q1_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q1_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q2']!=null){
+                            switch(I('q2_num')){
+                                case 1:
+                                    $data['a1_q2_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q2_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q2_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q2_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q2_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q3']!=null){
+                            switch(I('q3_num')){
+                                case 1:
+                                    $data['a1_q3_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q3_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q3_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q3_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q3_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q4']!=null){
+                            switch(I('q4_num')){
+                                case 1:
+                                    $data['a1_q4_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q4_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q4_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q4_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q4_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q5']!=null){
+                            switch(I('q5_num')){
+                                case 1:
+                                    $data['a1_q5_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q5_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q5_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q5_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q5_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q6']!=null){
+                            switch(I('q6_num')){
+                                case 1:
+                                    $data['a1_q6_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q6_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q6_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q6_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q6_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q7']!=null){
+                            switch(I('q7_num')){
+                                case 1:
+                                    $data['a1_q7_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q7_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q7_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q7_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q7_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q8']!=null){
+                            switch(I('q8_num')){
+                                case 1:
+                                    $data['a1_q8_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q8_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q8_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q8_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q8_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q9']!=null){
+                            switch(I('q9_num')){
+                                case 1:
+                                    $data['a1_q9_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q9_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q9_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q9_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q9_num']++;
+                                    break;
+                            }
+                        }
+                        if($rls['q10']!=null){
+                            switch(I('q10_num')){
+                                case 1:
+                                    $data['a1_q10_num']++;
+                                    break;
+                                case 2:
+                                    $data['a2_q10_num']++;
+                                    break;
+                                case 3:
+                                    $data['a3_q10_num']++;
+                                    break;
+                                case 4:
+                                    $data['a4_q10_num']++;
+                                    break;
+                                case 5:
+                                    $data['a5_q10_num']++;
+                                    break;
+                            }
+                        }
+                        $fbrls->where("id=$id")->save($data);
+                        $user_fb = M('stu');
+                        $user_['flag']=true;
+                        $user_id = $user['id'];
+                        $user_fb->where("id = $user_id")->save($user_);
+                    }else{
+                        $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
+                    }
+                }
+            }else{
+                $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
+            }
         }
+        else{$this->redirect('login/log','',0.01,'<script>alert(\'登陆失效，请重新输入学号\');</script>');}
     }
     public function fbcre() {
         $admin=session('admin');
@@ -52,137 +331,159 @@ class FeedbackController extends Controller {
     public function fbrls_() {
         $admin=session('admin');
         $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            if(I('btn_reback')) $this->redirect(fbman);//返回
-            else if(I('btn_fbrls')) {//发布
-                $fbrls=D('fbrls');
-                $fbori=M('fbori');
-                $quetit=I('que');
-                $data=$fbori->where("tit='$quetit'")->find();
-                unset($data['bId']);
-                unset($data['bNam']);
-                unset($data['id']);
-                if ($data+=$fbrls->create()){
-                    $fbrls->add($data);
-                    $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
-                }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布失败！\');</script>');
-            }
+        if($admin){
+            if($admin['typ']=='1'){
+                if(I('btn_reback')) $this->redirect(fbman);//返回
+                else if(I('btn_fbrls')) {//发布
+                    $fbrls=D('fbrls');
+                    $fbori=M('fbori');
+                    $quetit=I('que');
+                    $data=$fbori->where("tit='$quetit'")->find();
+                    unset($data['bId']);
+                    unset($data['bNam']);
+                    unset($data['id']);
+                    if ($data+=$fbrls->create()){
+                        $fbrls->add($data);
+                        $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
+                    }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布失败！\');</script>');
+                }
+            }else
+            $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbupdt() {
         $admin=session('admin');
         $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            $fbori = M('fbori');
-            $id = I('update');
-            $old = $fbori->where(" id=$id ")->select();
-            $this->assign('old',$old[0]);
-            $this->display();
+        if($admin){
+            if($admin['typ']=='1'){
+                $fbori = M('fbori');
+                $id = I('update');
+                $old = $fbori->where(" id=$id ")->select();
+                $this->assign('old',$old[0]);
+                $this->display();
+            }else
+                $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbupdt_() {
         $admin=session('admin');
         $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            if(I('btn_fbupdt')) {//修改
-                $fbori=D('fbori');
-                if($fbori->create()){
-                    $data=$fbori->add();
-                    $this->redirect('fbman','',0.01,'<script>alert(\'问卷修改成功！\');</script>');
+        if($admin){
+            if($admin['typ']=='1'){
+                if(I('btn_fbupdt')) {//修改
+                    $fbori=D('fbori');
+                    if($fbori->create()){
+                        $data=$fbori->add();
+                        $this->redirect('fbman','',0.01,'<script>alert(\'问卷修改成功！\');</script>');
+                    }
+                }else{
+                    if(I('btn_back')){
+                        $this->redirect('fbman','',0.01);
+                    }
                 }
-            }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷修改失败！\');</script>');
+            }else
+                $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     //管理员问卷显示
     public function fbman() {
         $admin=session('admin');
         $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            $fbori = M('fbori');
-            $id = $_POST['id'];
-            $old = $fbori->order('id desc')->select();
-            $this->assign('old',$old);
-            //按钮判断
-            if(I('btn_fbcre')) $this->redirect(fbcre);
-            if(I('btn_fbrls')) $this->redirect(fbman2);
-            //操作判断
-            $update=I('update');
-            $publish=I('publish');
-            $delete=I('delete');
-            if($update){//更新
-                $this->redirect("fbupdt?update=$update",'',0.01,'');
-            }else if ($publish){//发布
-                $que=$fbori->where("id=$publish")->find();
-                $this->redirect('fbrls',array('que'=>$que['tit']));
-            }else if ($delete){//删除
-                $fbori->where("id=$delete")->delete();
-                $this->redirect($this);
-            }
+        if($admin){
+            if($admin['typ']=='1'){
+                $fbori = M('fbori');
+                $id = $_POST['id'];
+                $old = $fbori->order('id desc')->select();
+                $this->assign('old',$old);
+                //按钮判断
+                if(I('btn_fbcre')) $this->redirect(fbcre);
+                if(I('btn_fbrls')) $this->redirect(fbman2);
+                //操作判断
+                $update=I('update');
+                $publish=I('publish');
+                $delete=I('delete');
+                if($update){//更新
+                    $this->redirect("fbupdt?update=$update",'',0.01,'');
+                }else if ($publish){//发布
+                    $que=$fbori->where("id=$publish")->find();
+                    $this->redirect('fbrls',array('que'=>$que['tit']));
+                }else if ($delete){//删除
+                    $fbori->where("id=$delete")->delete();
+                    $this->redirect($this);
+                }
 
-            else{
-                $this->display();
-            }
+                else{
+                    $this->display();
+                }
+            }else
+                $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     //已发布问卷显示
     public function fbman2() {
         $admin=session('admin');
         $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            $fbrls = M('fbrls');
-            $id = $_POST['id'];
-            $new = $fbrls->order('id desc')->select();
+        if($admin){
+            if($admin['typ']=='1'){
+                $fbrls = M('fbrls');
+                $id = $_POST['id'];
+                $new = $fbrls->order('id desc')->select();
 
-            for($i = 0 ;$i < count($new);$i++ ){
+                for($i = 0 ;$i < count($new);$i++ ){
 
-                switch($new[$i]['wday'])
-                {
-                    case 1:
-                        $new[$i]['wday']="一";
-                        break;
-                    case 2:
-                        $new[$i]['wday']="二";
-                        break;
-                    case 3:
-                        $new[$i]['wday']="三";
-                        break;
-                    case 4:
-                        $new[$i]['wday']="四";
-                        break;
-                    case 5:
-                        $new[$i]['wday']="五";
-                        break;
-                    case 6:
-                        $new[$i]['wday']="六";
-                        break;
-                    case 7:
-                        $new[$i]['wday']="日";
-                        break;
-                    default:
-                        break;
+                    switch($new[$i]['wday'])
+                    {
+                        case 1:
+                            $new[$i]['wday']="一";
+                            break;
+                        case 2:
+                            $new[$i]['wday']="二";
+                            break;
+                        case 3:
+                            $new[$i]['wday']="三";
+                            break;
+                        case 4:
+                            $new[$i]['wday']="四";
+                            break;
+                        case 5:
+                            $new[$i]['wday']="五";
+                            break;
+                        case 6:
+                            $new[$i]['wday']="六";
+                            break;
+                        case 7:
+                            $new[$i]['wday']="日";
+                            break;
+                        default:
+                            break;
+                    }
                 }
-            }
-            $this->assign('new',$new);
-            //按钮判断
-            if(I('btn_fbcre')) $this->redirect(fbcre);
-            if(I('btn_fbori')) $this->redirect(fbman);
-            if(I('btn_fbsts')) $this->redirect(fbsts,array('id'=>I('btn_fbsts')),0.01,'');
-            
-            else{
-                $this->display();
-            }
+                $this->assign('new',$new);
+                //按钮判断
+                if(I('btn_fbcre')) $this->redirect(fbcre);
+                if(I('btn_fbori')) $this->redirect(fbman);
+                if(I('btn_fbsts')) $this->redirect(fbsts,array('id'=>I('btn_fbsts')),0.01,'');
+                
+                else{
+                    $this->display();
+                }
+            }else
+                $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     public function fbsts(){
         $admin=session('admin');
         $this->assign('admin',$admin);
-        if($admin && $admin['typ']=='1' ){
-            $fbrls = M('fbrls');
-            $id = I('id');
-            $rls = $fbrls->where("id = '$id'")->select();
-            $this->assign('rls',$rls[0]);
-            $this->assign('id',$id);
-            $this->display();
+        if($admin){
+            if($admin['typ']=='1'){
+                $fbrls = M('fbrls');
+                $id = I('id');
+                $rls = $fbrls->where("id = '$id'")->select();
+                $this->assign('rls',$rls[0]);
+                $this->assign('id',$id);
+                $this->display();
+            }else
+                $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
 }
