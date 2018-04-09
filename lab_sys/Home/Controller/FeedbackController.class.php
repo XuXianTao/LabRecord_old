@@ -65,7 +65,7 @@ class FeedbackController extends Controller {
                 if ($data+=$fbrls->create()){
                     $fbrls->add($data);
                     $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
-                }
+                }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布失败！\');</script>');
             }
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
@@ -104,6 +104,7 @@ class FeedbackController extends Controller {
             $this->assign('old',$old);
             //按钮判断
             if(I('btn_fbcre')) $this->redirect(fbcre);
+            if(I('btn_fbrls')) $this->redirect(fbman2);
             //操作判断
             $update=I('update');
             $publish=I('publish');
@@ -124,30 +125,49 @@ class FeedbackController extends Controller {
         }else $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     //已发布问卷显示
-    public function fbman() {
+    public function fbman2() {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbrls = M('fbrls');
             $id = $_POST['id'];
             $new = $fbrls->order('id desc')->select();
-            $this->assign('old',$new);
+
+            for($i = 0 ;$i < count($new);$i++ ){
+
+                switch($new[$i]['wday'])
+                {
+                    case 1:
+                        $new[$i]['wday']="一";
+                        break;
+                    case 2:
+                        $new[$i]['wday']="二";
+                        break;
+                    case 3:
+                        $new[$i]['wday']="三";
+                        break;
+                    case 4:
+                        $new[$i]['wday']="四";
+                        break;
+                    case 5:
+                        $new[$i]['wday']="五";
+                        break;
+                    case 6:
+                        $new[$i]['wday']="六";
+                        break;
+                    case 7:
+                        $new[$i]['wday']="日";
+                        break;
+                    default:
+                        break;
+                }
+            }
+            $this->assign('new',$new);
             //按钮判断
             if(I('btn_fbcre')) $this->redirect(fbcre);
-            //操作判断
-            $update=I('update');
-            $publish=I('publish');
-            $delete=I('delete');
-            if($update){//更新
-                $this->redirect("fbupdt?update=$update",'',0.01,'');
-            }else if ($publish){//发布
-                $que=$fbori->where("id=$publish")->find();
-                $this->redirect('fbrls',array('que'=>$que['tit']));
-            }else if ($delete){//删除
-                $fbori->where("id=$delete")->delete();
-                $this->redirect($this);
-            }
-
+            if(I('btn_fbori')) $this->redirect(fbman);
+            if(I('btn_fbsts')) $this->redirect(fbsts,array('id'=>I('btn_fbsts')),0.01,'');
+            
             else{
                 $this->display();
             }
@@ -158,9 +178,10 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
             $fbrls = M('fbrls');
-            $id = $admin['id'];
-            $situation = $fbrls->where("id = '$id'")->select();
-            $this->assign('situation',$situation);
+            $id = I('id');
+            $rls = $fbrls->where("id = '$id'")->select();
+            $this->assign('rls',$rls[0]);
+            $this->assign('id',$id);
             $this->display();
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }

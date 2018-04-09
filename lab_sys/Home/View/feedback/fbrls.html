@@ -55,7 +55,7 @@
         </div>
     </div>
     <div id="main">
-        <form id="form" action="fbrls_" method="POST" onsubmit="return onDestroy()">
+        <form id="form" action="/lab_sys/index.php/Home/feedback/fbrls_" method="POST" onsubmit="return onDestroy()">
             <fieldset>
                 <legend>问卷发布：务必进行核对后再进行发布！</legend>
                 <div class="choice">
@@ -71,19 +71,31 @@
                     </select>
                 </div>
                 <div class="choice">
+                    上课日：
+                    <select name="wDay">
+                        <option value="1">周一</option>
+                        <option value="2">周二</option>
+                        <option value="3">周三</option>
+                        <option value="4">周四</option>
+                        <option value="5">周五</option>
+                        <option value="6">周六</option>
+                        <option value="7">周日</option>
+                    </select>
+                </div>
+                <div class="choice">
                     上课时段：
                     <select name="timInt" size="">
-                        <option>1 - 2节（8:00 - 9:40）</option>
-                        <option>3 - 4节（10:00 - 12:00）</option>
-                        <option>1 - 4节（8:00 - 12:00）</option>
-                        <option>5 - 6节（14:20 - 16:00）</option>
-                        <option>7 - 8节（16:20 - 18:00）</option>
-                        <option>5 - 8节（14:20 - 18:00）</option>
-                        <option>5 - 6节（14:20 - 16:00）</option>
-                        <option>7 - 8节（16:20 - 18:00）</option>
-                        <option>9 - 10节（19:00 - 20:40）</option>
-                        <option>10 - 11节（20:50 - 21:30）</option>
-                        <option>9 - 11节（19:00 - 21:30）</option>
+                        <option>1 - 2节（8:00-9:40）</option>
+                        <option>3 - 4节（10:00-12:00）</option>
+                        <option>1 - 4节（8:00-12:00）</option>
+                        <option>5 - 6节（14:20-16:00）</option>
+                        <option>7 - 8节（16:20-18:00）</option>
+                        <option>5 - 8节（14:20-18:00）</option>
+                        <option>5 - 6节（14:20-16:00）</option>
+                        <option>7 - 8节（16:20-18:00）</option>
+                        <option>9 - 10节（19:00-20:40）</option>
+                        <option>10 - 11节（20:50-21:30）</option>
+                        <option>9 - 11节（19:00-21:30）</option>
                     </select>
                 </div>
                 <div class="btn_group">

@@ -11,6 +11,8 @@ class FbrlsModel extends Model{
 		array('bTim','getBTim',1,'callback'),
 		array('eTim','getETim',1,'callback'),
 		array('styNum','0'),
+		array('rlsTim','getTim',1,"callback"),
+		array('claTim','getclaTim',1,"callback"),
 	);
 	protected function getTeaId(){
 		return session('admin')['id'];
@@ -25,6 +27,12 @@ class FbrlsModel extends Model{
 		return I('timInt');
 	}
 	protected function getETim(){
+		return I('timInt');
+	}
+	protected function getTim() {
+		return date('Y-m-d H:i:s',time());
+	}
+	protected function getcLaTim(){
 		return I('timInt');
 	}
 }

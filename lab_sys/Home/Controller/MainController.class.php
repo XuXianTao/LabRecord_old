@@ -6,8 +6,10 @@ class MainController extends Controller {
     use JUMP_HTML;
 	public function main(){
 		$user=session('user');
-		$this->assign('user',$user);
-		$this->display();
+		if ($user){
+            $this->assign('user',$user);
+			$this->display();
+        }else $this->redirect('log');
 	}
 	public function main_m(){
 		$admin=session('admin');

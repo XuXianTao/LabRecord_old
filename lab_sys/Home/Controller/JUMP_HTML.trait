@@ -2,43 +2,43 @@
 namespace Home\Controller;
 trait JUMP_HTML {
 	public function main() {
-		$this->redirect('main/main');
+		$this->redirect('/home/main/main');
 	}
 	public function main_m() {
-		$this->redirect('main/main_m');
+		$this->redirect('/home/main/main_m');
 	}
 	public function log() {
-		$this->redirect('login/log');
+		$this->redirect('/home/login/log');
 	}
 	public function logm() {
-		$this->redirect('login/logm');
+		$this->redirect('/home/login/logm');
 	}
 	public function fb() {
-		$this->redirect('feedback/fb');
+		$this->redirect('/home/feedback/fb');
 	}
 	public function fbcre() {
-		$this->redirect('feedback/fbcre');
+		$this->redirect('/home/feedback/fbcre');
 	}
 	public function fbrls() {
-		$this->redirect('feedback/fbrls');
+		$this->redirect('/home/feedback/fbrls');
 	}
 	public function fbsts() {
-		$this->redirect('feedback/fbsts');
+		$this->redirect('/home/feedback/fbsts');
 	}
 	public function fbupdt() {
-		$this->redirect('feedback/fbupdt');
+		$this->redirect('/home/feedback/fbupdt');
 	}
 	public function fbman() {
-		$this->redirect('feedback/fbman');
+		$this->redirect('/home/feedback/fbman');
 	}
 	public function excp() {
-		$this->redirect('exception/excp');
+		$this->redirect('/home/exception/excp');
 	}
 	public function excpsts() {
-		$this->redirect('exception/excpsts');
+		$this->redirect('/home/exception/excpsts');
 	}
 	public function excpsta() {
-		$this->redirect('exception/excpsta');
+		$this->redirect('/home/exception/excpsta');
 	}
 }
 
