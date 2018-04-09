@@ -13,6 +13,7 @@ class FbrlsModel extends Model{
 		array('styNum','0'),
 		array('rlsTim','getTim',1,"callback"),
 		array('claTim','getclaTim',1,"callback"),
+		array('ddl','getDDL',1,"callback"),
 	);
 	protected function getTeaId(){
 		return session('admin')['id'];
@@ -29,10 +30,13 @@ class FbrlsModel extends Model{
 	protected function getETim(){
 		return I('timInt');
 	}
+	protected function getcLaTim(){
+		return I('timInt');
+	}
 	protected function getTim() {
 		return date('Y-m-d H:i:s',time());
 	}
-	protected function getcLaTim(){
-		return I('timInt');
+	protected function getDDL(){
+		return date('Y-m-d H:i:s',strtotime(I('year')."-".I('month')."-".I('day')));
 	}
 }

@@ -36,9 +36,9 @@ class FeedbackController extends Controller {
 	public function fb_(){
     	$user=session('user');
     	if ($user){
-            if($user['flag']==false){
+            if($user['flag']==0){
                 if(I('btn_back')){
-                    $this->redirect('fbman','',0.01);
+                    $this->redirect('main/main','',0.01);
                 }else{
                     $fbrls = M('fbrls');
                     $id = I('id');
@@ -46,253 +46,206 @@ class FeedbackController extends Controller {
                     $date1 = date('Y-m-d H:i:s',time());
                     $date2 = $rls[0]['ddl'];
                     if(strtotime($date2)>=strtotime($date1)){
-                        $data = array(
-                            "a1_q1_num" => $rls[0]['a1_q1_num'],
-                            "a2_q1_num" => $rls[0]['a2_q1_num'],
-                            "a3_q1_num" => $rls[0]['a3_q1_num'],
-                            "a4_q1_num" => $rls[0]['a4_q1_num'],
-                            "a5_q1_num" => $rls[0]['a5_q1_num'],
-                            "a1_q2_num" => $rls[0]['a1_q2_num'],
-                            "a2_q2_num" => $rls[0]['a2_q2_num'],
-                            "a3_q2_num" => $rls[0]['a3_q2_num'],
-                            "a4_q2_num" => $rls[0]['a4_q2_num'],
-                            "a5_q2_num" => $rls[0]['a5_q2_num'],
-                            "a1_q3_num" => $rls[0]['a1_q3_num'],
-                            "a2_q3_num" => $rls[0]['a2_q3_num'],
-                            "a3_q3_num" => $rls[0]['a3_q3_num'],
-                            "a4_q3_num" => $rls[0]['a4_q3_num'],
-                            "a5_q3_num" => $rls[0]['a5_q3_num'],
-                            "a1_q4_num" => $rls[0]['a1_q4_num'],
-                            "a2_q4_num" => $rls[0]['a2_q4_num'],
-                            "a3_q4_num" => $rls[0]['a3_q4_num'],
-                            "a4_q4_num" => $rls[0]['a4_q4_num'],
-                            "a5_q4_num" => $rls[0]['a5_q4_num'],
-                            "a1_q5_num" => $rls[0]['a1_q5_num'],
-                            "a2_q5_num" => $rls[0]['a2_q5_num'],
-                            "a3_q5_num" => $rls[0]['a3_q5_num'],
-                            "a4_q5_num" => $rls[0]['a4_q5_num'],
-                            "a5_q5_num" => $rls[0]['a5_q5_num'],
-                            "a1_q6_num" => $rls[0]['a1_q6_num'],
-                            "a2_q6_num" => $rls[0]['a2_q6_num'],
-                            "a3_q6_num" => $rls[0]['a3_q6_num'],
-                            "a4_q6_num" => $rls[0]['a4_q6_num'],
-                            "a5_q6_num" => $rls[0]['a5_q6_num'],
-                            "a1_q7_num" => $rls[0]['a1_q7_num'],
-                            "a2_q7_num" => $rls[0]['a2_q7_num'],
-                            "a3_q7_num" => $rls[0]['a3_q7_num'],
-                            "a4_q7_num" => $rls[0]['a4_q7_num'],
-                            "a5_q7_num" => $rls[0]['a5_q7_num'],
-                            "a1_q8_num" => $rls[0]['a1_q8_num'],
-                            "a2_q8_num" => $rls[0]['a2_q8_num'],
-                            "a3_q8_num" => $rls[0]['a3_q8_num'],
-                            "a4_q8_num" => $rls[0]['a4_q8_num'],
-                            "a5_q8_num" => $rls[0]['a5_q8_num'],
-                            "a1_q9_num" => $rls[0]['a1_q9_num'],
-                            "a2_q9_num" => $rls[0]['a2_q9_num'],
-                            "a3_q9_num" => $rls[0]['a3_q9_num'],
-                            "a4_q9_num" => $rls[0]['a4_q9_num'],
-                            "a5_q9_num" => $rls[0]['a5_q9_num'],
-                            "a1_q10_num" => $rls[0]['a1_q10_num'],
-                            "a2_q10_num" => $rls[0]['a2_q10_num'],
-                            "a3_q10_num" => $rls[0]['a3_q10_num'],
-                            "a4_q10_num" => $rls[0]['a4_q10_num'],
-                            "a5_q10_num" => $rls[0]['a5_q10_num'],
-                        );
-                        if($rls['q1']!=null){
+                        $data = $rls[0];
+                        if($data['q1']!=null){
+                            echo 'test';
                             switch(I('q1_num')){
                                 case 1:
-                                    $data['a1_q1_num']++;
+                                    $data['a1_q1_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q1_num']++;
+                                    $data['a2_q1_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q1_num']++;
+                                    $data['a3_q1_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q1_num']++;
+                                    $data['a4_q1_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q1_num']++;
+                                    $data['a5_q1_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q2']!=null){
+                        if($data['q2']!=null){
                             switch(I('q2_num')){
                                 case 1:
-                                    $data['a1_q2_num']++;
+                                    $data['a1_q2_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q2_num']++;
+                                    $data['a2_q2_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q2_num']++;
+                                    $data['a3_q2_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q2_num']++;
+                                    $data['a4_q2_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q2_num']++;
+                                    $data['a5_q2_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q3']!=null){
+                        if($data['q3']!=null){
                             switch(I('q3_num')){
                                 case 1:
-                                    $data['a1_q3_num']++;
+                                    $data['a1_q3_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q3_num']++;
+                                    $data['a2_q3_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q3_num']++;
+                                    $data['a3_q3_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q3_num']++;
+                                    $data['a4_q3_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q3_num']++;
+                                    $data['a5_q3_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q4']!=null){
+                        if($data['q4']!=null){
                             switch(I('q4_num')){
                                 case 1:
-                                    $data['a1_q4_num']++;
+                                    $data['a1_q4_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q4_num']++;
+                                    $data['a2_q4_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q4_num']++;
+                                    $data['a3_q4_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q4_num']++;
+                                    $data['a4_q4_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q4_num']++;
+                                    $data['a5_q4_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q5']!=null){
+                        if($data['q5']!=null){
                             switch(I('q5_num')){
                                 case 1:
-                                    $data['a1_q5_num']++;
+                                    $data['a1_q5_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q5_num']++;
+                                    $data['a2_q5_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q5_num']++;
+                                    $data['a3_q5_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q5_num']++;
+                                    $data['a4_q5_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q5_num']++;
+                                    $data['a5_q5_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q6']!=null){
+                        if($data['q6']!=null){
                             switch(I('q6_num')){
                                 case 1:
-                                    $data['a1_q6_num']++;
+                                    $data['a1_q6_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q6_num']++;
+                                    $data['a2_q6_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q6_num']++;
+                                    $data['a3_q6_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q6_num']++;
+                                    $data['a4_q6_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q6_num']++;
+                                    $data['a5_q6_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q7']!=null){
+                        if($data['q7']!=null){
                             switch(I('q7_num')){
                                 case 1:
-                                    $data['a1_q7_num']++;
+                                    $data['a1_q7_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q7_num']++;
+                                    $data['a2_q7_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q7_num']++;
+                                    $data['a3_q7_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q7_num']++;
+                                    $data['a4_q7_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q7_num']++;
+                                    $data['a5_q7_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q8']!=null){
+                        if($data['q8']!=null){
                             switch(I('q8_num')){
                                 case 1:
-                                    $data['a1_q8_num']++;
+                                    $data['a1_q8_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q8_num']++;
+                                    $data['a2_q8_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q8_num']++;
+                                    $data['a3_q8_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q8_num']++;
+                                    $data['a4_q8_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q8_num']++;
+                                    $data['a5_q8_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q9']!=null){
+                        if($data['q9']!=null){
                             switch(I('q9_num')){
                                 case 1:
-                                    $data['a1_q9_num']++;
+                                    $data['a1_q9_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q9_num']++;
+                                    $data['a2_q9_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q9_num']++;
+                                    $data['a3_q9_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q9_num']++;
+                                    $data['a4_q9_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q9_num']++;
+                                    $data['a5_q9_Num']++;
                                     break;
                             }
                         }
-                        if($rls['q10']!=null){
+                        if($data['q10']!=null){
                             switch(I('q10_num')){
                                 case 1:
-                                    $data['a1_q10_num']++;
+                                    $data['a1_q10_Num']++;
                                     break;
                                 case 2:
-                                    $data['a2_q10_num']++;
+                                    $data['a2_q10_Num']++;
                                     break;
                                 case 3:
-                                    $data['a3_q10_num']++;
+                                    $data['a3_q10_Num']++;
                                     break;
                                 case 4:
-                                    $data['a4_q10_num']++;
+                                    $data['a4_q10_Num']++;
                                     break;
                                 case 5:
-                                    $data['a5_q10_num']++;
+                                    $data['a5_q10_Num']++;
                                     break;
                             }
                         }
-                        $fbrls->where("id=$id")->save($data);
+                        $fbrls->save($data);
                         $user_fb = M('stu');
                         $user_['flag']=true;
-                        $user_id = $user['id'];
-                        $user_fb->where("id = $user_id")->save($user_);
+                        //$user_id = $user['id'];
+                        //$user_fb->where("id = $user_id")->save($user_);
+                        //$user = $user_fb->where("id = $user_id")->select();
+                        //session('user',$user[0]);
+                        //$this->redirect('main/main','',0.01,'<script>alert(\'感谢你的反馈！\');</script>');
                     }else{
                         $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
