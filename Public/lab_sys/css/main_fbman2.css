@@ -20,6 +20,7 @@ tr {
     line-height: 30px;
 }
 
+td:first-child,
 td:first-child {
     width: 200px;
     text-align: center;
@@ -42,7 +43,7 @@ td:nth-child(4) {
     width: 250px;
 }
 
-th:nth-child(5),
-td:nth-child(5) {
-    width: 180px;
+th:last-child,
+td:last-child {
+    width: 200px;
 }
