@@ -1,18 +1,18 @@
 #main {
-	width: 980px;
-	margin: 0 auto;
+    width: 980px;
+    margin: 0 auto;
 }
 
 .btn_wrapper {
-	width: 50%;
-	margin: 0 auto;
-	padding-top: 100px;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 
 .btn {
-	width: 100%;
-	line-height: 50px;
-	border-radius: 25px;
-	background: #FFF;
-	font-size: x-large;
+    width: 100%;
+    line-height: 45px;
+    border-radius: 25px;
+    background: #FFF;
+    font-size: x-large;
 }
