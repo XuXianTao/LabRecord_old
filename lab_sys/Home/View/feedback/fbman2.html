@@ -67,6 +67,7 @@
                     <th>问卷标题</th>
                     <th>类型</th>
                     <th>发布人</th>
+                    <th>填写课室</th>
                     <th>对应上课时段</th>
                     <th>截止时间</th>
                     <th></th>
@@ -77,6 +78,7 @@
                         <td>{$vo.tit}</td>
                         <td>{:($vo.typ)?"小测":"问卷"}</td>
                         <td>{$vo.teaname}({$vo.teaid})</td>
+                        <td>{$vo.cla}</td>
                         <td>周{$vo.wday}&nbsp;{$vo.clatim}</td>
                         <td>{$vo.ddl}</td>
                         <td>

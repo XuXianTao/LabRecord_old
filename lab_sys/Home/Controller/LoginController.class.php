@@ -19,10 +19,13 @@ class LoginController extends Controller {
                 //if($loc){
                     $cla = 'B103';
                     $num = '4';
+                    $user_ = $user[0];
+                    $user_['cla'] = $cla;
+                    $user_['num'] = $num;
                     cookie('cla',$cla);
                     cookie('num',$num);
-                    session('user',$user[0]);
-                    $this->assign('user',$user[0]);
+                    session('user',$user_);
+                    $this->assign('user',$user_);
                     $this->redirect('main/main');
                 //}else
                     //$this->error('不存在的ip地址 '.$ip);
