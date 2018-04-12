@@ -1,4 +1,4 @@
-function set_val() {
+jQuery(document).ready(function() {
     jQuery("[name='btn1']").each(
         function(index) {
             var vo_id1 = jQuery("[name='vo_id1']").eq(index)[0];
@@ -13,4 +13,4 @@ function set_val() {
             vo_dat2.value = vo_dat_val;
         }
     );
-}
+})
