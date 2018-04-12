@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-    <script src="__PUBLIC__/js/init.js"></script>
-    <script src="__PUBLIC__/js/del.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-    <link rel="stylesheet" href="__PUBLIC__/css/main_fbman.css" />
-    <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
+    <input type="hidden" name="uname" id="uname" value="{$user['nam']}" />
     <input type="hidden" name="ip" id="ip" />
     <style type="text/css">
         html,
@@ -48,7 +46,7 @@
     <div id="navigation_wrapper">
         <div id="navigation">
             <div class="nav"><a href="main">主页</a></div>
-            <div class="nav"><a href="excpsta">课堂反馈</a></div>
+            <div class="nav"><a href="fbstu">课堂反馈</a></div>
             <div class="nav"><a href="excp">异常反馈</a></div>
         </div>
     </div>
