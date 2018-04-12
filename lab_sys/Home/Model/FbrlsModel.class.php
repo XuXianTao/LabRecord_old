@@ -37,6 +37,6 @@ class FbrlsModel extends Model{
 		return date('Y-m-d H:i:s',time());
 	}
 	protected function getDDL(){
-		return date('Y-m-d H:i:s',strtotime(I('year')."-".I('month')."-".I('day')));
+		return date('Y-m-d H:i:s',strtotime('+'.I('min').'minute'));
 	}
 }

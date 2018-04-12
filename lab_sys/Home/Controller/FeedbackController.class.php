@@ -22,7 +22,7 @@ class FeedbackController extends Controller {
     
                         $this->display();
                     }else{
-                        $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
+                        $this->redirect('feedback/fbstu','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
                 }else{
                     $this->redirect('main/main','',0.01,'<script>alert(\'没有需要填写的问卷\');</script>');
@@ -301,13 +301,44 @@ class FeedbackController extends Controller {
                     unset($data['bNam']);
                     unset($data['id']);
                     if ($data+=$fbrls->create()){
-                        $fbrls->add($data);
-                        $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
+                        $stu = M('stu');
+                        $stus['wDay'] = $data['wDay'];
+                        $stus['claTim'] = $data['claTim'];
+                        $stus['teaId'] = $data['teaId'];
+                        $stu_s = $stu->where($stus)->select();
+                        $fill = M('fill');
+                        if($stu_s != null){
+                            $data = $fbrls->add($data);
+                            for($i=0;$i<count($stu_s);$i++){
+                                $data_f['stuId']=$stu_s[$i]['id'];
+                                $data_f['fbId']=$data;
+                                $fill->add($data_f);
+                                $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
+                            }
+                        }else
+                            $this->redirect('fbrls',array('que'=>$quetit),0.01,'<script>alert(\'无此时段的学生！\');</script>');
                     }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布失败！\');</script>');
                 }
             }else
             $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
+    }
+    public function fbstu(){
+        $user=session('user');
+    	if ($user){
+            $id = $user['id'];
+            $fill = M('fill');
+            $fill_1 = $fill->where("stuId = $id and stat = 0")->select();
+            $fbrls = M('fbrls');
+            for($i=0;$i<count($fill_1);$i++){
+                $fbid = (int)$fill_1[$i]['fbid'];
+                $rls = $fbrls->where("id = $fbid")->select();
+                $fill_1[$i] += $rls[0];
+            }
+            $this->assign('fill',$fill_1);
+            $this->display();
+            
+    	}else{$this->redirect('login/log','',0.01,'<script>alert(\'登陆失效，请重新输入学号\');</script>');}
     }
     public function fbupdt() {
         $admin=session('admin');
@@ -374,7 +405,7 @@ class FeedbackController extends Controller {
                     $this->display();
                 }
             }else
-                $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
+                $this->redirect('Login/logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
         }else $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
     //已发布问卷显示

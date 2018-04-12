@@ -16,6 +16,9 @@ trait JUMP_HTML {
 	public function fb() {
 		$this->redirect('/home/feedback/fb');
 	}
+	public function fbstu() {
+		$this->redirect('/home/feedback/fbstu');
+	}
 	public function fbcre() {
 		$this->redirect('/home/feedback/fbcre');
 	}
@@ -30,6 +33,9 @@ trait JUMP_HTML {
 	}
 	public function fbman() {
 		$this->redirect('/home/feedback/fbman');
+	}
+	public function fbman2() {
+		$this->redirect('/home/feedback/fbman2');
 	}
 	public function excp() {
 		$this->redirect('/home/exception/excp');

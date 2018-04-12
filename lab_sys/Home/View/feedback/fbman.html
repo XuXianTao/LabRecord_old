@@ -65,6 +65,7 @@
                 <tr>
                     <th>创建时间</th>
                     <th>问卷标题</th>
+                    <th>类型</th>
                     <th>制定人</th>
                     <th>操作</th>
                 </tr>
@@ -72,6 +73,7 @@
                     <tr>
                         <td>{$vo.cretim}</td>
                         <td><a href="?update={$vo.id}">{$vo.tit}</a></td>
+                        <td>{:($vo.typ==1)?"小测":"问卷"}</td>
                         <td>{$vo.bnam}({$vo.bid})</td>
                         <td>
                             <button type="submit" name="update" value="{$vo.id}">修改</button>
