@@ -73,7 +73,8 @@
                 <td>".$rls['a3_q1_num']."</td>
                 <td>".$rls['a4_q1_num']."</td>
                 <td>".$rls['a5_q1_num']."</td>
-            </tr>":""} {:($rls['q2']!=null)?"
+            </tr>":""} 
+            {:($rls['q2']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q2']."</td>
@@ -89,7 +90,8 @@
                 <td>".$rls['a3_q2_num']."</td>
                 <td>".$rls['a4_q2_num']."</td>
                 <td>".$rls['a5_q2_num']."</td>
-            </tr>":""} {:($rls['q3']!=null)?"
+            </tr>":""} 
+            {:($rls['q3']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q3']."</td>
@@ -105,7 +107,8 @@
                 <td>".$rls['a3_q3_num']."</td>
                 <td>".$rls['a4_q3_num']."</td>
                 <td>".$rls['a5_q3_num']."</td>
-            </tr>":""} {:($rls['q4']!=null)?"
+            </tr>":""} 
+            {:($rls['q4']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q4']."</td>
@@ -121,7 +124,8 @@
                 <td>".$rls['a3_q4_num']."</td>
                 <td>".$rls['a4_q4_num']."</td>
                 <td>".$rls['a5_q4_num']."</td>
-            </tr>":""} {:($rls['q5']!=null)?"
+            </tr>":""} 
+            {:($rls['q5']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q5']."</td>
@@ -137,7 +141,8 @@
                 <td>".$rls['a3_q5_num']."</td>
                 <td>".$rls['a4_q5_num']."</td>
                 <td>".$rls['a5_q5_num']."</td>
-            </tr>":""} {:($rls['q6']!=null)?"
+            </tr>":""} 
+            {:($rls['q6']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q6']."</td>
@@ -153,7 +158,8 @@
                 <td>".$rls['a3_q6_num']."</td>
                 <td>".$rls['a4_q6_num']."</td>
                 <td>".$rls['a5_q6_num']."</td>
-            </tr>":""} {:($rls['q7']!=null)?"
+            </tr>":""} 
+            {:($rls['q7']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q7']."</td>
@@ -169,7 +175,8 @@
                 <td>".$rls['a3_q7_num']."</td>
                 <td>".$rls['a4_q7_num']."</td>
                 <td>".$rls['a5_q7_num']."</td>
-            </tr>":""} {:($rls['q8']!=null)?"
+            </tr>":""} 
+            {:($rls['q8']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q8']."</td>
@@ -185,7 +192,8 @@
                 <td>".$rls['a3_q8_num']."</td>
                 <td>".$rls['a4_q8_num']."</td>
                 <td>".$rls['a5_q8_num']."</td>
-            </tr>":""} {:($rls['q9']!=null)?"
+            </tr>":""} 
+            {:($rls['q9']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q9']."</td>
@@ -201,7 +209,8 @@
                 <td>".$rls['a3_q9_num']."</td>
                 <td>".$rls['a4_q9_num']."</td>
                 <td>".$rls['a5_q9_num']."</td>
-            </tr>":""} {:($rls['q10']!=null)?"
+            </tr>":""} 
+            {:($rls['q10']!=null)?"
             <tr>
                 <td>问题</td>
                 <td>".$rls['a1_q10']."</td>
@@ -219,25 +228,42 @@
                 <td>".$rls['a5_q10_num']."</td>
             </tr>":""}
         </table>
-        <table id="stu_list" border="1">
+        <table id="unsubmit_list" border="1">
             <caption>未上交名单</caption>
             <tr>
                 <td>学号</td>
                 <td>姓名</td>
                 <td>上课课室</td>
-                <td>任课教师</td>
                 <td>上课时段</td>
             </tr>
-            <volist id="vo" name="slist">
+            <volist id="vo" name="fill_stat">
                 <tr>
                     <td>{$vo.id}</td>
                     <td>{$vo.nam}</td>
                     <td>{$vo.cla}</td>
-                    <td>{$vo.tnam}</td>
-                    <td>{$vo.claTim}</td>
+                    <td>{$vo.clatim}</td>
                 </tr>
             </volist>
         </table>
+        <table id="unsubmit_list" border="1">
+                <caption>不及格名单</caption>
+                <tr>
+                    <td>学号</td>
+                    <td>姓名</td>
+                    <td>上课课室</td>
+                    <td>上课时段</td>
+                    <td>分数</td>
+                </tr>
+                <volist id="vo" name="fill_sc">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.nam}</td>
+                        <td>{$vo.cla}</td>
+                        <td>{$vo.clatim}</td>
+                        <td>{$vo.scr}</td>
+                    </tr>
+                </volist>
+            </table>
     </div>
 </body>
 

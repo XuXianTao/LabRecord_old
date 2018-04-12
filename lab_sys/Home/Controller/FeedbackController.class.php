@@ -416,7 +416,8 @@ class FeedbackController extends Controller {
             if($admin['typ']=='1'){
                 $fbrls = M('fbrls');
                 $id = $_POST['id'];
-                $new = $fbrls->order('id desc')->select();
+                $tea_id = $admin['id'];
+                $new = $fbrls->where("teaId = $tea_id")->order('id desc')->select();
 
                 for($i = 0 ;$i < count($new);$i++ ){
 
@@ -465,15 +466,18 @@ class FeedbackController extends Controller {
         $this->assign('admin',$admin);
         if($admin){
             if($admin['typ']=='1'){
+                $f = M('fill');
                 $fbrls = M('fbrls');
                 $id = I('id');
+                $fill_stat = $f->join("stu ON stu.id = fill.stuId")->where("fbId = '$id' and stat = 0")->select();
+                $fill_sc = $f->join("stu ON stu.id = fill.stuId")->where("fbId = '$id' and scr < 60")->select();
+
                 $rls = $fbrls->where("id = '$id'")->select();
                 $this->assign('rls',$rls[0]);
                 $this->assign('id',$id);
-                $sql="select stu.id, stu.nam, stu.claTim, man.cla as cla, man.nam as tnam from man,stu where man.id=stu.teaId and stu.wDay={$rls[0]['wday']} and stu.claTim='{$rls[0]['clatim']}' and flag=0;";
-                $slist=M()->query($sql);
 
-                $this->assign('slist',$slist);
+                $this->assign('fill_stat',$fill_stat);
+                $this->assign('fill_sc',$fill_sc);
                 $this->display();
             }else
                 $this->redirect('logm','',0.01,'<script>alert(\'身份验证失败，请重新输入学号/职工号\');</script>');
