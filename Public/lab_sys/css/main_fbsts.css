@@ -6,12 +6,47 @@ table {
 tr {
     text-align: center;
     line-height: 30px;
+    height: 30px;
 }
 
-td {
-    width: 200px;
+#stat_data td {
+    width: 180px;
 }
 
-#stat_data tr:last-child {
-    width: 320px;
+#stat_data td:nth-child(1) {
+    width: 350px;
+}
+
+#stat_data tr:nth-child(even) td:nth-child(1) {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#unsubmit_list td:nth-child(1) {
+    width: 120px;
+}
+
+#unsubmit_list td:nth-child(2) {
+    width: 100px;
+}
+
+#unsubmit_list td:nth-child(3) {
+    width: 180px;
+}
+
+#notpass_list td:nth-child(1) {
+    width: 120px;
+}
+
+#notpass_list td:nth-child(2) {
+    width: 100px;
+}
+
+#notpass_list td:nth-child(3) {
+    width: 180px;
+}
+
+#notpass_list td:nth-child(4) {
+    width: 100px;
 }

@@ -3,12 +3,14 @@
     margin: 40px auto;
 }
 
-.qu {
+.q,
+.tit,
+.typ {
     width: 80%;
     margin: 0 auto;
 }
 
-input {
+input[type="text"] {
     width: 50%;
 }
 

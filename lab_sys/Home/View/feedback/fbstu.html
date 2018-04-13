@@ -6,6 +6,7 @@
     <title>lab_sys</title>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/main_fbstu.css">
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/init.js"></script>
@@ -54,17 +55,18 @@
         <form>
             <table border="1">
                 <caption>未填问卷/小测</caption>
-                
-                {:($fill!=null)?"<tr>
-                        <th>问卷标题</th>
-                        <th>类型</th>
-                        <th>发布人</th>
-                        <th>截止时间</th>
-                    </tr>":"<tr>无未填问卷/小测</tr>"}
+                {:($fill!=null)?"
+                <tr>
+                    <th>问卷标题</th>
+                    <th>类型</th>
+                    <th>发布人</th>
+                    <th>截止时间</th>
+                </tr>":"
+                <tr>无未填问卷/小测</tr>"}
                 <volist name="fill" id="vo">
                     <tr>
-                        <td><a href = "fb?id=".{$vo.id}>{$vo.tit}</td>
-                        <td>{:($vo.typ)?"小测":"问卷"}</td>
+                        <td><a href="fb?id=" .{$vo.id}>{$vo.tit}</td>
+                        <td>{:($vo.typ)?"问卷":"小测"}</td>
                         <td>{$vo.teaname}</td>
                         <td>{$vo.ddl}</td>
                     </tr>
