@@ -63,7 +63,7 @@
                     </tr>":"<tr>无未填问卷/小测</tr>"}
                 <volist name="fill" id="vo">
                     <tr>
-                        <td><a href = "fb?id=".{$vo.id}>{$vo.tit}</td>
+                        <td><a href = "fb?id={$vo.id}">{$vo.tit}</td>
                         <td>{:($vo.typ)?"小测":"问卷"}</td>
                         <td>{$vo.teaname}</td>
                         <td>{$vo.ddl}</td>
