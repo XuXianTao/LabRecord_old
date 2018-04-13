@@ -9,10 +9,8 @@ class FeedbackController extends Controller {
     	if ($user){
             if($user['flag']==false){
                 $fbrls = M('fbrls');
-                $data['teaid']=$user['teaid'];
-                $data['wday']=$user['wday'];
-                $data['clatim']=$user['clatim'];
-                $rls = $fbrls->order('id desc')->where($data)->select();
+                $id=I('id');
+                $rls = $fbrls->where("id = $id")->select();
                 if($rls){
                     $date1 = date('Y-m-d H:i:s',time());
                     $date2 = $rls[0]['ddl'];
