@@ -20,16 +20,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -47,23 +47,25 @@
     <div id="navigation_wrapper">
         <div id="navigation">
             <div class="nav"><a href="main_m">主页</a></div>
-            <div class="nav"><a href="fbman">问卷管理</a></div>
             <div class="nav"><a href="excpsts">异常情况</a></div>
-            <div class="nav"><a href="fbman">原始问卷管理</a></div>
-            <div class="nav"><a href="fbman2">已发布问卷管理</a></div>
-
+            <div class="nav"><a href="excpsta">故障统计</a></div>
+            <?php if(($admin['typ'] == 1)): ?><div class="nav"><a href="fbman">原始问卷管理</a></div>
+                <div class="nav"><a href="fbman2">已发布问卷管理</a></div><?php endif; ?>
         </div>
     </div>
     <div id="main">
         <div class="btn_wrapper">
-            <a href="fbman"><button id="btn1" name="btn_fbman" class="btn">问卷管理</button></a>
+            <a href="excpsts"><button id="btn1" name="btn_excp" class="btn">查看异常情况</button></a>
         </div>
         <div class="btn_wrapper">
-            <a href="excpsts"><button id="btn2" name="btn_excp" class="btn">查看异常情况</button></a>
+            <a href="excpsta"><button id="btn2" name="btn_bd" class="btn">查看故障统计</button></a>
         </div>
-        <div class="btn_wrapper">
-            <a href="excpsta"><button id="btn3" name="btn_bd" class="btn">查看故障统计</button></a>
-        </div>
+        <?php if(($admin['typ'] == 1)): ?><div class="btn_wrapper">
+                <a href="fbman"><button id="btn3" name="btn_fbman" class="btn">原始问卷管理</button></a>
+            </div>
+            <div class="btn_wrapper">
+                <a href="fbman2"><button id="btn4" name="btn_fbman" class="btn">已发布问卷管理</button></a>
+            </div><?php endif; ?>
     </div>
 </body>
 

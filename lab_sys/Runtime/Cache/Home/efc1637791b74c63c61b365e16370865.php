@@ -47,13 +47,13 @@
     <div id="navigation_wrapper">
         <div id="navigation">
             <div class="nav"><a href="main">主页</a></div>
-            <div class="nav"><a href="fb">课堂反馈</a></div>
+            <div class="nav"><a href="fbstu">课堂反馈</a></div>
             <div class="nav"><a href="excp">异常反馈</a></div>
         </div>
     </div>
     <div id="main">
         <div class="btn_wrapper">
-            <a href="fb"><button id="btn1" class="btn">课堂反馈</button></a>
+            <a href="fbstu"><button id="btn1" class="btn">课堂反馈</button></a>
         </div>
         <div class="btn_wrapper">
             <a href="excp"><button id="btn2" class="btn">异常反馈</button></a>

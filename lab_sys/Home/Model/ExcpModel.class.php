@@ -69,7 +69,7 @@ class ExcpModel extends Model{
 		return I('oth')?1:0;
 	}
 	protected function getDes() {
-		return I('Des');
+		return I('des');
 	}
 }
 ?>

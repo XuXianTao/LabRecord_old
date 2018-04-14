@@ -10,7 +10,6 @@
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/init.js"></script>
-    <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/set_dat.js"></script>
     <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
     <input type="hidden" name="ip" id="ip" />
     <style type="text/css">
@@ -42,7 +41,7 @@
     </style>
 </head>
 
-<body onload="init();set_deft();set_opt()">
+<body onload="init()">
     <div id="header_wrapper">
         <div id="header">
             <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
@@ -51,11 +50,11 @@
     </div>
     <div id="navigation_wrapper">
         <div id="navigation">
-            <div class="nav"><a href="main_m">主页</a></div>
-            <div class="nav"><a href="excpsts">异常情况</a></div>
-            <div class="nav"><a href="excpsta">故障统计</a></div>
-            <div class="nav"><a href="fbman">原始问卷管理</a></div>
-            <div class="nav"><a href="fbman2">已发布问卷管理</a></div>
+            <div class="nav"><a href="/lab_sys/index.php/Home/Main/main_m">主页</a></div>
+            <div class="nav"><a href="/lab_sys/index.php/Home/exception/excpsts">异常情况</a></div>
+            <div class="nav"><a href="/lab_sys/index.php/Home/exception/excpsta">故障统计</a></div>
+            <div class="nav"><a href="/lab_sys/index.php/Home/feedback/fbman">原始问卷管理</a></div>
+            <div class="nav"><a href="/lab_sys/index.php/Home/feedback/fbman2">已发布问卷管理</a></div>
         </div>
     </div>
     <div id="main">
@@ -104,76 +103,23 @@
                 </div>
                 <div class="choice">
                     截止时间：
-                    <select id="year" name = "year">
-                        <option>2018</option>
-                        <option>2019</option>
-                        <option>2020</option>
-                        <option>2021</option>
-                        <option>2022</option>
-                        <option>2023</option>
-                        <option>2024</option>
-                        <option>2025</option>
-                        <option>2026</option>
-                        <option>2027</option>
-                        <option>2028</option>
-                        <option>2029</option>
-                    </select>
-                    <p>年</p>
-                    <select id="month" name="month">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                    </select>
-                    <p>月</p>
-                    <select id="day" name="day">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
+                    <select id="min" name="min">
                         <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                        <option>31</option>
+                        <option selected>30</option>
+                        <option>45</option>
+                        <option>60</option>
+                        <option>75</option>
+                        <option>90</option>
+                        <option>105</option>
+                        <option>120</option>
                     </select>
-                    <p>日</p>
+                    <p>分钟后</p>
                 </div>
                 <div class="btn_group">
                     <button id="btn1" class="btn" type="submit" name="btn_fbrls" value="true">发布</button>
                     <button id="btn2" class="btn" type="submit" name="btn_reback" value="true">返回</button>
                 </div>
-                <input type="hidden" name="que" value="<?php echo I('que');?>">
+                <input type="hidden" name="que" value="<?php echo I( 'que');?>">
             </fieldset>
         </form>
     </div>

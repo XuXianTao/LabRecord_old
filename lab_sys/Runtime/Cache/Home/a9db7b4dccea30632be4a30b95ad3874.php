@@ -6,23 +6,12 @@
     <title>lab_sys</title>
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excp.css">
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_fbstu.css">
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/init.js"></script>
-    <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/ent.js"></script>
-    <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/input.js"></script>
     <input type="hidden" name="uname" id="uname" value="<?php echo ($user['nam']); ?>" />
     <input type="hidden" name="ip" id="ip" />
-    <script>
-        window.onbeforeunload = function() {
-            return "确认退出？";
-        }
-
-        function onDestroy() {
-            window.onbeforeunload = null;
-        }
-    </script>
     <style type="text/css">
         html,
         body {
@@ -31,16 +20,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -48,7 +37,7 @@
     </style>
 </head>
 
-<body onload="init();input()">
+<body onload="init()">
     <div id="header_wrapper">
         <div id="header">
             <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
@@ -63,23 +52,24 @@
         </div>
     </div>
     <div id="main">
-        <form id="form" action="excp_" method="POST" onsubmit="return onDestroy()">
-            <fieldset>
-                <legend>异常反馈</legend>
-                <div class="choice">请选择异常仪器：<br>
-                    <input name="pc" value="pc" type="checkbox">电脑<br>
-                    <input name="wire" value="wire" type="checkbox">导线<br>
-                    <input name="box" value="box" type="checkbox">电路箱<br>
-                    <input name="oscp" value="oscp" type="checkbox">示波器<br>
-                    <input name="gen" value="gen" type="checkbox">函数发生器<br>
-                    <input name="oth" value="oth" type="checkbox">其他
-                    <input name="des" type="text" placeholder="输入文字进行描述" width="20px">
-                </div>
-                <div class="btn_group">
-                    <button id="btn1" class="btn" type="submit" name="btn_excp">提交</button>
-                    <button id="btn2" class="btn" type="reset">重置</button>
-                </div>
-            </fieldset>
+        <form>
+            <table border="1">
+                <?php echo ($fill!=null)?"
+                <caption>未填问卷/小测</caption>
+                <tr>
+                    <th>问卷标题</th>
+                    <th>类型</th>
+                    <th>发布人</th>
+                    <th>截止时间</th>
+                </tr>":"
+                <caption>无未填问卷/小测</caption>";?>
+                <?php if(is_array($fill)): $i = 0; $__LIST__ = $fill;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td><a href="fb?id=<?php echo ($vo["id"]); ?>"><?php echo ($vo["tit"]); ?></td>
+                        <td><?php echo ($vo['typ'])?"小测":"问卷";?></td>
+                        <td><?php echo ($vo["teaname"]); ?></td>
+                        <td><?php echo ($vo["ddl"]); ?></td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+            </table>
         </form>
     </div>
 </body>

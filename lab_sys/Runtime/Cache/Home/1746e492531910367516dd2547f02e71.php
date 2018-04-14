@@ -10,7 +10,7 @@
     <script src="/lab_sys/Public/lab_sys/js/del.js"></script>
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_fbman.css" />
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_fbman2.css" />
     <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
     <input type="hidden" name="ip" id="ip" />
     <style type="text/css">
@@ -21,16 +21,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -56,28 +56,32 @@
     </div>
     <div id="main">
         <form>
-            <div class="btn_group">
+            <!-- <div class="btn_group">
                 <button id="btn1" class="btn" type="submit" name="btn_fbcre" value="true">创建问卷</button>
                 <button id="btn2" class="btn" type="submit" name="btn_fbori" value="true">查看原始问卷</button>
-                <div clear="both"></div>
-            </div>
-            
-            <table>
-                <caption>已经制定的问卷原型</caption>
+            </div> -->
+            <table border="1">
+                <caption>已经发布的问卷</caption>
                 <tr>
                     <th>发布时间</th>
                     <th>问卷标题</th>
+                    <th>类型</th>
                     <th>发布人</th>
+                    <th>填写课室</th>
                     <th>对应上课时段</th>
+                    <th>截止时间</th>
                     <th></th>
                 </tr>
                 <?php if(is_array($new)): $i = 0; $__LIST__ = $new;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                         <td><?php echo ($vo["rlstim"]); ?></td>
-                        <td><a href="?update=<?php echo ($vo["id"]); ?>"><?php echo ($vo["tit"]); ?></a></td>
+                        <td><?php echo ($vo["tit"]); ?></td>
+                        <td><?php echo ($vo['typ']==0)?"问卷":"小测";?></td>
                         <td><?php echo ($vo["teaname"]); ?>(<?php echo ($vo["teaid"]); ?>)</td>
+                        <td><?php echo ($vo["cla"]); ?></td>
                         <td>周<?php echo ($vo["wday"]); ?>&nbsp;<?php echo ($vo["clatim"]); ?></td>
+                        <td><?php echo ($vo["ddl"]); ?></td>
                         <td>
-                            <button id="btn3" class="btn" type="submit" name="btn_fbsts" value="<?php echo ($vo["id"]); ?>">查看反馈情况</button>
+                            <button type="submit" name="btn_fbsts" value="<?php echo ($vo["id"]); ?>">查看反馈情况</button>
                         </td>
                     </tr><?php endforeach; endif; else: echo "" ;endif; ?>
             </table>

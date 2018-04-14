@@ -286,12 +286,12 @@ create table excpsta (
     num			int not null,					#座位号
     pc			int,							#电脑故障数
     wire		int,							#导线故障数
-    box			int,							#电路箱故障数 
+    box			int,							#电路箱故障数
     oscp		int,							#示波器故障数
     gen			int,							#函数发生器故障数
     oth			int								#其他故障数
 ) engine=InnoDB;
-DELIMITER //
+-- DELIMITER //
 create trigger `tri_insert_excpsta` after insert on `excp` for each row
 begin
     select count(*) into @cnt from excpsta where cla=new.cla and num=new.num;
@@ -319,4 +319,4 @@ begin
     end if;
 end;
 //
-DELIMITER ;
+-- DELIMITER ;

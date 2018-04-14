@@ -23,16 +23,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -53,8 +53,10 @@
                 <div class="nav"><a href="main_m">主页</a></div>
                 <div class="nav"><a href="excpsts">异常情况</a></div>
                 <div class="nav"><a href="excpsta">故障统计</a></div>
-                <div class="nav"><a href="fbman">原始问卷管理</a></div>
-                <div class="nav"><a href="fbman2">已发布问卷管理</a></div>
+                <if condition="($admin['typ'] eq 1)">
+                    <div class="nav"><a href="fbman">原始问卷管理</a></div>
+                    <div class="nav"><a href="fbman2">已发布问卷管理</a></div>
+                </if>
             </div>
         </div>
         <table border="1">
@@ -75,7 +77,7 @@
                     <td name="dat">{$vo.dat}</td>
                     <td name="id">{$vo.id}&nbsp;{$vo.nam}</td>
                     <td>{$vo.cla}：{$vo.num}号机</td>
-                    <td>{:$vo[pc]?"&nbsp;电脑":""}{:$vo[wire]?"&nbsp;网线":""}{:$vo[box]?"&nbsp;电路箱":""}{:$vo[oscp]?"&nbsp;示波器":""}{:$vo[gen]?"&nbsp;函数发生器":""}</td>
+                    <td>{:$vo[pc]?"&nbsp;电脑":""}{:$vo[wire]?"&nbsp;网线":""}{:$vo[box]?"&nbsp;电路箱":""}{:$vo[oscp]?"&nbsp;示波器":""}{:$vo[gen]?"&nbsp;函数发生器":""}{:$vo[oth]?"<br/>[其他]：$vo[des]":""}</td>
                     <td>{$vo.delid} {$vo.delnam}</td>
                     <td name="sts">{$vo.sts}</td>
                     <td>{$vo.delway}</td>

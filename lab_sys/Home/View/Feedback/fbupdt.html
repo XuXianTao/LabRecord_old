@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>lab_sys</title>
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-    <script src="__PUBLIC__/js/init.js"></script>
-    <script src="__PUBLIC__/js/type.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
     <link rel="stylesheet" href="__PUBLIC__/css/main_fbupdt.css" />
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+    <script src="__PUBLIC__/js/init.js"></script>
+    <script src="__PUBLIC__/js/type-btn.js"></script>
     <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
     <input type="hidden" name="ip" id="ip" />
     <script>
@@ -30,16 +30,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -47,7 +47,7 @@
     </style>
 </head>
 
-<body onload="init()">
+<body onload="init();type_btn();">
     <div id="header_wrapper">
         <div id="header">
             <div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学" /></div>
@@ -68,12 +68,12 @@
             <fieldset>
                 <legend>问卷修改：务必进行核对后再提交修改！提交将会创建新问卷！</legend>
                 <div id="qnr0" name="qnr0" class="tit">
-                    <br> 标题： <input id="q0" name="tit" type="text" placeholder="这里输入问卷标题">
+                    <br> 标题： <input id="q0" name="tit" type="text" value="{$old['tit']}" placeholder="这里输入问卷标题">
                 </div>
                 <div id="qnrtyp" name="qnrtyp" class="typ">
                     <br> 类型：
-                    <input id="qt0" name="type" type="radio" value="0" checked>调查问卷
-                    <input id="qt1" name="type" type="radio" value="1">课堂小测
+                    <input id="qt0" name="typ" type="radio" value="0" {:$old['typ']?"":"checked"}>调查问卷
+                    <input id="qt1" name="typ" type="radio" value="1" {:$old['typ']?"checked":""}>课堂小测
                 </div>
                 <div id="qnr1" name="qnr1" class="q">
                     <br> 问题1： <input id="q1" name="q1" type="text" value="{$old['q1']}" placeholder="这里输入问题1"> <br><br> &emsp;&emsp;第一个选项：

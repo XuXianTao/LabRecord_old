@@ -10,7 +10,7 @@
     <script src="__PUBLIC__/js/del.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-    <link rel="stylesheet" href="__PUBLIC__/css/main_fbman.css" />
+    <link rel="stylesheet" href="__PUBLIC__/css/main_fbman2.css" />
     <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
     <input type="hidden" name="ip" id="ip" />
     <style type="text/css">
@@ -21,16 +21,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -55,30 +55,34 @@
         </div>
     </div>
     <div id="main">
-        <form action="__URL__/fbman" method="POST">
-            <div class="btn_group">
+        <form>
+            <!-- <div class="btn_group">
                 <button id="btn1" class="btn" type="submit" name="btn_fbcre" value="true">创建问卷</button>
-                <button id="btn2" class="btn" type="submit" name="btn_fbrls" value="true">查看已发布问卷/反馈</button>
-            </div>
+                <button id="btn2" class="btn" type="submit" name="btn_fbori" value="true">查看原始问卷</button>
+            </div> -->
             <table border="1">
-                <caption>已经制定的问卷原型</caption>
+                <caption>已经发布的问卷</caption>
                 <tr>
-                    <th>创建时间</th>
+                    <th>发布时间</th>
                     <th>问卷标题</th>
                     <th>类型</th>
-                    <th>制定人</th>
-                    <th>操作</th>
+                    <th>发布人</th>
+                    <th>填写课室</th>
+                    <th>对应上课时段</th>
+                    <th>截止时间</th>
+                    <th></th>
                 </tr>
-                <volist name="old" id="vo">
+                <volist name="new" id="vo">
                     <tr>
-                        <td>{$vo.cretim}</td>
-                        <td><a href="?update={$vo.id}">{$vo.tit}</a></td>
+                        <td>{$vo.rlstim}</td>
+                        <td>{$vo.tit}</td>
                         <td>{:($vo['typ']==0)?"问卷":"小测"}</td>
-                        <td>{$vo.bnam}({$vo.bid})</td>
+                        <td>{$vo.teaname}({$vo.teaid})</td>
+                        <td>{$vo.cla}</td>
+                        <td>周{$vo.wday}&nbsp;{$vo.clatim}</td>
+                        <td>{$vo.ddl}</td>
                         <td>
-                            <button type="submit" name="update" value="{$vo.id}">修改</button>
-                            <button type="submit" name="publish" value="{$vo.id}">发布</button>
-                            <button type="submit" name="delete" value="{$vo.id}" onclick="return del();">删除</button>
+                            <button type="submit" name="btn_fbsts" value="{$vo.id}">查看反馈情况</button>
                         </td>
                     </tr>
                 </volist>

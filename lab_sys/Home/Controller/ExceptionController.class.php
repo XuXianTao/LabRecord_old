@@ -10,7 +10,7 @@ class ExceptionController extends Controller {
             $this->assign('user',$user);
             $this->display();
         }else{$this->redirect('login/log');}
-    }   
+    }
     public function excp_(){
         $Exc=D('excp');//在model中自动处理post的数值
         if ($Exc->create()){
@@ -21,7 +21,7 @@ class ExceptionController extends Controller {
     }
     public function excpsts(){
     	$Exc=M('excp');
-    	$list=$Exc->select();
+    	$list=$Exc->order('dat desc')->select();
     	$this->assign('list',$list);
         $admin=session('admin');
         if ($admin){
@@ -30,7 +30,7 @@ class ExceptionController extends Controller {
         }else $this->redirect('logm');
     }
     public function deal_inc() {//处理不成功
-        
+
         $excp = M('excp');
         $admin=session('admin');
         if($admin){
@@ -46,7 +46,7 @@ class ExceptionController extends Controller {
         }else{
             $this->redirect('logm');
         }
-        
+
     }
     public function deal_com() {//处理成功
         $excp = M('excp');

@@ -11,6 +11,13 @@
     <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/init.js"></script>
     <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/ent.js"></script>
     <input type="hidden" name="ip" id="ip" />
+    <script>
+        var userAgent = navigator.userAgent;
+        if (!!window.ActiveXObject || "ActiveXObject" in window || (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && userAgent.indexOf("Opera") <= -1)) {
+            alert('珍爱生命，远离IE\n推荐使用Chrome来进行上网');
+            window.location.href = 'http://rj.baidu.com/soft/detail/14744.html?ald';
+        }
+    </script>
     <style type="text/css">
         html,
         body {
@@ -50,5 +57,10 @@
         </form>
     </div>
 </body>
+<script>
+    jQuery(document).ready(function() {
+        jQuery("input").focus();
+    });
+</script>
 
 </html>
