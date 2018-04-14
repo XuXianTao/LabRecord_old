@@ -73,7 +73,7 @@
                     <tr>
                         <td>{$vo.cretim}</td>
                         <td><a href="?update={$vo.id}">{$vo.tit}</a></td>
-                        <td>{:($vo.typ==1)?"小测":"问卷"}</td>
+                        <td>{:($vo['typ']==0)?"问卷":"小测"}</td>
                         <td>{$vo.bnam}({$vo.bid})</td>
                         <td>
                             <button type="submit" name="update" value="{$vo.id}">修改</button>

@@ -39,18 +39,99 @@ class FeedbackController extends Controller {
                     $this->redirect('main/main','',0.01);
                 }else{
                     $fbrls = M('fbrls');
+                    $fill = M('fill');
+                    $user_id = $user['id'];
                     $id = I('id');
-                    $rls = $fbrls->where("id = $id")->select();
+                    $data_s = $fill
+                        ->join('stu ON stu.id = fill.stuId')
+                        ->join('fbrls ON fbrls.id = fill.fbId')
+                        ->where("fbrls.id = $id and stu.id = $user_id")
+                        ->select();
+                    //dump($data_s);
                     //更新学生flag
-                    $stu=M('stu');
-                    $rls1=$rls[0];
-                    $sdata=$stu->where("nam='{$user['nam']}' and wDay={$rls1['wday']} and claTim='{$rls1['clatim']}'")->setField('flag','1');
+                    $type = 0;
+                    if($data_s[0]['typ']==1){
+                        $type = 1;
+                    }
                     $date1 = date('Y-m-d H:i:s',time());
-                    $date2 = $rls[0]['ddl'];
+                    $date2 = $data_s[0]['ddl'];
+                    $q_num=0;
+                    $wa_num=0;
                     if(strtotime($date2)>=strtotime($date1)){
-                        $data = $rls[0];
-                        if($data['q1']!=null){
-                            echo 'test';
+                        $data=array(
+                            'a1_q1_Num' => $data_s[0]['a1_q1_num'],
+                            'a2_q1_Num' => $data_s[0]['a2_q1_num'],
+                            'a3_q1_Num' => $data_s[0]['a3_q1_num'],
+                            'a4_q1_Num' => $data_s[0]['a4_q1_num'],
+                            'a5_q1_Num' => $data_s[0]['a5_q1_num'],
+                            'a_q1_Num' => $data_s[0]['a_q1_num'],
+                            
+                            'a1_q2_Num' => $data_s[0]['a1_q2_num'],
+                            'a2_q2_Num' => $data_s[0]['a2_q2_num'],
+                            'a3_q2_Num' => $data_s[0]['a3_q2_num'],
+                            'a4_q2_Num' => $data_s[0]['a4_q2_num'],
+                            'a5_q2_Num' => $data_s[0]['a5_q2_num'],
+                            'a_q2_Num' => $data_s[0]['a_q2_num'],
+
+                            'a1_q3_Num' => $data_s[0]['a1_q3_num'],
+                            'a2_q3_Num' => $data_s[0]['a2_q3_num'],
+                            'a3_q3_Num' => $data_s[0]['a3_q3_num'],
+                            'a4_q3_Num' => $data_s[0]['a4_q3_num'],
+                            'a5_q3_Num' => $data_s[0]['a5_q3_num'],
+                            'a_q3_Num' => $data_s[0]['a_q3_num'],
+
+                            'a1_q4_Num' => $data_s[0]['a1_q4_num'],
+                            'a2_q4_Num' => $data_s[0]['a2_q4_num'],
+                            'a3_q4_Num' => $data_s[0]['a3_q4_num'],
+                            'a4_q4_Num' => $data_s[0]['a4_q4_num'],
+                            'a5_q4_Num' => $data_s[0]['a5_q4_num'],
+                            'a_q4_Num' => $data_s[0]['a_q4_num'],
+
+                            'a1_q5_Num' => $data_s[0]['a1_q5_num'],
+                            'a2_q5_Num' => $data_s[0]['a2_q5_num'],
+                            'a3_q5_Num' => $data_s[0]['a3_q5_num'],
+                            'a4_q5_Num' => $data_s[0]['a4_q5_num'],
+                            'a5_q5_Num' => $data_s[0]['a5_q5_num'],
+                            'a_q5_Num' => $data_s[0]['a_q5_num'],
+
+                            'a1_q6_Num' => $data_s[0]['a1_q6_num'],
+                            'a2_q6_Num' => $data_s[0]['a2_q6_num'],
+                            'a3_q6_Num' => $data_s[0]['a3_q6_num'],
+                            'a4_q6_Num' => $data_s[0]['a4_q6_num'],
+                            'a5_q6_Num' => $data_s[0]['a5_q6_num'],
+                            'a_q6_Num' => $data_s[0]['a_q6_num'],
+
+                            'a1_q7_Num' => $data_s[0]['a1_q7_num'],
+                            'a2_q7_Num' => $data_s[0]['a2_q7_num'],
+                            'a3_q7_Num' => $data_s[0]['a3_q7_num'],
+                            'a4_q7_Num' => $data_s[0]['a4_q7_num'],
+                            'a5_q7_Num' => $data_s[0]['a5_q7_num'],
+                            'a_q7_Num' => $data_s[0]['a_q7_num'],
+
+                            'a1_q8_Num' => $data_s[0]['a1_q8_num'],
+                            'a2_q8_Num' => $data_s[0]['a2_q8_num'],
+                            'a3_q8_Num' => $data_s[0]['a3_q8_num'],
+                            'a4_q8_Num' => $data_s[0]['a4_q8_num'],
+                            'a5_q8_Num' => $data_s[0]['a5_q8_num'],
+                            'a_q8_Num' => $data_s[0]['a_q8_num'],
+
+                            'a1_q9_Num' => $data_s[0]['a1_q9_num'],
+                            'a2_q9_Num' => $data_s[0]['a2_q9_num'],
+                            'a3_q9_Num' => $data_s[0]['a3_q9_num'],
+                            'a4_q9_Num' => $data_s[0]['a4_q9_num'],
+                            'a5_q9_Num' => $data_s[0]['a5_q9_num'],
+                            'a_q9_Num' => $data_s[0]['a_q9_num'],
+
+                            'a1_q10_Num' => $data_s[0]['a1_q10_num'],
+                            'a2_q10_Num' => $data_s[0]['a2_q10_num'],
+                            'a3_q10_Num' => $data_s[0]['a3_q10_num'],
+                            'a4_q10_Num' => $data_s[0]['a4_q10_num'],
+                            'a5_q10_Num' => $data_s[0]['a5_q10_num'],
+                            'a_q10_Num' => $data_s[0]['a_q10_num'],
+                        );
+                        
+                        if($data_s[0]['q1']!=null){
+                            //echo 'test';
                             switch(I('q1_num')){
                                 case 1:
                                     $data['a1_q1_Num']++;
@@ -68,8 +149,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q1_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q1']==I('q1_num')){
+                                    $data['a_q1_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q2']!=null){
+                        if($data_s[0]['q2']!=null){
                             switch(I('q2_num')){
                                 case 1:
                                     $data['a1_q2_Num']++;
@@ -87,8 +176,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q2_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q2']==I('q2_num')){
+                                    $data['a_q2_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q3']!=null){
+                        if($data_s[0]['q3']!=null){
                             switch(I('q3_num')){
                                 case 1:
                                     $data['a1_q3_Num']++;
@@ -106,8 +203,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q3_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q3']==I('q3_num')){
+                                    $data['a_q3_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q4']!=null){
+                        if($data_s[0]['q4']!=null){
                             switch(I('q4_num')){
                                 case 1:
                                     $data['a1_q4_Num']++;
@@ -125,8 +230,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q4_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q4']==I('q4_num')){
+                                    $data['a_q4_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q5']!=null){
+                        if($data_s[0]['q5']!=null){
                             switch(I('q5_num')){
                                 case 1:
                                     $data['a1_q5_Num']++;
@@ -144,8 +257,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q5_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q5']==I('q5_num')){
+                                    $data['a_q5_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q6']!=null){
+                        if($data_s[0]['q6']!=null){
                             switch(I('q6_num')){
                                 case 1:
                                     $data['a1_q6_Num']++;
@@ -163,8 +284,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q6_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q6']==I('q6_num')){
+                                    $data['a_q6_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q7']!=null){
+                        if($data_s[0]['q7']!=null){
                             switch(I('q7_num')){
                                 case 1:
                                     $data['a1_q7_Num']++;
@@ -182,8 +311,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q7_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q7']==I('q7_num')){
+                                    $data['a_q7_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q8']!=null){
+                        if($data_s[0]['q8']!=null){
                             switch(I('q8_num')){
                                 case 1:
                                     $data['a1_q8_Num']++;
@@ -201,8 +338,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q8_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q8']==I('q8_num')){
+                                    $data['a_q8_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q9']!=null){
+                        if($data_s[0]['q9']!=null){
                             switch(I('q9_num')){
                                 case 1:
                                     $data['a1_q9_Num']++;
@@ -220,8 +365,16 @@ class FeedbackController extends Controller {
                                     $data['a5_q9_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q9']==I('q9_num')){
+                                    $data['a_q9_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-                        if($data['q10']!=null){
+                        if($data_s[0]['q10']!=null){
                             switch(I('q10_num')){
                                 case 1:
                                     $data['a1_q10_Num']++;
@@ -239,16 +392,26 @@ class FeedbackController extends Controller {
                                     $data['a5_q10_Num']++;
                                     break;
                             }
+                            if($type == 1){
+                                $q_num++;
+                                if($data_s[0]['a_q10']==I('q10_num')){
+                                    $data['a_q10_Num']++;
+                                }else{
+                                    $wa_num++;
+                                }
+                            }
                         }
-
-                        $fbrls->save($data);
-                        $user_fb = M('stu');
-                        $user_['flag']=true;
-                        $user_id = $user['id'];
-                        $user_fb->where("id = $user_id")->save($user_);
-                        $user = $user_fb->where("id = $user_id")->select();
-                        session('user',$user[0]);
-                        $this->redirect('main/main','',0.01,'<script>alert(\'感谢你的反馈！\');</script>');
+                        dump($data);
+                        //$fbrls->where("id = $id")->save($data);
+                        $state['stat'] = 1;
+                        if($type == 1){
+                            $state['scr'] = round(($q_num - $wa_num)*100/$q_num);
+                        }
+                        //$fill->where("fbId = $id and stuId = $user_id")->save($state);
+                        dump($wa_num);
+                        dump($state);
+                        $answer = ($type)?'回答':'反馈';
+                        //$this->redirect('main/main','',0.01,"<script>alert(\'感谢你的$answer！\');</script>");
                     }else{
                         $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
@@ -323,6 +486,7 @@ class FeedbackController extends Controller {
     }
     public function fbstu(){
         $user=session('user');
+        $this->assign('user',$user);
     	if ($user){
             $id = $user['id'];
             $fill = M('fill');

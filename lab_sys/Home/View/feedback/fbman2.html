@@ -76,7 +76,7 @@
                     <tr>
                         <td>{$vo.rlstim}</td>
                         <td>{$vo.tit}</td>
-                        <td>{:($vo.typ)?"问卷":"小测"}</td>
+                        <td>{:($vo['typ']==0)?"问卷":"小测"}</td>
                         <td>{$vo.teaname}({$vo.teaid})</td>
                         <td>{$vo.cla}</td>
                         <td>周{$vo.wday}&nbsp;{$vo.clatim}</td>
