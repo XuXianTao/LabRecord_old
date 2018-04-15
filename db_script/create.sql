@@ -5,7 +5,7 @@ use `lab_sys`;
 #IP、座位号映像
 create table ip (
 	ip			varchar(80) not null,			#ip地址
-    cla     	varchar(80) not null,      	#课室号
+    cla     	varchar(80) not null,      		#课室号
     num			varchar(80) not null			#桌号
 ) engine=InnoDB;
 #管理、教师、助理
@@ -14,7 +14,7 @@ create table man (
     id			int not null,					#职工号/学号
     nam			varchar(80) not null,			#名字
     cla			varchar(80),					#课室
-    wDay		int,							#工作日，1一，2二
+    wDay		int default null,				#工作日，1一，2二
     claTim		varchar(80),					#工作时段
     primary 	key(typ,id,wDay,claTim)
 ) engine=InnoDB;
@@ -33,7 +33,7 @@ create table fbori (
     creTim      datetime,                       #创建时间
     bId			int,							#创建人id
     bNam		varchar(80),					#创建人名字
-    typ			tinyint default 0,					#问卷类型：0调查问卷，1课堂小测
+    typ			tinyint default 0,				#问卷类型：0调查问卷，1课堂小测
 	tit			varchar(80) default null,		#问卷标题
     q1			varchar(80) default null,		#问题1
     a1_q1		varchar(80) default null,		#问题1第一选项
@@ -112,7 +112,7 @@ create table fbrls (
     teaId		int not null,					#发布者id
     teaName		varchar(80) not null,			#发布者名字
     rlsTim      datetime,                       #发布时间
-    typ			tinyint default 0,					#问卷类型：0调查问卷，1课堂小测
+    typ			tinyint default 0,				#问卷类型：0调查问卷，1课堂小测
     cla			varchar(80) not null,			#问卷发放到的班级的所在课室
     wDay		int,							#问卷发放到的班级的对应上课日，1一，2二
     claTim		varchar(80),					#问卷发放到的班级的上课时段
@@ -254,7 +254,7 @@ create table fill (
 	stuId		int not null,					#学生id
     fbId		int not null,					#已发布问卷id
     stat		int not null default 0,			#学生填写状态，0未填写，1已填写
-    scr			int not null default 100,			#学生分数
+    scr			int not null default 100,		#学生分数
     ddl			datetime						#截止时间
 ) engine=InnoDB;
 
@@ -264,7 +264,7 @@ create table excp (
     id			int not null,					#学号
     nam     	varchar(80) not null,      		#名字
     cla     	varchar(80) not null,      		#课室
-    num     	int not null,               	#机号
+    num     	int not null,               	#桌号
     delId		int,							#处理人学号
     delNam		varchar(80),					#处理人姓名
     sts			varchar(80) not null,			#处理状态，完全未处理，处理不成功，处理完毕
@@ -291,7 +291,7 @@ create table excpsta (
     gen			int,							#函数发生器故障数
     oth			int								#其他故障数
 ) engine=InnoDB;
--- DELIMITER //
+DELIMITER //
 create trigger `tri_insert_excpsta` after insert on `excp` for each row
 begin
     select count(*) into @cnt from excpsta where cla=new.cla and num=new.num;
@@ -319,4 +319,4 @@ begin
     end if;
 end;
 //
--- DELIMITER ;
+DELIMITER ;

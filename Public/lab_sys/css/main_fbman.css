@@ -18,6 +18,7 @@ tr {
     line-height: 30px;
 }
 
+th:first-child,
 td:first-child {
     width: 200px;
     text-align: center;
