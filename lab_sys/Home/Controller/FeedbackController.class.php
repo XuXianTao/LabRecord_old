@@ -7,13 +7,17 @@ class FeedbackController extends Controller {
     public function fb(){
     	$user=session('user');
     	if ($user){
-            if($user['flag']==false){
                 $fbrls = M('fbrls');
                 $id=I('id');
                 $rls = $fbrls->where("id = $id")->select();
-                if($rls){
+            if($rls){
+                $fill = M('fill');
+                $user_id = $user['id'];
+                $rls_id = $rls[0]['id'];
+                $f = $fill->where("stuId = $user_id and fbId = $rls_id")->select();
+                if($f[0]['stat']==0){
                     $date1 = date('Y-m-d H:i:s',time());
-                    $date2 = $rls[0]['ddl'];
+                    $date2 = $f[0]['ddl'];
                     if(strtotime($date2)>=strtotime($date1)){
                         $this->assign('user',$user);
                         $this->assign('rls',$rls[0]);
@@ -23,10 +27,10 @@ class FeedbackController extends Controller {
                         $this->redirect('feedback/fbstu','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
                 }else{
-                    $this->redirect('main/main','',0.01,'<script>alert(\'没有需要填写的问卷\');</script>');
-                }
+                    $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
+                }            
             }else{
-                $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
+                $this->redirect('feedback/fbstu','',0.01,'<script>alert(\'问卷访问出错\');</script>');
             }
 
     	}else{$this->redirect('login/log','',0.01,'<script>alert(\'登陆失效，请重新输入学号\');</script>');}
@@ -34,19 +38,19 @@ class FeedbackController extends Controller {
 	public function fb_(){
     	$user=session('user');
     	if ($user){
-            if($user['flag']==0){
-                if(I('btn_back')){
-                    $this->redirect('main/main','',0.01);
-                }else{
-                    $fbrls = M('fbrls');
-                    $fill = M('fill');
-                    $user_id = $user['id'];
-                    $id = I('id');
-                    $data_s = $fill
-                        ->join('stu ON stu.id = fill.stuId')
-                        ->join('fbrls ON fbrls.id = fill.fbId')
-                        ->where("fbrls.id = $id and stu.id = $user_id")
-                        ->select();
+            if(I('btn_back')){
+                $this->redirect('main/main','',0.01);
+            }else{
+                $fbrls = M('fbrls');
+                $fill = M('fill');
+                $user_id = $user['id'];
+                $id = I('id');
+                $data_s = $fill
+                    ->join('stu ON stu.id = fill.stuId')
+                    ->join('fbrls ON fbrls.id = fill.fbId')
+                    ->where("fbrls.id = $id and stu.id = $user_id")
+                    ->select();
+                if($data_s['stat']==0){
                     //dump($data_s);
                     //更新学生flag
                     $type = 0;
@@ -104,13 +108,13 @@ class FeedbackController extends Controller {
                         }
                         $fill->where("fbId = $id and stuId = $user_id")->save($state);
                         $answer = ($type)?'回答':'反馈';
-                        $this->redirect('main/main','',0.01,"<script>alert(\'感谢你的$answer！\');</script>");
+                        $this->redirect('main/main','',0.01,"<script>alert(\'感谢你的$answer ！\');</script>");
                     }else{
                         $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
+                }else{
+                    $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
                 }
-            }else{
-                $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
             }
         }
         else{$this->redirect('login/log','',0.01,'<script>alert(\'登陆失效，请重新输入学号\');</script>');}

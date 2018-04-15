@@ -33,7 +33,7 @@ create table fbori (
     creTim      datetime,                       #创建时间
     bId			int,							#创建人id
     bNam		varchar(80),					#创建人名字
-    typ			int default 0,					#问卷类型：0调查问卷，1课堂小测
+    typ			tinyint default 0,					#问卷类型：0调查问卷，1课堂小测
 	tit			varchar(80) default null,		#问卷标题
     q1			varchar(80) default null,		#问题1
     a1_q1		varchar(80) default null,		#问题1第一选项
@@ -112,8 +112,7 @@ create table fbrls (
     teaId		int not null,					#发布者id
     teaName		varchar(80) not null,			#发布者名字
     rlsTim      datetime,                       #发布时间
-    ddl			datetime,						#截止时间
-    typ			int default 0,					#问卷类型：0调查问卷，1课堂小测
+    typ			tinyint default 0,					#问卷类型：0调查问卷，1课堂小测
     cla			varchar(80) not null,			#问卷发放到的班级的所在课室
     wDay		int,							#问卷发放到的班级的对应上课日，1一，2二
     claTim		varchar(80),					#问卷发放到的班级的上课时段
@@ -255,7 +254,8 @@ create table fill (
 	stuId		int not null,					#学生id
     fbId		int not null,					#已发布问卷id
     stat		int not null default 0,			#学生填写状态，0未填写，1已填写
-    scr			int not null default 100			#学生分数
+    scr			int not null default 100,			#学生分数
+    ddl			datetime						#截止时间
 ) engine=InnoDB;
 
 #异常
