@@ -84,11 +84,11 @@
                     <input id="a5_q1" name="a5_q1" type="text" class="a" value="<?php echo ($old['a5_q1']); ?>" placeholder="这里输入问题1的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q1_1" name="a_q1" type="radio" value="1" checked>1
-                        <input id="a_q1_2" name="a_q1" type="radio" value="2">2
-                        <input id="a_q1_3" name="a_q1" type="radio" value="3">3
-                        <input id="a_q1_4" name="a_q1" type="radio" value="4">4
-                        <input id="a_q1_5" name="a_q1" type="radio" value="5">5
+                        <input id="a_q1_1" name="a_q1" type="radio" value="1" <?php echo $old['a_q1']==1?"checked":"";?>>1
+                        <input id="a_q1_2" name="a_q1" type="radio" value="2" <?php echo $old['a_q1']==2?"checked":"";?>>2
+                        <input id="a_q1_3" name="a_q1" type="radio" value="3" <?php echo $old['a_q1']==3?"checked":"";?>>3
+                        <input id="a_q1_4" name="a_q1" type="radio" value="4" <?php echo $old['a_q1']==4?"checked":"";?>>4
+                        <input id="a_q1_5" name="a_q1" type="radio" value="5" <?php echo $old['a_q1']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr2" name="qnr1" class="q">
@@ -100,11 +100,11 @@
                     <input id="a5_q2" name="a5_q2" type="text" class="a" value="<?php echo ($old['a5_q2']); ?>" placeholder="这里输入问题2的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q2_1" name="a_q2" type="radio" value="1" checked>1
-                        <input id="a_q2_2" name="a_q2" type="radio" value="2">2
-                        <input id="a_q2_3" name="a_q2" type="radio" value="3">3
-                        <input id="a_q2_4" name="a_q2" type="radio" value="4">4
-                        <input id="a_q2_5" name="a_q2" type="radio" value="5">5
+                        <input id="a_q2_1" name="a_q2" type="radio" value="1" <?php echo $old['a_q2']==1?"checked":"";?>>1
+                        <input id="a_q2_2" name="a_q2" type="radio" value="2" <?php echo $old['a_q2']==2?"checked":"";?>>2
+                        <input id="a_q2_3" name="a_q2" type="radio" value="3" <?php echo $old['a_q2']==3?"checked":"";?>>3
+                        <input id="a_q2_4" name="a_q2" type="radio" value="4" <?php echo $old['a_q2']==4?"checked":"";?>>4
+                        <input id="a_q2_5" name="a_q2" type="radio" value="5" <?php echo $old['a_q2']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr3" name="qnr1" class="q">
@@ -116,11 +116,11 @@
                     <input id="a5_q3" name="a5_q3" type="text" class="a" value="<?php echo ($old['a5_q3']); ?>" placeholder="这里输入问题3的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q3_1" name="a_q3" type="radio" value="1" checked>1
-                        <input id="a_q3_2" name="a_q3" type="radio" value="2">2
-                        <input id="a_q3_3" name="a_q3" type="radio" value="3">3
-                        <input id="a_q3_4" name="a_q3" type="radio" value="4">4
-                        <input id="a_q3_5" name="a_q3" type="radio" value="5">5
+                        <input id="a_q3_1" name="a_q3" type="radio" value="1" <?php echo $old['a_q3']==1?"checked":"";?>>1
+                        <input id="a_q3_2" name="a_q3" type="radio" value="2" <?php echo $old['a_q3']==2?"checked":"";?>>2
+                        <input id="a_q3_3" name="a_q3" type="radio" value="3" <?php echo $old['a_q3']==3?"checked":"";?>>3
+                        <input id="a_q3_4" name="a_q3" type="radio" value="4" <?php echo $old['a_q3']==4?"checked":"";?>>4
+                        <input id="a_q3_5" name="a_q3" type="radio" value="5" <?php echo $old['a_q3']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr4" name="qnr1" class="q">
@@ -132,11 +132,11 @@
                     <input id="a5_q4" name="a5_q4" type="text" class="a" value="<?php echo ($old['a5_q4']); ?>" placeholder="这里输入问题4的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q4_1" name="a_q4" type="radio" value="1" checked>1
-                        <input id="a_q4_2" name="a_q4" type="radio" value="2">2
-                        <input id="a_q4_3" name="a_q4" type="radio" value="3">3
-                        <input id="a_q4_4" name="a_q4" type="radio" value="4">4
-                        <input id="a_q4_5" name="a_q4" type="radio" value="5">5
+                        <input id="a_q4_1" name="a_q4" type="radio" value="1" <?php echo $old['a_q4']==1?"checked":"";?>>1
+                        <input id="a_q4_2" name="a_q4" type="radio" value="2" <?php echo $old['a_q4']==2?"checked":"";?>>2
+                        <input id="a_q4_3" name="a_q4" type="radio" value="3" <?php echo $old['a_q4']==3?"checked":"";?>>3
+                        <input id="a_q4_4" name="a_q4" type="radio" value="4" <?php echo $old['a_q4']==4?"checked":"";?>>4
+                        <input id="a_q4_5" name="a_q4" type="radio" value="5" <?php echo $old['a_q4']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr5" name="qnr1" class="q">
@@ -148,11 +148,11 @@
                     <input id="a5_q5" name="a5_q5" type="text" class="a" value="<?php echo ($old['a5_q5']); ?>" placeholder="这里输入问题5的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q5_1" name="a_q5" type="radio" value="1" checked>1
-                        <input id="a_q5_2" name="a_q5" type="radio" value="2">2
-                        <input id="a_q5_3" name="a_q5" type="radio" value="3">3
-                        <input id="a_q5_4" name="a_q5" type="radio" value="4">4
-                        <input id="a_q5_5" name="a_q5" type="radio" value="5">5
+                        <input id="a_q5_1" name="a_q5" type="radio" value="1" <?php echo $old['a_q5']==1?"checked":"";?>>1
+                        <input id="a_q5_2" name="a_q5" type="radio" value="2" <?php echo $old['a_q5']==2?"checked":"";?>>2
+                        <input id="a_q5_3" name="a_q5" type="radio" value="3" <?php echo $old['a_q5']==3?"checked":"";?>>3
+                        <input id="a_q5_4" name="a_q5" type="radio" value="4" <?php echo $old['a_q5']==4?"checked":"";?>>4
+                        <input id="a_q5_5" name="a_q5" type="radio" value="5" <?php echo $old['a_q5']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr6" name="qnr1" class="q">
@@ -164,11 +164,11 @@
                     <input id="a5_q6" name="a5_q6" type="text" class="a" value="<?php echo ($old['a5_q6']); ?>" placeholder="这里输入问题6的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q6_1" name="a_q6" type="radio" value="1" checked>1
-                        <input id="a_q6_2" name="a_q6" type="radio" value="2">2
-                        <input id="a_q6_3" name="a_q6" type="radio" value="3">3
-                        <input id="a_q6_4" name="a_q6" type="radio" value="4">4
-                        <input id="a_q6_5" name="a_q6" type="radio" value="5">5
+                        <input id="a_q6_1" name="a_q6" type="radio" value="1" <?php echo $old['a_q6']==1?"checked":"";?>>1
+                        <input id="a_q6_2" name="a_q6" type="radio" value="2" <?php echo $old['a_q6']==2?"checked":"";?>>2
+                        <input id="a_q6_3" name="a_q6" type="radio" value="3" <?php echo $old['a_q6']==3?"checked":"";?>>3
+                        <input id="a_q6_4" name="a_q6" type="radio" value="4" <?php echo $old['a_q6']==4?"checked":"";?>>4
+                        <input id="a_q6_5" name="a_q6" type="radio" value="5" <?php echo $old['a_q6']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr7" name="qnr1" class="q">
@@ -180,11 +180,11 @@
                     <input id="a5_q7" name="a5_q7" type="text" class="a" value="<?php echo ($old['a5_q7']); ?>" placeholder="这里输入问题7的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q7_1" name="a_q7" type="radio" value="1" checked>1
-                        <input id="a_q7_2" name="a_q7" type="radio" value="2">2
-                        <input id="a_q7_3" name="a_q7" type="radio" value="3">3
-                        <input id="a_q7_4" name="a_q7" type="radio" value="4">4
-                        <input id="a_q7_5" name="a_q7" type="radio" value="5">5
+                        <input id="a_q7_1" name="a_q7" type="radio" value="1" <?php echo $old['a_q7']==1?"checked":"";?>>1
+                        <input id="a_q7_2" name="a_q7" type="radio" value="2" <?php echo $old['a_q7']==2?"checked":"";?>>2
+                        <input id="a_q7_3" name="a_q7" type="radio" value="3" <?php echo $old['a_q7']==3?"checked":"";?>>3
+                        <input id="a_q7_4" name="a_q7" type="radio" value="4" <?php echo $old['a_q7']==4?"checked":"";?>>4
+                        <input id="a_q7_5" name="a_q7" type="radio" value="5" <?php echo $old['a_q7']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr8" name="qnr1" class="q">
@@ -196,11 +196,11 @@
                     <input id="a5_q8" name="a5_q8" type="text" class="a" value="<?php echo ($old['a5_q8']); ?>" placeholder="这里输入问题8的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q8_1" name="a_q8" type="radio" value="1" checked>1
-                        <input id="a_q8_2" name="a_q8" type="radio" value="2">2
-                        <input id="a_q8_3" name="a_q8" type="radio" value="3">3
-                        <input id="a_q8_4" name="a_q8" type="radio" value="4">4
-                        <input id="a_q8_5" name="a_q8" type="radio" value="5">5
+                        <input id="a_q8_1" name="a_q8" type="radio" value="1" <?php echo $old['a_q8']==1?"checked":"";?>>1
+                        <input id="a_q8_2" name="a_q8" type="radio" value="2" <?php echo $old['a_q8']==2?"checked":"";?>>2
+                        <input id="a_q8_3" name="a_q8" type="radio" value="3" <?php echo $old['a_q8']==3?"checked":"";?>>3
+                        <input id="a_q8_4" name="a_q8" type="radio" value="4" <?php echo $old['a_q8']==4?"checked":"";?>>4
+                        <input id="a_q8_5" name="a_q8" type="radio" value="5" <?php echo $old['a_q8']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr9" name="qnr1" class="q">
@@ -212,11 +212,11 @@
                     <input id="a5_q9" name="a5_q9" type="text" class="a" value="<?php echo ($old['a5_q9']); ?>" placeholder="这里输入问题9的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q9_1" name="a_q9" type="radio" value="1" checked>1
-                        <input id="a_q9_2" name="a_q9" type="radio" value="2">2
-                        <input id="a_q9_3" name="a_q9" type="radio" value="3">3
-                        <input id="a_q9_4" name="a_q9" type="radio" value="4">4
-                        <input id="a_q9_5" name="a_q9" type="radio" value="5">5
+                        <input id="a_q9_1" name="a_q9" type="radio" value="1" <?php echo $old['a_q9']==1?"checked":"";?>>1
+                        <input id="a_q9_2" name="a_q9" type="radio" value="2" <?php echo $old['a_q9']==2?"checked":"";?>>2
+                        <input id="a_q9_3" name="a_q9" type="radio" value="3" <?php echo $old['a_q9']==3?"checked":"";?>>3
+                        <input id="a_q9_4" name="a_q9" type="radio" value="4" <?php echo $old['a_q9']==4?"checked":"";?>>4
+                        <input id="a_q9_5" name="a_q9" type="radio" value="5" <?php echo $old['a_q9']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div id="qnr10" name="qnr1" class="q">
@@ -228,11 +228,11 @@
                     <input id="a5_q10" name="a5_q10" type="text" class="a" value="<?php echo ($old['a5_q10']); ?>" placeholder="这里输入问题10的第五个选项"> <br><br>
                     <div>
                         &emsp;&emsp;正确选项：
-                        <input id="a_q10_1" name="a_q10" type="radio" value="1" checked>1
-                        <input id="a_q10_2" name="a_q10" type="radio" value="2">2
-                        <input id="a_q10_3" name="a_q10" type="radio" value="3">3
-                        <input id="a_q10_4" name="a_q10" type="radio" value="4">4
-                        <input id="a_q10_5" name="a_q10" type="radio" value="5">5
+                        <input id="a_q10_1" name="a_q10" type="radio" value="1" <?php echo $old['a_q10']==1?"checked":"";?>>1
+                        <input id="a_q10_2" name="a_q10" type="radio" value="2" <?php echo $old['a_q10']==2?"checked":"";?>>2
+                        <input id="a_q10_3" name="a_q10" type="radio" value="3" <?php echo $old['a_q10']==3?"checked":"";?>>3
+                        <input id="a_q10_4" name="a_q10" type="radio" value="4" <?php echo $old['a_q10']==4?"checked":"";?>>4
+                        <input id="a_q10_5" name="a_q10" type="radio" value="5" <?php echo $old['a_q10']==5?"checked":"";?>>5
                     </div>
                 </div>
                 <div class="btn_group">

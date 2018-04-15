@@ -20,21 +20,21 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
         }
-        
+
         select {
             display: inline-block;
         }
@@ -62,7 +62,7 @@
             <fieldset>
                 <legend>问卷发布：务必进行核对后再进行发布！</legend>
                 <div class="choice">
-                    问卷：<b><?php echo I('que');;?></b>
+                    问卷：<b><?php echo ($que); ?></b>
                 </div>
                 <div class="choice">
                     上课课室：
@@ -119,7 +119,8 @@
                     <button id="btn1" class="btn" type="submit" name="btn_fbrls" value="true">发布</button>
                     <button id="btn2" class="btn" type="submit" name="btn_reback" value="true">返回</button>
                 </div>
-                <input type="hidden" name="que" value="<?php echo I( 'que');?>">
+                <input type="hidden" name="que" value="<?php echo ($que); ?>">
+                <input type="hidden" name="id" value="<?php echo I('id');?>">
             </fieldset>
         </form>
     </div>

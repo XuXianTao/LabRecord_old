@@ -28,7 +28,7 @@ class FeedbackController extends Controller {
                     }
                 }else{
                     $this->redirect('main/main','',0.01,'<script>alert(\'你已填写问卷，无须再填\');</script>');
-                }            
+                }
             }else{
                 $this->redirect('feedback/fbstu','',0.01,'<script>alert(\'问卷访问出错\');</script>');
             }
@@ -74,19 +74,19 @@ class FeedbackController extends Controller {
                                 //echo 'test';
                                 switch(I("q{$q}_num")){
                                     case 1:
-                                        $data['a1_q1_Num']++;
+                                        $data["a1_q{$q}_Num"]++;
                                         break;
                                     case 2:
-                                        $data['a2_q1_Num']++;
+                                        $data["a2_q{$q}_Num"]++;
                                         break;
                                     case 3:
-                                        $data['a3_q1_Num']++;
+                                        $data["a3_q{$q}_Num"]++;
                                         break;
                                     case 4:
-                                        $data['a4_q1_Num']++;
+                                        $data["a4_q{$q}_Num"]++;
                                         break;
                                     case 5:
-                                        $data['a5_q1_Num']++;
+                                        $data["a5_q{$q}_Num"]++;
                                         break;
                                 }
                                 if($type == 1){
@@ -141,6 +141,10 @@ class FeedbackController extends Controller {
         $admin=session('admin');
         $this->assign('admin',$admin);
         if($admin && $admin['typ']=='1' ){
+            $fbori=M('fbori');
+            $data=$fbori->where("id = ".I('id'))->find();
+            $que=$data['tit'];
+            $this->assign('que',$que);
             $this->display();
         }else $this->redirect('logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
     }
@@ -154,10 +158,8 @@ class FeedbackController extends Controller {
                     $fbrls=D('fbrls');
                     $fbori=M('fbori');
                     $quetit=I('que');
-                    $data=$fbori->where("tit='$quetit'")->find();
-                    unset($data['bId']);
-                    unset($data['bNam']);
-                    unset($data['id']);
+                    $id=I('id');
+                    $data=$fbori->where("id='$id'")->find();
                     if ($temp=$fbrls->create()){
                         $data = array_merge($data,$temp);
                         $stu = M('stu');
@@ -167,6 +169,10 @@ class FeedbackController extends Controller {
                         $stu_s = $stu->where($stus)->select();
                         $fill = M('fill');
                         if($stu_s != null){
+                            unset($data['bId']);
+                            unset($data['bNam']);
+                            unset($data['id']);
+                            unset($data['cretim']);
                             $data2 = $fbrls->add($data);
                             for($i=0;$i<count($stu_s);$i++){
                                 $data_f['stuId']=$stu_s[$i]['id'];
@@ -174,9 +180,10 @@ class FeedbackController extends Controller {
                                 $data_f['ddl']=$data['ddl'];
                                 $fill->add($data_f);
                             }
-                            $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
-                        }else
-                            $this->redirect('fbrls',array('que'=>$quetit),0.01,'<script>alert(\'无此时段的学生！\');</script>');
+                            $this->redirect('fbman2','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
+                        }
+                        else
+                            $this->redirect('fbrls',array('id'=>$id),0.01,'<script>alert(\'无此时段的学生！\');</script>');
                     }else $this->redirect('fbman','',0.01,'<script>alert(\'问卷发布失败！\');</script>');
                 }
             }else
@@ -257,7 +264,7 @@ class FeedbackController extends Controller {
                     $this->redirect("fbupdt?update=$update",'',0.01,'');
                 }else if ($publish){//发布
                     $que=$fbori->where("id=$publish")->find();
-                    $this->redirect('fbrls',array('que'=>$que['tit']));
+                    $this->redirect('fbrls',array('id'=>$que['id']));
                 }else if ($delete){//删除
                     $fbori->where("id=$delete")->delete();
                     $this->redirect($this);
@@ -332,12 +339,21 @@ class FeedbackController extends Controller {
                 $fbrls = M('fbrls');
                 $id = I('id');
                 $fill_stat = $f->join("stu ON stu.id = fill.stuId")->where("fbId = '$id' and stat = 0")->select();
-                $fill_sc = $f->join("stu ON stu.id = fill.stuId")->where("fbId = '$id' and scr < 60")->select();
-
+                $fill_sc = $f->join("stu ON stu.id = fill.stuId")->where("fbId = '$id' and scr < 60")->order("scr desc")->select();
+                $fill_score = $f->join("stu ON stu.id = fill.stuId")->where("fbId = '$id' and stat = 1")->order("scr desc")->select();
                 $rls = $fbrls->where("id = '$id'")->select();
+                for ($q=1;$q<=10;$q++){
+                    $sum=0;
+                    $anscount;
+                    for ($a=1;$a<=5;$a++){
+                        $sum+=$rls[0]["a{$a}_q{$q}_num"];
+                        if ($rls[0]["a_q{$q}"]==$a) $anscount=$rls[0]["a{$a}_q{$q}_num"];
+                    }
+                    $rls[0]["q{$q}_correct"]=round($anscount/$sum,3);
+                }
                 $this->assign('rls',$rls[0]);
                 $this->assign('id',$id);
-
+                $this->assign('fill_score',$fill_score);
                 $this->assign('fill_stat',$fill_stat);
                 $this->assign('fill_sc',$fill_sc);
                 $this->display();

@@ -5,15 +5,13 @@ use Think\Model;
 class FbrlsModel extends Model{
 	protected $field = true;
 	protected $_auto=array(
-		array('teaId','getTeaId',1,'callback'),
-		array('teaName','getTeaname',1,"callback"),
-		array('wDay','getWDay',1,"callback"),
-		array('bTim','getBTim',1,'callback'),
-		array('eTim','getETim',1,'callback'),
-		array('styNum','0'),
-		array('rlsTim','getTim',1,"callback"),
-		array('claTim','getclaTim',1,"callback"),
-		array('ddl','getDDL',1,"callback"),
+		array('teaId','getTeaId',self::MODEL_BOTH,'callback'),
+		array('teaName','getTeaname',self::MODEL_BOTH,"callback"),
+		array('wDay','getWDay',self::MODEL_BOTH,"callback"),
+		array('stuNum','0'),
+		array('rlsTim','getTim',self::MODEL_BOTH,"callback"),
+		array('claTim','getclaTim',self::MODEL_BOTH,"callback"),
+		array('ddl','getDDL',self::MODEL_BOTH,"callback")
 	);
 	protected function getTeaId(){
 		return session('admin')['id'];
@@ -24,13 +22,7 @@ class FbrlsModel extends Model{
 	protected function getWDay(){
 		return I('wDay');
 	}
-	protected function getBTim(){
-		return I('timInt');
-	}
-	protected function getETim(){
-		return I('timInt');
-	}
-	protected function getcLaTim(){
+	protected function getclaTim(){
 		return I('timInt');
 	}
 	protected function getTim() {

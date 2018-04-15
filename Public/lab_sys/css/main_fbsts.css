@@ -35,18 +35,21 @@ tr {
     width: 180px;
 }
 
+#score_list td:nth-child(1),
 #notpass_list td:nth-child(1) {
     width: 120px;
 }
 
+#score_list td:nth-child(2),
 #notpass_list td:nth-child(2) {
     width: 100px;
 }
 
+#score_list td:nth-child(3),
 #notpass_list td:nth-child(3) {
     width: 180px;
 }
-
+#score_list td:nth-child(4),
 #notpass_list td:nth-child(4) {
     width: 100px;
 }

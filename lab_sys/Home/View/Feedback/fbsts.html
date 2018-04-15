@@ -20,16 +20,16 @@
             margin: 0;
             padding: 0;
         }
-        
+
         * {
             font-family: Arial, sans-serif, "微软雅黑";
             font-size: large;
         }
-        
+
         p {
             display: inline-block;
         }
-        
+
         a {
             color: black;
             text-decoration: none;
@@ -65,6 +65,7 @@
                 <td>".$rls['a3_q1']."</td>
                 <td>".$rls['a4_q1']."</td>
                 <td>".$rls['a5_q1']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q1']."</td>
@@ -73,7 +74,8 @@
                 <td>".$rls['a3_q1_num']."</td>
                 <td>".$rls['a4_q1_num']."</td>
                 <td>".$rls['a5_q1_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q1_correct"]."</td>
+            </tr>":""}
             {:($rls['q2']!=null)?"
             <tr>
                 <td>问题</td>
@@ -82,6 +84,7 @@
                 <td>".$rls['a3_q2']."</td>
                 <td>".$rls['a4_q2']."</td>
                 <td>".$rls['a5_q2']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q2']."</td>
@@ -90,7 +93,8 @@
                 <td>".$rls['a3_q2_num']."</td>
                 <td>".$rls['a4_q2_num']."</td>
                 <td>".$rls['a5_q2_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q2_correct"]."</td>
+            </tr>":""}
             {:($rls['q3']!=null)?"
             <tr>
                 <td>问题</td>
@@ -99,6 +103,7 @@
                 <td>".$rls['a3_q3']."</td>
                 <td>".$rls['a4_q3']."</td>
                 <td>".$rls['a5_q3']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q3']."</td>
@@ -107,7 +112,8 @@
                 <td>".$rls['a3_q3_num']."</td>
                 <td>".$rls['a4_q3_num']."</td>
                 <td>".$rls['a5_q3_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q3_correct"]."</td>
+            </tr>":""}
             {:($rls['q4']!=null)?"
             <tr>
                 <td>问题</td>
@@ -116,6 +122,7 @@
                 <td>".$rls['a3_q4']."</td>
                 <td>".$rls['a4_q4']."</td>
                 <td>".$rls['a5_q4']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q4']."</td>
@@ -124,7 +131,8 @@
                 <td>".$rls['a3_q4_num']."</td>
                 <td>".$rls['a4_q4_num']."</td>
                 <td>".$rls['a5_q4_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q4_correct"]."</td>
+            </tr>":""}
             {:($rls['q5']!=null)?"
             <tr>
                 <td>问题</td>
@@ -133,6 +141,7 @@
                 <td>".$rls['a3_q5']."</td>
                 <td>".$rls['a4_q5']."</td>
                 <td>".$rls['a5_q5']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q5']."</td>
@@ -141,7 +150,8 @@
                 <td>".$rls['a3_q5_num']."</td>
                 <td>".$rls['a4_q5_num']."</td>
                 <td>".$rls['a5_q5_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q5_correct"]."</td>
+            </tr>":""}
             {:($rls['q6']!=null)?"
             <tr>
                 <td>问题</td>
@@ -150,6 +160,7 @@
                 <td>".$rls['a3_q6']."</td>
                 <td>".$rls['a4_q6']."</td>
                 <td>".$rls['a5_q6']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q6']."</td>
@@ -158,7 +169,8 @@
                 <td>".$rls['a3_q6_num']."</td>
                 <td>".$rls['a4_q6_num']."</td>
                 <td>".$rls['a5_q6_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q6_correct"]."</td>
+            </tr>":""}
             {:($rls['q7']!=null)?"
             <tr>
                 <td>问题</td>
@@ -167,6 +179,7 @@
                 <td>".$rls['a3_q7']."</td>
                 <td>".$rls['a4_q7']."</td>
                 <td>".$rls['a5_q7']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q7']."</td>
@@ -175,7 +188,8 @@
                 <td>".$rls['a3_q7_num']."</td>
                 <td>".$rls['a4_q7_num']."</td>
                 <td>".$rls['a5_q7_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q7_correct"]."</td>
+            </tr>":""}
             {:($rls['q8']!=null)?"
             <tr>
                 <td>问题</td>
@@ -184,6 +198,7 @@
                 <td>".$rls['a3_q8']."</td>
                 <td>".$rls['a4_q8']."</td>
                 <td>".$rls['a5_q8']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q8']."</td>
@@ -192,7 +207,9 @@
                 <td>".$rls['a3_q8_num']."</td>
                 <td>".$rls['a4_q8_num']."</td>
                 <td>".$rls['a5_q8_num']."</td>
-            </tr>":""} 
+
+                <td>".$rls["q8_correct"]."</td>
+            </tr>":""}
             {:($rls['q9']!=null)?"
             <tr>
                 <td>问题</td>
@@ -201,6 +218,7 @@
                 <td>".$rls['a3_q9']."</td>
                 <td>".$rls['a4_q9']."</td>
                 <td>".$rls['a5_q9']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q9']."</td>
@@ -209,7 +227,8 @@
                 <td>".$rls['a3_q9_num']."</td>
                 <td>".$rls['a4_q9_num']."</td>
                 <td>".$rls['a5_q9_num']."</td>
-            </tr>":""} 
+                <td>".$rls["q9_correct"]."</td>
+            </tr>":""}
             {:($rls['q10']!=null)?"
             <tr>
                 <td>问题</td>
@@ -218,6 +237,7 @@
                 <td>".$rls['a3_q10']."</td>
                 <td>".$rls['a4_q10']."</td>
                 <td>".$rls['a5_q10']."</td>
+                <td>正确率</td>
             </tr>
             <tr>
                 <td>".$rls['q10']."</td>
@@ -226,20 +246,24 @@
                 <td>".$rls['a3_q10_num']."</td>
                 <td>".$rls['a4_q10_num']."</td>
                 <td>".$rls['a5_q10_num']."</td>
+                <td>".$rls["q10_correct"]."</td>
             </tr>":""}
         </table>
-        <table id="unsubmit_list" border="1">
-            <caption>未上交名单</caption>
+
+        <table id="score_list" border="1">
+            <caption>已提交名单</caption>
             <tr>
                 <td>学号</td>
                 <td>姓名</td>
                 <td>上课时段</td>
+                <td>成绩</td>
             </tr>
-            <volist id="vo" name="fill_stat">
+            <volist id="vo" name="fill_score">
                 <tr>
                     <td>{$vo.id}</td>
                     <td>{$vo.nam}</td>
                     <td>{$vo.clatim}</td>
+                    <td>{$vo.scr}</td>
                 </tr>
             </volist>
         </table>
@@ -259,7 +283,23 @@
                         <td>{$vo.scr}</td>
                     </tr>
                 </volist>
-            </table>
+        </table>
+        <table id="unsubmit_list" border="1">
+            <caption>未上交名单</caption>
+            <tr>
+                <td>学号</td>
+                <td>姓名</td>
+                <td>上课时段</td>
+            </tr>
+            <volist id="vo" name="fill_stat">
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.nam}</td>
+                    <td>{$vo.clatim}</td>
+                </tr>
+            </volist>
+        </table>
+
     </div>
 </body>
 
