@@ -14,9 +14,9 @@ create table man (
     id			int not null,					#职工号/学号
     nam			varchar(80) not null,			#名字
     cla			varchar(80),					#课室
-    wDay		int default null,				#工作日，1一，2二
+    wDay		int,							#工作日，1一，2二
     claTim		varchar(80),					#工作时段
-    primary 	key(typ,id,wDay,claTim)
+    primary key(typ,id,cla,wDay,claTim)
 ) engine=InnoDB;
 #学生
 create table stu (
@@ -112,6 +112,7 @@ create table fbrls (
     teaId		int not null,					#发布者id
     teaName		varchar(80) not null,			#发布者名字
     rlsTim      datetime,                       #发布时间
+    ddl			datetime,						#截止时间
     typ			tinyint default 0,				#问卷类型：0调查问卷，1课堂小测
     cla			varchar(80) not null,			#问卷发放到的班级的所在课室
     wDay		int,							#问卷发放到的班级的对应上课日，1一，2二
