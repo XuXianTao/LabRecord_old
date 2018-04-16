@@ -108,7 +108,7 @@ class FeedbackController extends Controller {
                         }
                         $fill->where("fbId = $id and stuId = $user_id")->save($state);
                         $answer = ($type)?'回答':'反馈';
-                        $this->redirect('main/main','',0.01,"<script>alert(\'感谢你的$answer ！\');</script>");
+                        $this->redirect('main/main','',0.01,"<script>alert(\"感谢你的".$answer." ！\");</script>");
                     }else{
                         $this->redirect('main/main','',0.01,'<script>alert(\'问卷已过期，不能再填\');</script>');
                     }
