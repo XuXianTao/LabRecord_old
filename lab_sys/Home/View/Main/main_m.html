@@ -57,17 +57,17 @@
     </div>
     <div id="main">
         <div class="btn_wrapper">
-            <a href="excpsts"><button id="btn1" name="btn_excp" class="btn">查看异常情况</button></a>
+            <a href="excpsts"><button id="btn1" name="btn_excp" class="btn" onclick="window.location.href='excpsts'">查看异常情况</button></a>
         </div>
         <div class="btn_wrapper">
-            <a href="excpsta"><button id="btn2" name="btn_bd" class="btn">查看故障统计</button></a>
+            <a href="excpsta"><button id="btn2" name="btn_bd" class="btn" onclick="window.location.href='excpsta'">查看故障统计</button></a>
         </div>
         <if condition="($admin['typ'] eq 1)">
             <div class="btn_wrapper">
-                <a href="fbman"><button id="btn3" name="btn_fbman" class="btn">原始问卷管理</button></a>
+                <a href="fbman"><button id="btn3" name="btn_fbman" class="btn" onclick="window.location.href='fbman'">原始问卷管理</button></a>
             </div>
             <div class="btn_wrapper">
-                <a href="fbman2"><button id="btn4" name="btn_fbman" class="btn">已发布问卷管理</button></a>
+                <a href="fbman2"><button id="btn4" name="btn_fbman" class="btn" onclick="window.location.href='fbman2'">已发布问卷管理</button></a>
             </div>
         </if>
     </div>

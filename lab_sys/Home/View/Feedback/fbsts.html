@@ -249,41 +249,6 @@
                 <td>".$rls["q10_correct"]."</td>
             </tr>":""}
         </table>
-
-        <table id="score_list" border="1">
-            <caption>已提交名单</caption>
-            <tr>
-                <td>学号</td>
-                <td>姓名</td>
-                <td>上课时段</td>
-                <td>成绩</td>
-            </tr>
-            <volist id="vo" name="fill_score">
-                <tr>
-                    <td>{$vo.id}</td>
-                    <td>{$vo.nam}</td>
-                    <td>{$vo.clatim}</td>
-                    <td>{$vo.scr}</td>
-                </tr>
-            </volist>
-        </table>
-        <table id="notpass_list" border="1">
-                <caption>不及格名单</caption>
-                <tr>
-                    <td>学号</td>
-                    <td>姓名</td>
-                    <td>上课时段</td>
-                    <td>分数</td>
-                </tr>
-                <volist id="vo" name="fill_sc">
-                    <tr>
-                        <td>{$vo.id}</td>
-                        <td>{$vo.nam}</td>
-                        <td>{$vo.clatim}</td>
-                        <td>{$vo.scr}</td>
-                    </tr>
-                </volist>
-        </table>
         <table id="unsubmit_list" border="1">
             <caption>未上交名单</caption>
             <tr>
@@ -299,7 +264,45 @@
                 </tr>
             </volist>
         </table>
+        <table id="notpass_list" border="1">
+                <caption>不及格名单</caption>
+                <tr>
+                    <td>学号</td>
+                    <td>姓名</td>
+                    <td>位置</td>
+                    <td>上课时段</td>
+                    <td>分数</td>
+                </tr>
+                <volist id="vo" name="fill_sc">
+                    <tr>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.nam}</td>
+                        <td>{$vo.cla}：{$vo.num}</td>
+                        <td>{$vo.clatim}</td>
+                        <td>{$vo.scr}</td>
+                    </tr>
+                </volist>
+        </table>
 
+        <table id="score_list" border="1">
+            <caption>已提交名单</caption>
+            <tr>
+                <td>学号</td>
+                <td>姓名</td>
+                <td>位置</td>
+                <td>上课时段</td>
+                <td>成绩</td>
+            </tr>
+            <volist id="vo" name="fill_score">
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.nam}</td>
+                    <td>{$vo.cla}：{$vo.num}</td>
+                    <td>{$vo.clatim}</td>
+                    <td>{$vo.scr}</td>
+                </tr>
+            </volist>
+        </table>
     </div>
 </body>
 

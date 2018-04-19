@@ -255,6 +255,8 @@ create table fill (
 	stuId		int not null,					#学生id
     fbId		int not null,					#已发布问卷id
     stat		int not null default 0,			#学生填写状态，0未填写，1已填写
+    cla     	varchar(80) not null,      		#课室号
+    num			varchar(80) not null			#桌号
     scr			int not null default 100,		#学生分数
     ddl			datetime						#截止时间
 ) engine=InnoDB;

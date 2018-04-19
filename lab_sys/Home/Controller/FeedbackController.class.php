@@ -103,9 +103,12 @@ class FeedbackController extends Controller {
 
                         $fbrls->where("id = $id")->save($data);
                         $state['stat'] = 1;
+                        $state['cla']=cookie('cla');
+                        $state['num']=cookie('num');
                         if($type == 1){
                             $state['scr'] = round(($q_num - $wa_num)*100/$q_num);
                         }
+						dump($state);
                         $fill->where("fbId = $id and stuId = $user_id")->save($state);
                         $answer = ($type)?'回答':'反馈';
                         $this->redirect('main/main','',0.01,"<script>alert(\"感谢你的".$answer." ！\");</script>");

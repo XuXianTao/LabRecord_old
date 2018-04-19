@@ -47,9 +47,14 @@ tr {
 
 #score_list td:nth-child(3),
 #notpass_list td:nth-child(3) {
-    width: 180px;
+    width: 150px;
 }
+
 #score_list td:nth-child(4),
 #notpass_list td:nth-child(4) {
+    width: 180px;
+}
+#score_list td:nth-child(5),
+#notpass_list td:nth-child(5) {
     width: 100px;
 }

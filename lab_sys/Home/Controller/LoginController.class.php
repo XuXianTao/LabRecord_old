@@ -17,8 +17,10 @@ class LoginController extends Controller {
             $loc = $Exc->where(" ip='$ip' ")->select();
 			if ($user){
                 //if($loc){
-                    $cla = 'B103';
-                    $num = '4';
+                    //$cla = 'B103';
+                    //$num = '4';
+                    $cla = $loc[0]['cla'];
+                    $num = $loc[0]['num'];
                     $user_ = $user[0];
                     $user_['cla'] = $cla;
                     $user_['num'] = $num;
@@ -28,7 +30,7 @@ class LoginController extends Controller {
                     $this->assign('user',$user_);
                     $this->redirect('main/main');
                 //}else
-                    //$this->error('不存在的ip地址 '.$ip);
+                //    $this->error('不存在的ip地址 '.$ip);
 			}else{
 				$this->error('学号不存在');
 			}
