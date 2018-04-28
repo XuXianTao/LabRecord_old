@@ -293,11 +293,11 @@ create table excp (
 create table excpsta (
     cla           varchar(80) not null,              # 课室
     num           int not null,                      # 桌号
-    pc            int default 0,                               # 电脑故障数
-    wire          int default 0,                               # 导线故障数
-    box           int default 0,                               # 电路箱故障数
-    oscp          int default 0,                               # 示波器故障数
-    gen           int default 0,                               # 函数发生器故障数
+    pc            int default 0,                     # 电脑故障数
+    wire          int default 0,                     # 导线故障数
+    box           int default 0,                     # 电路箱故障数
+    oscp          int default 0,                     # 示波器故障数
+    gen           int default 0,                     # 函数发生器故障数
     oth int # 其他故障数
 ) engine=InnoDB;
 create table dev (
@@ -308,9 +308,8 @@ create table dev (
     cnt           int default 0                      # 故障数
 ) engine=InnoDB;
 DELIMITER //
-create trigger `tri_insert_excpsta` after insert on `excp` for each row
+create trigger `tri_insert_excpsta_dev` after insert on `excp` for each row
 begin
-    # 检索是否存在对应课室对应桌号的故障
     select count(*) into @cnt from excpsta where cla=new.cla and num=new.num;
     if @cnt<>0 then
         if new.pc<>0 then
@@ -333,6 +332,24 @@ begin
         end if;
     else
         insert into excpsta(cla,num,pc,wire,box,oscp,gen,oth) values(new.cla,new.num,new.pc,new.wire,new.box,new.oscp,new.gen,new.oth);
+    end if;
+    if new.pc<>0 then
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="pc";
+    end if;
+    if new.wire<>0 then
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="wire";
+    end if;
+    if new.box<>0 then
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="box";
+    end if;
+    if new.oscp<>0 then
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="oscp";
+    end if;
+    if new.gen<>0 then
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="gen";
+    end if;
+    if new.oth<>0 then
+        update dev set oth=oth+1 where cla=new.cla and num=new.num and typ="oth";
     end if;
 end;
 //
