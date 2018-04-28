@@ -270,6 +270,7 @@ create table fill (
 # 异常
 create table excp (
     dat           datetime,                          # 时间
+    schTim        varchar(80),                       # 时间段
     id            int not null,                      # 学号
     nam           varchar(80) not null,              # 名字
     cla           varchar(80) not null,              # 课室
@@ -292,11 +293,11 @@ create table excp (
 create table excpsta (
     cla           varchar(80) not null,              # 课室
     num           int not null,                      # 桌号
-    pc            int,                               # 电脑故障数
-    wire          int,                               # 导线故障数
-    box           int,                               # 电路箱故障数
-    oscp          int,                               # 示波器故障数
-    gen           int,                               # 函数发生器故障数
+    pc            int default 0,                               # 电脑故障数
+    wire          int default 0,                               # 导线故障数
+    box           int default 0,                               # 电路箱故障数
+    oscp          int default 0,                               # 示波器故障数
+    gen           int default 0,                               # 函数发生器故障数
     oth int # 其他故障数
 ) engine=InnoDB;
 create table dev (
