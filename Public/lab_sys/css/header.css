@@ -10,10 +10,9 @@
 }
 
 #welcome {
-	position: relative;
-	left: 65%;
-	top: -40%;
-	font-size: large;
+    position: relative;
+    top: -40%;
+    left: 65%;
+    width: 400px;
 	color: white;
-	width: 400px;
 }

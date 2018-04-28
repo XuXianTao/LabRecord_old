@@ -3,22 +3,18 @@
     margin: 40px auto;
 }
 
-.choice {
-    height: 50px;
-    vertical-align: baseline;
+.choice,
+.btn_wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
 }
 
-.choice,
-.btn_group {
-    width: 80%;
-    padding: 5px;
-    margin: 0 auto;
+.btn_wrapper {
+    width: 130px;
 }
 
 .btn {
     width: 60px;
     height: 30px;
-    margin: 0 auto;
-    position: relative;
-    left: 37%;
 }

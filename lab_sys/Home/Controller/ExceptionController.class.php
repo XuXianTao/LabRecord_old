@@ -70,12 +70,12 @@ class ExceptionController extends Controller {
             $btn=1;
         }
         $page = ($btn-1) * 10;
-        $bd=M('excpsta');
-        $num_list = $bd->count();
+        $excpsta=M('excpsta');
+        $num_list = $excpsta->count();
         $num = ceil($num_list / 10);
         if($page>=$num_list)$page-=10;
         $this->assign('page',$page/10+1);
-        $list=$bd->limit($page,10)->select();
+        $list=$excpsta->limit($page,10)->select();
         $this->assign('list',$list);
         $this->assign('num',$num);
         $admin=session('admin');

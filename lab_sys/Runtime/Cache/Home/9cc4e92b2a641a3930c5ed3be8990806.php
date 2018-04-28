@@ -1,20 +1,19 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>lab_sys</title>
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_bd.css">
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/page_change.js"></script>
-    <script type="text/javascript" src="/lab_sys/Public/lab_sys/js/init.js"></script>
-    <input type="hidden" name="num_list" id="num_list" value="<?php echo ($num_list); ?>" />
-    <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
-    <input type="hidden" name="ip" id="ip" />
-    <style type="text/css">
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excpsta.css">
+    <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+    <script src="/lab_sys/Public/lab_sys/js/page_change.js"></script>
+    <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
+    <input id="num_list" name="num_list" type="hidden" value="<?php echo ($num_list); ?>" />
+    <input id="uname" name="uname" type="hidden" value="<?php echo ($admin['nam']); ?>" />
+    <style>
         html,
         body {
             width: 100%;
@@ -42,12 +41,12 @@
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+            <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>
-    <div id="navigation_wrapper">
-        <div id="navigation">
+    <div id="nav_wrapper">
+        <div id="nav">
             <div class="nav"><a href="main_m">主页</a></div>
             <div class="nav"><a href="excpsts">异常情况</a></div>
             <div class="nav"><a href="excpsta">故障统计</a></div>
@@ -56,6 +55,14 @@
         </div>
     </div>
     <div id="main">
+        <div>
+            <p>筛选方式：</p>
+            <input type="radio" name="typ" checked>默认顺序筛选
+            <input type="radio" name="typ">课室+座位号筛选
+            <input type="radio" name="typ">学号筛选
+            <input type="radio" name="typ">时间段筛选
+            <input type="radio" name="typ">设备序列号筛选
+        </div>
         <table border="1">
             <caption>机器故障统计表</caption>
             <tr>
@@ -88,6 +95,5 @@
         </form>
     </div>
 </body>
-
 
 </html>

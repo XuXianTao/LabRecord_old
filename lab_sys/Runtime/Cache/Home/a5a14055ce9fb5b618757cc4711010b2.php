@@ -1,21 +1,20 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>lab_sys</title>
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excpsts.css">
     <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/cfm.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/disp.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/set_val.js"></script>
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excpsts.css" />
-    <input type="hidden" name="uname" id="uname" value="<?php echo ($admin['nam']); ?>" />
-    <input type="hidden" name="ip" id="ip" />
-    <style type="text/css">
+    <input id="uname" name="uname" type="hidden" value="<?php echo ($admin['nam']); ?>">
+    <style>
         html,
         body {
             width: 100%;
@@ -44,12 +43,12 @@
     <div id="main">
         <div id="header_wrapper">
             <div id="header">
-                <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学" /></div>
+                <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
                 <div id="welcome">欢迎！</div>
             </div>
         </div>
-        <div id="navigation_wrapper">
-            <div id="navigation">
+        <div id="nav_wrapper">
+            <div id="nav">
                 <div class="nav"><a href="main_m">主页</a></div>
                 <div class="nav"><a href="excpsts">异常情况</a></div>
                 <div class="nav"><a href="excpsta">故障统计</a></div>
@@ -72,24 +71,24 @@
             </tr>
             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
                     <td name="dat"><?php echo ($vo["dat"]); ?></td>
-                    <td name="id"><?php echo ($vo["id"]); ?>&nbsp;<?php echo ($vo["nam"]); ?></td>
-                    <td><?php echo ($vo["cla"]); ?>：<?php echo ($vo["num"]); ?>号机</td>
-                    <td><?php echo $vo[pc]?"&nbsp;电脑":""; echo $vo[wire]?"&nbsp;网线":""; echo $vo[box]?"&nbsp;电路箱":""; echo $vo[oscp]?"&nbsp;示波器":""; echo $vo[gen]?"&nbsp;函数发生器":""; echo $vo[oth]?"<br/>[其他]：$vo[des]":"";?></td>
-                    <td><?php echo ($vo["delid"]); ?> <?php echo ($vo["delnam"]); ?></td>
+                    <td name="id"><?php echo ($vo["id"]); ?>&emsp;<?php echo ($vo["nam"]); ?></td>
+                    <td><?php echo ($vo["cla"]); ?>&emsp;<?php echo ($vo["num"]); ?>号机</td>
+                    <td><?php echo $vo[pc]?"&emsp;电脑":""; echo $vo[wire]?"&emsp;网线":""; echo $vo[box]?"&emsp;电路箱":""; echo $vo[oscp]?"&emsp;示波器":""; echo $vo[gen]?"&emsp;函数发生器":""; echo $vo[oth]?"<br/>[其他]：$vo[des]":"";?></td>
+                    <td><?php echo ($vo["delid"]); ?>&emsp;<?php echo ($vo["delnam"]); ?></td>
                     <td name="sts"><?php echo ($vo["sts"]); ?></td>
                     <td><?php echo ($vo["delway"]); ?></td>
                     <td><?php echo ($vo["deltim"]); ?></td>
                     <td>
                         <form action="/lab_sys/index.php/Home/Exception/deal_inc" method="POST" style="display: inline-block;">
-                            <input type="hidden" name="vo_id1">
-                            <input type="hidden" name="vo_dat1">
-                            <input type="hidden" name="delWay1">
+                            <input name="vo_id1" type="hidden">
+                            <input name="vo_dat1" type="hidden">
+                            <input name="delWay1" type="hidden">
                             <button name="btn1" type="submit" onclick="return cfm_inc(event);">处理不成功</button>
                         </form>
                         <form action="/lab_sys/index.php/Home/Exception/deal_com" method="POST" style="display: inline-block;">
-                            <input type="hidden" name="vo_id2">
-                            <input type="hidden" name="vo_dat2">
-                            <input type="hidden" name="delWay2">
+                            <input name="vo_id2" type="hidden">
+                            <input name="vo_dat2" type="hidden">
+                            <input name="delWay2" type="hidden">
                             <button name="btn2" type="submit" onclick="return cfm_com(event);">处理成功</button>
                         </form>
                     </td>

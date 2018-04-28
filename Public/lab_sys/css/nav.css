@@ -1,17 +1,16 @@
-#navigation_wrapper {
+#nav_wrapper {
 	width: 100%;
 	height: 55px;
-	background: #EEE;
+	background-color: #EEE;
 }
 
-#navigation {
-	width: 980px;
+#nav {
+    width: 980px;
+    margin: 0 auto;
 	line-height: 55px;
-	margin: 0 auto;
 }
 
 .nav {
 	display: inline-block;
 	padding-left: 20px;
-	font-size: large;
 }

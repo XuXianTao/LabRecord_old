@@ -4,25 +4,17 @@
 }
 
 .choice,
-.btn_group {
+.btn_wrapper {
     width: 80%;
     margin: 0 auto;
     padding: 10px;
 }
 
-.choice {
-    text-align: left;
-}
-
-.btn_group {
-    width: 125px;
+.btn_wrapper {
+    width: 130px;
 }
 
 .btn {
     width: 60px;
     height: 30px;
-}
-
-#btn1 {
-    padding-right: 5px;
 }

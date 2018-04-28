@@ -1,0 +1,147 @@
+[ 2018-04-23T20:17:56+08:00 ] ::1 /lab_sys/logm
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001522s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2018-04-23T20:17:59+08:00 ] ::1 /lab_sys/index.php/Home/Login/logm_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `man` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `man` WHERE ( id=100000 ) LIMIT 1   [ RunTime:0.0012s ]
+
+[ 2018-04-23T20:17:59+08:00 ] ::1 /lab_sys/index.php/Home/main/main_m
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2018-04-23T20:18:00+08:00 ] ::1 /lab_sys/index.php/Home/main/fbman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+
+[ 2018-04-23T20:18:00+08:00 ] ::1 /lab_sys/index.php/home/feedback/fbman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `fbori` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\FeedbackController.class.php 第 325 行.
+SQL: SELECT * FROM `fbori` ORDER BY id desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000052s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000644s ]
+
+[ 2018-04-23T20:18:02+08:00 ] ::1 /lab_sys/index.php/Home/Feedback/fbman
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: SHOW COLUMNS FROM `fbori` [ RunTime:0.0097s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\lab_sys\lab_sys\Home\Controller\FeedbackController.class.php 第 325 行.
+SQL: SELECT * FROM `fbori` ORDER BY id desc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `fbori` WHERE ( id=3 ) LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-23T20:18:02+08:00 ] ::1 /lab_sys/index.php/Home/Feedback/fbrls/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+SQL: SHOW COLUMNS FROM `fbori` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `fbori` WHERE ( id = 3 ) LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2018-04-23T20:18:06+08:00 ] ::1 /lab_sys/index.php/Home/feedback/fbrls_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `fbrls` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `fbori` [ RunTime:0.0027s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id')}' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `fbori` WHERE ( id='{I('id')}' ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'id')}' ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `fbori` WHERE ( id='{I('id')}' ) LIMIT 1  
+
+[ 2018-04-23T20:18:34+08:00 ] ::1 /lab_sys/index.php/Home/Feedback/fbrls/id/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+NOTIC: [2] Use of undefined constant TMPL_PARSE_STRING - assumed 'TMPL_PARSE_STRING' (this will throw an Error in a future version of PHP) D:\xampp\htdocs\lab_sys\lab_sys\Home\Conf\config.php 第 12 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+ERR: syntax error, unexpected 'I' (T_STRING), expecting ',' or ')'
+

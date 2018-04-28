@@ -12,6 +12,5 @@ function init() {
             myDate.getDate().toString() + "日" + myDate.getHours().toString() + "时" +
             myDate.getMinutes().toString() + "分" + myDate.getSeconds().toString() + "秒");
     }
-    jQuery("#ip")[0].value = returnCitySN["cip"];
     window.setTimeout(init, 1000);
 }

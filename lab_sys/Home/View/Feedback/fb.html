@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>lab_sys</title>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
     <link rel="stylesheet" href="__PUBLIC__/css/main_fb.css">
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
     <script src="__PUBLIC__/js/init.js"></script>
     <script src="__PUBLIC__/js/dis_btn.js"></script>
-    <input type="hidden" name="uname" id="uname" value="{$user['nam']}" />
-    <input type="hidden" name="ip" id="ip" />
+    <input id="uname" name="uname" type="hidden" value="{$user['nam']}">
     <script>
         window.onbeforeunload = function() {
             return "确认退出？";
@@ -22,7 +21,7 @@
             window.onbeforeunload = null;
         }
     </script>
-    <style type="text/css">
+    <style>
         html,
         body {
             width: 100%;
@@ -50,12 +49,12 @@
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学" /></div>
+            <div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学"></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>
-    <div id="navigation_wrapper">
-        <div id="navigation">
+    <div id="nav_wrapper">
+        <div id="nav">
             <div class="nav"><a href="main">主页</a></div>
             <div class="nav"><a href="fbstu">课堂反馈</a></div>
             <div class="nav"><a href="excp">异常反馈</a></div>
@@ -63,323 +62,323 @@
     </div>
     <div id="main">
         <form id="form" action="fb_" method="POST" onsubmit="return onDestroy()">
-            <input id="id" name="id" type="hidden" value="{$rls['id']}">
+            <input id="id" name="id" type="hidden" value="{$data_fbrls['id']}">
             <fieldset>
-                <legend>{$rls['tit']}</legend>
+                <legend>{$data_fbrls['tit']}</legend>
                 <table border="1">
-                    {:(($rls['q1']!=null)?"
+                    {:(($data_fbrls['q1']!=null)?"
                     <tr>
-                        <td colspan=\\"5\\">1、".$rls['q1']."</td>
+                        <td colspan=\\"5\\">1、".$data_fbrls['q1']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q1']."</td>
-                        <td>".$rls['a2_q1']."</td>
-                        <td>".$rls['a3_q1']."</td>
-                        <td>".$rls['a4_q1']."</td>
-                        <td>".$rls['a5_q1']."</td>
+                        <td>".$data_fbrls['a1_q1']."</td>
+                        <td>".$data_fbrls['a2_q1']."</td>
+                        <td>".$data_fbrls['a3_q1']."</td>
+                        <td>".$data_fbrls['a4_q1']."</td>
+                        <td>".$data_fbrls['a5_q1']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q1']!=null)?"
-                        <td><input name=\\"q1_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q1']!=null)?"
+                        <td><input name=\\"q1_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q1']!=null)?"
-                        <td><input name=\\"q1_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q1']!=null)?"
+                        <td><input name=\\"q1_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q1']!=null)?"
-                        <td><input name=\\"q1_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q1']!=null)?"
+                        <td><input name=\\"q1_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q1']!=null)?"
-                        <td><input name=\\"q1_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q1']!=null)?"
+                        <td><input name=\\"q1_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q1']!=null)?"
-                        <td><input name=\\"q1_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q1']!=null)?"
+                        <td><input name=\\"q1_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q2']!=null)?"
+                    </tr> "} {:(($data_fbrls['q2']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">2、".$rls['q2']."</td>
+                        <td colspan=\\"5\\">2、".$data_fbrls['q2']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q2']."</td>
-                        <td>".$rls['a2_q2']."</td>
-                        <td>".$rls['a3_q2']."</td>
-                        <td>".$rls['a4_q2']."</td>
-                        <td>".$rls['a5_q2']."</td>
+                        <td>".$data_fbrls['a1_q2']."</td>
+                        <td>".$data_fbrls['a2_q2']."</td>
+                        <td>".$data_fbrls['a3_q2']."</td>
+                        <td>".$data_fbrls['a4_q2']."</td>
+                        <td>".$data_fbrls['a5_q2']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q2']!=null)?"
-                        <td><input name=\\"q2_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q2']!=null)?"
+                        <td><input name=\\"q2_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q2']!=null)?"
-                        <td><input name=\\"q2_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q2']!=null)?"
+                        <td><input name=\\"q2_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q2']!=null)?"
-                        <td><input name=\\"q2_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q2']!=null)?"
+                        <td><input name=\\"q2_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q2']!=null)?"
-                        <td><input name=\\"q2_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q2']!=null)?"
+                        <td><input name=\\"q2_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q2']!=null)?"
-                        <td><input name=\\"q2_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q2']!=null)?"
+                        <td><input name=\\"q2_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q3']!=null)?"
+                    </tr> "} {:(($data_fbrls['q3']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">3、".$rls['q3']."</td>
+                        <td colspan=\\"5\\">3、".$data_fbrls['q3']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q3']."</td>
-                        <td>".$rls['a2_q3']."</td>
-                        <td>".$rls['a3_q3']."</td>
-                        <td>".$rls['a4_q3']."</td>
-                        <td>".$rls['a5_q3']."</td>
+                        <td>".$data_fbrls['a1_q3']."</td>
+                        <td>".$data_fbrls['a2_q3']."</td>
+                        <td>".$data_fbrls['a3_q3']."</td>
+                        <td>".$data_fbrls['a4_q3']."</td>
+                        <td>".$data_fbrls['a5_q3']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q3']!=null)?"
-                        <td><input name=\\"q3_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q3']!=null)?"
+                        <td><input name=\\"q3_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q3']!=null)?"
-                        <td><input name=\\"q3_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q3']!=null)?"
+                        <td><input name=\\"q3_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q3']!=null)?"
-                        <td><input name=\\"q3_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q3']!=null)?"
+                        <td><input name=\\"q3_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q3']!=null)?"
-                        <td><input name=\\"q3_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q3']!=null)?"
+                        <td><input name=\\"q3_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q3']!=null)?"
-                        <td><input name=\\"q3_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q3']!=null)?"
+                        <td><input name=\\"q3_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr>"} {:(($rls['q4']!=null)?"
+                    </tr>"} {:(($data_fbrls['q4']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">4、".$rls['q4']."</td>
+                        <td colspan=\\"5\\">4、".$data_fbrls['q4']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q4']."</td>
-                        <td>".$rls['a2_q4']."</td>
-                        <td>".$rls['a3_q4']."</td>
-                        <td>".$rls['a4_q4']."</td>
-                        <td>".$rls['a5_q4']."</td>
+                        <td>".$data_fbrls['a1_q4']."</td>
+                        <td>".$data_fbrls['a2_q4']."</td>
+                        <td>".$data_fbrls['a3_q4']."</td>
+                        <td>".$data_fbrls['a4_q4']."</td>
+                        <td>".$data_fbrls['a5_q4']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q4']!=null)?"
-                        <td><input name=\\"q4_num\\" type=\\"radio\\"value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q4']!=null)?"
+                        <td><input name=\\"q4_Radio\\" type=\\"radio\\"value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q4']!=null)?"
-                        <td><input name=\\"q4_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q4']!=null)?"
+                        <td><input name=\\"q4_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q4']!=null)?"
-                        <td><input name=\\"q4_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q4']!=null)?"
+                        <td><input name=\\"q4_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q4']!=null)?"
-                        <td><input name=\\"q4_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q4']!=null)?"
+                        <td><input name=\\"q4_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q4']!=null)?"
-                        <td><input name=\\"q4_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q4']!=null)?"
+                        <td><input name=\\"q4_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q5']!=null)?"
+                    </tr> "} {:(($data_fbrls['q5']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">5、".$rls['q5']."</td>
+                        <td colspan=\\"5\\">5、".$data_fbrls['q5']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q5']."</td>
-                        <td>".$rls['a2_q5']."</td>
-                        <td>".$rls['a3_q5']."</td>
-                        <td>".$rls['a4_q5']."</td>
-                        <td>".$rls['a5_q5']."</td>
+                        <td>".$data_fbrls['a1_q5']."</td>
+                        <td>".$data_fbrls['a2_q5']."</td>
+                        <td>".$data_fbrls['a3_q5']."</td>
+                        <td>".$data_fbrls['a4_q5']."</td>
+                        <td>".$data_fbrls['a5_q5']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q5']!=null)?"
-                        <td><input name=\\"q5_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q5']!=null)?"
+                        <td><input name=\\"q5_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q5']!=null)?"
-                        <td><input name=\\"q5_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q5']!=null)?"
+                        <td><input name=\\"q5_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q5']!=null)?"
-                        <td><input name=\\"q5_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q5']!=null)?"
+                        <td><input name=\\"q5_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q5']!=null)?"
-                        <td><input name=\\"q5_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q5']!=null)?"
+                        <td><input name=\\"q5_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q5']!=null)?"
-                        <td><input name=\\"q5_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q5']!=null)?"
+                        <td><input name=\\"q5_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q6']!=null)?"
+                    </tr> "} {:(($data_fbrls['q6']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">6、".$rls['q6']."</td>
+                        <td colspan=\\"5\\">6、".$data_fbrls['q6']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q6']."</td>
-                        <td>".$rls['a2_q6']."</td>
-                        <td>".$rls['a3_q6']."</td>
-                        <td>".$rls['a4_q6']."</td>
-                        <td>".$rls['a5_q6']."</td>
+                        <td>".$data_fbrls['a1_q6']."</td>
+                        <td>".$data_fbrls['a2_q6']."</td>
+                        <td>".$data_fbrls['a3_q6']."</td>
+                        <td>".$data_fbrls['a4_q6']."</td>
+                        <td>".$data_fbrls['a5_q6']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q6']!=null)?"
-                        <td><input name=\\"q6_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q6']!=null)?"
+                        <td><input name=\\"q6_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q6']!=null)?"
-                        <td><input name=\\"q6_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q6']!=null)?"
+                        <td><input name=\\"q6_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q6']!=null)?"
-                        <td><input name=\\"q6_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q6']!=null)?"
+                        <td><input name=\\"q6_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q6']!=null)?"
-                        <td><input name=\\"q6_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q6']!=null)?"
+                        <td><input name=\\"q6_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q6']!=null)?"
-                        <td><input name=\\"q6_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q6']!=null)?"
+                        <td><input name=\\"q6_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q7']!=null)?"
+                    </tr> "} {:(($data_fbrls['q7']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">7、".$rls['q7']."</td>
+                        <td colspan=\\"5\\">7、".$data_fbrls['q7']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q7']."</td>
-                        <td>".$rls['a2_q7']."</td>
-                        <td>".$rls['a3_q7']."</td>
-                        <td>".$rls['a4_q7']."</td>
-                        <td>".$rls['a5_q7']."</td>
+                        <td>".$data_fbrls['a1_q7']."</td>
+                        <td>".$data_fbrls['a2_q7']."</td>
+                        <td>".$data_fbrls['a3_q7']."</td>
+                        <td>".$data_fbrls['a4_q7']."</td>
+                        <td>".$data_fbrls['a5_q7']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q7']!=null)?"
-                        <td><input name=\\"q7_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q7']!=null)?"
+                        <td><input name=\\"q7_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q7']!=null)?"
-                        <td><input name=\\"q7_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q7']!=null)?"
+                        <td><input name=\\"q7_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q7']!=null)?"
-                        <td><input name=\\"q7_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q7']!=null)?"
+                        <td><input name=\\"q7_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q7']!=null)?"
-                        <td><input name=\\"q7_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q7']!=null)?"
+                        <td><input name=\\"q7_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q7']!=null)?"
-                        <td><input name=\\"q7_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q7']!=null)?"
+                        <td><input name=\\"q7_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q8']!=null)?"
+                    </tr> "} {:(($data_fbrls['q8']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">8、".$rls['q8']."</td>
+                        <td colspan=\\"5\\">8、".$data_fbrls['q8']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q8']."</td>
-                        <td>".$rls['a2_q8']."</td>
-                        <td>".$rls['a3_q8']."</td>
-                        <td>".$rls['a4_q8']."</td>
-                        <td>".$rls['a5_q8']."</td>
+                        <td>".$data_fbrls['a1_q8']."</td>
+                        <td>".$data_fbrls['a2_q8']."</td>
+                        <td>".$data_fbrls['a3_q8']."</td>
+                        <td>".$data_fbrls['a4_q8']."</td>
+                        <td>".$data_fbrls['a5_q8']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q8']!=null)?"
-                        <td><input name=\\"q8_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q8']!=null)?"
+                        <td><input name=\\"q8_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q8']!=null)?"
-                        <td><input name=\\"q8_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q8']!=null)?"
+                        <td><input name=\\"q8_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q8']!=null)?"
-                        <td><input name=\\"q8_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q8']!=null)?"
+                        <td><input name=\\"q8_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q8']!=null)?"
-                        <td><input name=\\"q8_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q8']!=null)?"
+                        <td><input name=\\"q8_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q8']!=null)?"
-                        <td><input name=\\"q8_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q8']!=null)?"
+                        <td><input name=\\"q8_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q9']!=null)?"
+                    </tr> "} {:(($data_fbrls['q9']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">9、".$rls['q9']."</td>
+                        <td colspan=\\"5\\">9、".$data_fbrls['q9']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q9']."</td>
-                        <td>".$rls['a2_q9']."</td>
-                        <td>".$rls['a3_q9']."</td>
-                        <td>".$rls['a4_q9']."</td>
-                        <td>".$rls['a5_q9']."</td>
+                        <td>".$data_fbrls['a1_q9']."</td>
+                        <td>".$data_fbrls['a2_q9']."</td>
+                        <td>".$data_fbrls['a3_q9']."</td>
+                        <td>".$data_fbrls['a4_q9']."</td>
+                        <td>".$data_fbrls['a5_q9']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q9']!=null)?"
-                        <td><input name=\\"q9_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q9']!=null)?"
+                        <td><input name=\\"q9_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q9']!=null)?"
-                        <td><input name=\\"q9_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q9']!=null)?"
+                        <td><input name=\\"q9_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q9']!=null)?"
-                        <td><input name=\\"q9_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q9']!=null)?"
+                        <td><input name=\\"q9_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q9']!=null)?"
-                        <td><input name=\\"q9_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q9']!=null)?"
+                        <td><input name=\\"q9_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q9']!=null)?"
-                        <td><input name=\\"q9_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q9']!=null)?"
+                        <td><input name=\\"q9_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
-                    </tr> "} {:(($rls['q10']!=null)?"
+                    </tr> "} {:(($data_fbrls['q10']!=null)?"
                     <tr>
                         <td colspan=\\"5\\"></td>
                     </tr>
                     <tr>
-                        <td colspan=\\"5\\">10、".$rls['q10']."</td>
+                        <td colspan=\\"5\\">10、".$data_fbrls['q10']."</td>
                     </tr>
                     <tr>
-                        <td>".$rls['a1_q10']."</td>
-                        <td>".$rls['a2_q10']."</td>
-                        <td>".$rls['a3_q10']."</td>
-                        <td>".$rls['a4_q10']."</td>
-                        <td>".$rls['a5_q10']."</td>
+                        <td>".$data_fbrls['a1_q10']."</td>
+                        <td>".$data_fbrls['a2_q10']."</td>
+                        <td>".$data_fbrls['a3_q10']."</td>
+                        <td>".$data_fbrls['a4_q10']."</td>
+                        <td>".$data_fbrls['a5_q10']."</td>
                     </tr>
                     <tr>
-                        ".(($rls['a1_q10']!=null)?"
-                        <td><input name=\\"q10_num\\" type=\\"radio\\" value=\\"1\\" checked></td>
+                        ".(($data_fbrls['a1_q10']!=null)?"
+                        <td><input name=\\"q10_Radio\\" type=\\"radio\\" value=\\"1\\" checked></td>
                         ":"
-                        <td></td>") .(($rls['a2_q10']!=null)?"
-                        <td><input name=\\"q10_num\\" type=\\"radio\\" value=\\"2\\"></td>
+                        <td></td>") .(($data_fbrls['a2_q10']!=null)?"
+                        <td><input name=\\"q10_Radio\\" type=\\"radio\\" value=\\"2\\"></td>
                         ":"
-                        <td></td>") .(($rls['a3_q10']!=null)?"
-                        <td><input name=\\"q10_num\\" type=\\"radio\\" value=\\"3\\"></td>
+                        <td></td>") .(($data_fbrls['a3_q10']!=null)?"
+                        <td><input name=\\"q10_Radio\\" type=\\"radio\\" value=\\"3\\"></td>
                         ":"
-                        <td></td>") .(($rls['a4_q10']!=null)?"
-                        <td><input name=\\"q10_num\\" type=\\"radio\\" value=\\"4\\"></td>
+                        <td></td>") .(($data_fbrls['a4_q10']!=null)?"
+                        <td><input name=\\"q10_Radio\\" type=\\"radio\\" value=\\"4\\"></td>
                         ":"
-                        <td></td>") .(($rls['a5_q10']!=null)?"
-                        <td><input name=\\"q10_num\\" type=\\"radio\\" value=\\"5\\"></td>
+                        <td></td>") .(($data_fbrls['a5_q10']!=null)?"
+                        <td><input name=\\"q10_Radio\\" type=\\"radio\\" value=\\"5\\"></td>
                         ":"
                         <td></td>"):"")."
                     </tr> "}
                 </table>
-                <div class="btn_group">
-                    <button id="btn1" class="btn" type="submit" name="btn_fb" value="a">提交</button>
-                    <button id="btn2" class="btn" type="submit" name="btn_back" value="a">返回</button>
-                    <button id="btn3" class="btn" type="reset">重置</button>
+                <div class="btn_wrapper">
+                    <button class="btn" id="btn1" name="btn_fb" type="submit" value="true">提交</button>
+                    <button class="btn" id="btn2" name="btn_back" type="submit" value="true">返回</button>
+                    <button class="btn" id="btn3" type="reset">重置</button>
                 </div>
             </fieldset>
         </form>

@@ -1,57 +1,45 @@
-.btn_group {
-    width: 980px;
-    margin: 20px auto;
-}
-
-.btn {
-    height: 30px;
-    margin: 0 auto;
-    position: relative;
-    left: 37%;
-}
-
 table {
     border-collapse: collapse;
-    margin: 10px auto;
+    margin: 40px auto;
 }
 
 tr {
-    text-align: center;
-    line-height: 30px;
     height: 30px;
+    line-height: 30px;
+    text-align: center;
 }
 
 th:first-child,
-td:first-child {
-    width: 200px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-th:nth-child(2),
-td:nth-child(2) {
-    width: 200px;
-}
-
-th:nth-child(3),
-td:nth-child(3) {
-    width: 100px;
-}
-
-th:nth-child(4),
-td:nth-child(4) {
-    width: 150px;
-}
-
-th:nth-child(5),
-td:nth-child(5) {
-    width: 120px;
-}
-
+td:first-child,
 th:nth-child(6),
 td:nth-child(6),
 th:nth-child(7),
 td:nth-child(7) {
-    width: 220px;
+    width: 200px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 240px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    width: 80px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+    width: 200px;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+    width: 100px;
+}
+
+td:nth-child(2) {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
 }

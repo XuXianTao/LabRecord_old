@@ -38,3 +38,13 @@ td:nth-child(1) {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+td>a:link,
+td>a:hover,
+td>a:active {
+    color: blue;
+}
+
+td>a:visited {
+    color: purple;
+}

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>lab_sys</title>
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
-    <script src="__PUBLIC__/js/init.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/header.css">
     <link rel="stylesheet" href="__PUBLIC__/css/nav.css">
-    <link rel="stylesheet" href="__PUBLIC__/css/main_fbman2.css" />
-    <input type="hidden" name="uname" id="uname" value="{$admin['nam']}" />
-    <input type="hidden" name="ip" id="ip" />
-    <style type="text/css">
+    <link rel="stylesheet" href="__PUBLIC__/css/main_fbman2.css">
+    <script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+    <script src="__PUBLIC__/js/init.js"></script>
+    <input id="uname" name="uname" type="hidden" value="{$admin['nam']}">
+    <style>
         html,
         body {
             width: 100%;
@@ -40,12 +39,12 @@
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学" /></div>
+            <div id="logo"><img src="__PUBLIC__/img/logo.jpg" alt="中山大学"></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>
-    <div id="navigation_wrapper">
-        <div id="navigation">
+    <div id="nav_wrapper">
+        <div id="nav">
             <div class="nav"><a href="main_m">主页</a></div>
             <div class="nav"><a href="excpsts">异常情况</a></div>
             <div class="nav"><a href="excpsta">故障统计</a></div>
@@ -55,10 +54,6 @@
     </div>
     <div id="main">
         <form>
-            <!-- <div class="btn_group">
-                <button id="btn1" class="btn" type="submit" name="btn_fbcre" value="true">创建问卷</button>
-                <button id="btn2" class="btn" type="submit" name="btn_fbori" value="true">查看原始问卷</button>
-            </div> -->
             <table border="1">
                 <caption>已经发布的问卷</caption>
                 <tr>
@@ -66,22 +61,22 @@
                     <th>问卷标题</th>
                     <th>类型</th>
                     <th>发布人</th>
-                    <th>填写课室</th>
+                    <th>课室</th>
                     <th>对应上课时段</th>
                     <th>截止时间</th>
                     <th></th>
                 </tr>
-                <volist name="new" id="vo">
+                <volist name="data_fbrls" id="vo">
                     <tr>
                         <td>{$vo.rlstim}</td>
                         <td>{$vo.tit}</td>
                         <td>{:($vo['typ']==0)?"问卷":"小测"}</td>
-                        <td>{$vo.teaname}({$vo.teaid})</td>
+                        <td>{$vo.teanam}({$vo.teaid})</td>
                         <td>{$vo.cla}</td>
-                        <td>周{$vo.wday}&nbsp;{$vo.clatim}</td>
+                        <td>周{$vo.schday}{$vo.schtim}</td>
                         <td>{$vo.ddl}</td>
                         <td>
-                            <button type="submit" name="btn_fbsts" value="{$vo.id}">查看反馈情况</button>
+                            <button name="btn_fbsts" type="submit" value="{$vo.id}">查看反馈情况</button>
                         </td>
                     </tr>
                 </volist>

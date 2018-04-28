@@ -1,11 +1,17 @@
-#执行顺序
+# 执行顺序
 
-1、create
+- create
+- insert-ip
+- insert-man
+- insert-stu
+- insert-dev
+- insert-excp
 
-2、insert-ip
+# Navicat连接
 
-3、insert-man
+【服务器ip】:【端口号】
 
-4、insert-stu
+# MySQL命令行连接
 
-5、insert-excp
+mysql -h 【服务器ip】 -P 【端口号】 -u 【用户名】 -p
+然后提示输入密码，xampp默认用户root的密码为空

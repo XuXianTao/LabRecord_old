@@ -3,8 +3,8 @@
     margin: 40px auto;
 }
 
-.btn_group {
-    width: 80%;
+.btn_wrapper {
+    width: 200px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -12,31 +12,20 @@
 .btn {
     width: 60px;
     height: 30px;
-    margin: 0 auto;
-    position: relative;
-    left: 37%;
 }
 
 table {
-    width: 90%;
     border-collapse: collapse;
+    width: 90%;
     margin: 10px auto;
 }
 
 tr {
-    height: 30px;
     line-height: 30px;
 }
 
 td {
+    width: 20%;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-td:nth-child(1),
-td:nth-child(2),
-td:nth-child(3),
-td:nth-child(4),
-td:nth-child(5) {
-    width: 20%;
 }

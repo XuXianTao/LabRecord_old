@@ -4,14 +4,14 @@ use Think\Model;
 //model对应表名
 class FboriModel extends Model{
 	protected $_auto=array(
-		array('bId','getBId',1,"callback"),
-		array('bNam','getNam',1,"callback"),
+		array('teaId','getTeaId',1,"callback"),
+		array('teaNam','getTeaNam',1,"callback"),
 		array('creTim','getTim',1,"callback")
 	);
-	protected function getBId(){
+	protected function getTeaId(){
 		return session('admin')['id'];
 	}
-	protected function getNam(){
+	protected function getTeaNam(){
 		return session('admin')['nam'];
 	}
 	protected function getTim() {
