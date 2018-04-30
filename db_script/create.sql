@@ -270,7 +270,8 @@ create table fill (
 # 异常
 create table excp (
     dat           datetime,                          # 时间
-    schTim        varchar(80),                       # 时间段
+    schTim        varchar(80) not null,                       # 时间段
+    schDay        int not null,                               # 上课日，1一，2二...
     id            int not null,                      # 学号
     nam           varchar(80) not null,              # 名字
     cla           varchar(80) not null,              # 课室
@@ -298,13 +299,13 @@ create table excpsta (
     box           int default 0,                     # 电路箱故障数
     oscp          int default 0,                     # 示波器故障数
     gen           int default 0,                     # 函数发生器故障数
-    oth int # 其他故障数
+    oth           int                                # 其他故障数
 ) engine=InnoDB;
 create table dev (
     sn            varchar(80) not null primary key,  # 序列号
     cla           varchar(80) not null,              # 所在课室
     num           varchar(80) not null,              # 当前所在桌号
-    typ           varchar(80) not null,              # 类型
+    typ           int default 1,                     # 类型
     cnt           int default 0                      # 故障数
 ) engine=InnoDB;
 DELIMITER //
@@ -334,22 +335,22 @@ begin
         insert into excpsta(cla,num,pc,wire,box,oscp,gen,oth) values(new.cla,new.num,new.pc,new.wire,new.box,new.oscp,new.gen,new.oth);
     end if;
     if new.pc<>0 then
-        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="pc";
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=1;
     end if;
     if new.wire<>0 then
-        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="wire";
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=2;
     end if;
     if new.box<>0 then
-        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="box";
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=3;
     end if;
     if new.oscp<>0 then
-        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="oscp";
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=4;
     end if;
     if new.gen<>0 then
-        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ="gen";
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=5;
     end if;
     if new.oth<>0 then
-        update dev set oth=oth+1 where cla=new.cla and num=new.num and typ="oth";
+        update dev set oth=oth+1 where cla=new.cla and num=new.num and typ=6;
     end if;
 end;
 //

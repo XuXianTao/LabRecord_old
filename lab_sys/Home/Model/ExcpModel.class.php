@@ -5,6 +5,8 @@ use Think\Model;
 class ExcpModel extends Model{
 	protected $_auto=array(
 		array('dat','getDate',1,'callback'),
+		array('schday','getSchDay',1,'callback'),
+		array('schtim','getSchTim',1,'callback'),
 		array('id','getId',1,"callback"),
 		array('nam','getNam',1,"callback"),
 		array('cla','getCla',1,"callback"),
@@ -23,11 +25,17 @@ class ExcpModel extends Model{
 	protected function getDate() {
 		return date('Y-m-d H:i:s',time());
 	}
+	protected function getSchDay(){
+		return session('user')['schday'];
+	}
+	protected function getSchTim(){
+		return session('user')['schtim'];
+	}
 	protected function getId() {
 		return session('user')['id'];
 	}
 	protected function getNam() {
-		return session('user')[nam];
+		return session('user')['nam'];
 	}
 	protected function getCla() {
 		return cookie('cla');

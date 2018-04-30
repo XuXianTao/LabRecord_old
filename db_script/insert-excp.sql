@@ -22,9 +22,9 @@ create table excp (
 ) engine=InnoDB;
 */
 use `lab_sys`;
-insert into excp(dat,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-20 14:20:00','16000000','STU','C102','01','15000009','王杏婷','处理不成功','导线更换；电路箱不知道什么问题','2018-03-20 14:49:50','0','1','1','0','0','0','');
-insert into excp(dat,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-27 14:30:05','16000000','STU','C102','01','15000009','王杏婷','处理成功','导线更换','2018-03-20 14:49:50','0','1','0','0','0','0','');
-insert into excp(dat,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-21 09:30:01','16301004','蔡泽帆','C103','01','10000','MAN','处理成功','线松','2018-03-21 09:37:46','0','0','0','0','1','0','');
-insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-30 15:00:39','16301082','刘竞妍','C104','24','未处理','0','0','0','1','0','0','');
-insert into excp(dat,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-28 21:52:15','16301056','康生晶','C103','18','未处理','0','0','0','1','0','0','');
+insert into excp(dat,schTim,schDay,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-20 14:20:00','5-6节(14:20-16:00)','2','16000000','STU','C102','01','15000009','王杏婷','处理不成功','导线更换；电路箱不知道什么问题','2018-03-20 14:49:50','0','1','1','0','0','0','');
+insert into excp(dat,schTim,schDay,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-27 14:30:05','5-6节(14:20-16:00)','3','16000000','STU','C102','01','15000009','王杏婷','处理成功','导线更换','2018-03-20 14:49:50','0','1','0','0','0','0','');
+insert into excp(dat,schTim,schDay,id,nam,cla,num,delID,delNam,sts,delWay,delTim,pc,wire,box,oscp,gen,oth,des) values('2018-03-21 09:30:01','5-6节(14:20-16:00)','2','16301004','蔡泽帆','C103','01','10000','MAN','处理成功','线松','2018-03-21 09:37:46','0','0','0','0','1','0','');
+insert into excp(dat,schTim,schDay,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-30 15:00:39','7-8节(16:20-18:00)','3','16301082','刘竞妍','C104','24','未处理','0','0','0','1','0','0','');
+insert into excp(dat,schTim,schDay,id,nam,cla,num,sts,pc,wire,box,oscp,gen,oth,des) values('2018-03-28 21:52:15','7-8节(16:20-18:00)','2','16301056','康生晶','C103','18','未处理','0','0','0','1','0','0','');
 select * from excp order by dat ASC;

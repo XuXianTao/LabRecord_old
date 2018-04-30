@@ -31,7 +31,7 @@ class LoginController extends Controller {
                 // 调试用，部署时需将以下一行解除注释
                 // if($loc) {
                 // 调试用，部署时需将以下两行注释，否则提交将会固定为B103：4号机
-                    $cla = 'B103';
+                    $cla = 'C103';
                     $num = '4';
                     // 调试用，部署时需将以下两行解除注释
                     // $cla = $loc['cla'];
