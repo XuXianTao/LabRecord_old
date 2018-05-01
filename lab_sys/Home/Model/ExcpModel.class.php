@@ -5,8 +5,8 @@ use Think\Model;
 class ExcpModel extends Model{
 	protected $_auto=array(
 		array('dat','getDate',1,'callback'),
-		array('schday','getSchDay',1,'callback'),
-		array('schtim','getSchTim',1,'callback'),
+		array('schDay','getSchDay',1,'callback'),
+		array('schTim','getSchTim',1,'callback'),
 		array('id','getId',1,"callback"),
 		array('nam','getNam',1,"callback"),
 		array('cla','getCla',1,"callback"),
@@ -77,7 +77,7 @@ class ExcpModel extends Model{
 		return I('oth')?1:0;
 	}
 	protected function getDes() {
-		return I('des');
+		return I('des')?I('des'):'';
 	}
 }
 ?>

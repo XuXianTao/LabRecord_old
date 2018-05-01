@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excp.css">
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
     <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/input.js"></script>
     <script src="/lab_sys/Public/lab_sys/js/dis_btn.js"></script>
     <input id="uname" name="uname" type="hidden" value="<?php echo ($user['nam']); ?>">
-    <input id="ip" name="ip" type="hidden">
     <script>
         window.onbeforeunload = function() {
             return "确认退出？";
@@ -76,7 +74,7 @@
                     <input name="oth"  type="checkbox" value="oth">其他
                     <input name="des"  type="text" placeholder="输入文字进行描述" width="20px">
                 </div>
-                <div class="btn_group">
+                <div class="btn_wrapper">
                     <button class="btn" id="btn1" name="btn_excp" type="submit">提交</button>
                     <button class="btn" id="btn2" type="reset">重置</button>
                 </div>

@@ -270,8 +270,8 @@ create table fill (
 # 异常
 create table excp (
     dat           datetime,                          # 时间
-    schTim        varchar(80) not null,                       # 时间段
-    schDay        int not null,                               # 上课日，1一，2二...
+    schTim        varchar(80) not null,              # 时间段
+    schDay        int not null,                      # 上课日，1一，2二...
     id            int not null,                      # 学号
     nam           varchar(80) not null,              # 名字
     cla           varchar(80) not null,              # 课室
@@ -299,12 +299,12 @@ create table excpsta (
     box           int default 0,                     # 电路箱故障数
     oscp          int default 0,                     # 示波器故障数
     gen           int default 0,                     # 函数发生器故障数
-    oth           int                                # 其他故障数
+    oth           int default 0                      # 其他故障数
 ) engine=InnoDB;
 create table dev (
     sn            varchar(80) not null primary key,  # 序列号
     cla           varchar(80) not null,              # 所在课室
-    num           varchar(80) not null,              # 当前所在桌号
+    num           int not null,              # 当前所在桌号
     typ           int default 1,                     # 类型
     cnt           int default 0                      # 故障数
 ) engine=InnoDB;
@@ -350,7 +350,7 @@ begin
         update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=5;
     end if;
     if new.oth<>0 then
-        update dev set oth=oth+1 where cla=new.cla and num=new.num and typ=6;
+        update dev set cnt=cnt+1 where cla=new.cla and num=new.num and typ=6;
     end if;
 end;
 //

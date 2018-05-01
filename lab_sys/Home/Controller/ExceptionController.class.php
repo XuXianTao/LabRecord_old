@@ -13,7 +13,9 @@ class ExceptionController extends Controller {
     }
     public function excp_(){
         $Exc=D('excp');//在model中自动处理post的数值
-        if ($Exc->create()){
+        
+        if ($temp=$Exc->create()){
+            dump($temp);
             $Exc->add();
         }else $this->error($Exc->getError());
         //$this->show("<script>alert('感谢反馈');</script>");
