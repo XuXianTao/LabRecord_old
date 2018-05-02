@@ -2,8 +2,14 @@
 <html lang="zh-cmn-Hans">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/assets/bootstrap.css">
+    <!--  -->
     <title>lab_sys</title>
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
     <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
@@ -56,75 +62,138 @@
     </div>
     <div id="main">
         <div>
-            <form action = "excpsta" method="POST" >
+            <ul class="nav nav-tabs" id="excpsta-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#type1" role="tab" data-toggle="tab">课室+桌号</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#type2" role="tab" data-toggle="tab">学号</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#type3" role="tab" data-toggle="tab">时间段</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#type4" role="tab" data-toggle="tab">设备序列号</a>
+                </li>
+            </ul>
+             <!-- <form action = "excpsta" method="POST" >
                 <p>筛选方式：</p>
-                <input type="radio" name="typ" value = "1" checked>默认顺序筛选
-                <input type="radio" name="typ" value = "2">课室+桌号筛选
-                <input type="radio" name="typ" value = "3">学号筛选
-                <input type="radio" name="typ" value = "4">时间段筛选
-                <input type="radio" name="typ" value = "5">设备序列号筛选
+                <input type="radio" name="typ" value = "1" checked>课室+桌号筛选
+                <input type="radio" name="typ" value = "2">学号筛选
+                <input type="radio" name="typ" value = "3">时间段筛选
+                <input type="radio" name="typ" value = "4">设备序列号筛选
                 <button type="submit" name="selectType" value="true">提交查询</button>
-                <!--之后考虑使用ajax-->
-            </form>
+            </form>  -->
         </div>
-        <?php echo ($type<3); ?>
-        <table border="1">
-            <caption>机器故障统计表</caption>
-            <?php echo ($type < 3 )?"<tr>
-                <th>课室</th>
-                <th>桌号</th>
-                <th>电脑故障数</th>
-                <th>导线故障数</th>
-                <th>电路箱故障数</th>
-                <th>示波器故障数</th>
-                <th>函数发生器故障数</th>
-                <th>其他故障数</th>
-            </tr>" :(($type==3)? "<tr>
-                <th>学号</th>
-                <th>姓名</th>
-                <th>电脑故障数</th>
-                <th>导线故障数</th>
-                <th>电路箱故障数</th>
-                <th>示波器故障数</th>
-                <th>函数发生器故障数</th>
-                <th>其他故障数</th>
-            </tr>" :(($type == 4)? "<tr>
-                <th>上课日</th>
-                <th>时间段</th>
-                <th>电脑故障数</th>
-                <th>导线故障数</th>
-                <th>电路箱故障数</th>
-                <th>示波器故障数</th>
-                <th>函数发生器故障数</th>
-                <th>其他故障数</th>
-            </tr>" :"<tr>
-                <th>设备号</th>
-                <th>课室</th>
-                <th>桌号</th>
-                <th>类型</th>
-                <th>数量</th>
-            </tr>" ));?>
-            
-            <?php if(is_array($list)): $i = 0; $__LIST__ = array_slice($list,0,10,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                    <td name="cla"><?php echo ($type<3)?$vo['cla']:(($type<4)?$vo['id']:(($type<5)?$vo['schday']:$vo['sn']));?></td>
-                    <td name="num"><?php echo ($type<3)?$vo['num']:(($type<4)?$vo['nam']:(($type<5)?$vo['schtim']:$vo['cla']));?></td>
-                    <td><?php echo ($type<5)?$vo['pc']:$vo['num'];?></td>
-                    <td><?php echo ($type<5)?$vo['wire']:$vo['typ'];?></td>
-                    <td><?php echo ($type<5)?$vo['box']:$vo['cnt'];?></td>
-                    <?php echo ($type<5)?"<td>".$vo['oscp']."</td>":"";?>
-                    <?php echo ($type<5)?"<td>".$vo['gen']."</td>":"";?>
-                    <?php echo ($type<5)?"<td>".$vo['oth']."</td>":"";?>
-                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-        </table>
-        <br>
-        <div>第<?php echo ($page); ?>页/共<?php echo ($num); ?>页</div>
-        <br>
-        <form action="/lab_sys/index.php/Home/Exception/excpsta" method="POST" style="display: inline-block;">
-            <button name="btn" type="submit" value="<?php echo ($page-1); ?>">上一页</button>
-            <button name="btn" type="submit" value="<?php echo ($page+1); ?>">下一页</button>
-            <input type="hidden" name = "type" value = "<?php echo ($type); ?>">
-        </form>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="type1">
+                <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-inverse">
+                <tr>
+                    <th>课室</th>
+                    <th>桌号</th>
+                    <th>电脑故障数</th>
+                    <th>导线故障数</th>
+                    <th>电路箱故障数</th>
+                    <th>示波器故障数</th>
+                    <th>函数发生器故障数</th>
+                    <th>其他故障数</th>
+                </tr>
+                </thead>
+                <?php if(is_array($list1)): $i = 0; $__LIST__ = $list1;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                        <td name="cla"><?php echo ($vo['cla']); ?></td>
+                        <td name="num"><?php echo ($vo['num']); ?></td>
+                        <td><?php echo ($vo['pc']); ?></td>
+                        <td><?php echo ($vo['wire']); ?></td>
+                        <td><?php echo ($vo['box']); ?></td>
+                        <td><?php echo ($vo['oscp']); ?></td>
+                        <td><?php echo ($vo['gen']); ?></td>
+                        <td><?php echo ($vo['oth']); ?></td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </table>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="type2">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-inverse">
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>电脑故障数</th>
+                        <th>导线故障数</th>
+                        <th>电路箱故障数</th>
+                        <th>示波器故障数</th>
+                        <th>函数发生器故障数</th>
+                        <th>其他故障数</th>
+                    </tr>
+                    </thead>
+                    <?php if(is_array($list2)): $i = 0; $__LIST__ = $list2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td name="cla"><?php echo ($vo['id']); ?></td>
+                            <td name="num"><?php echo ($vo['nam']); ?></td>
+                            <td><?php echo ($vo['pc']); ?></td>
+                            <td><?php echo ($vo['wire']); ?></td>
+                            <td><?php echo ($vo['box']); ?></td>
+                            <td><?php echo ($vo['oscp']); ?></td>
+                            <td><?php echo ($vo['gen']); ?></td>
+                            <td><?php echo ($vo['oth']); ?></td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </table>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="type3">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-inverse">
+                    <tr>
+                        <th>上课日</th>
+                        <th>时间段</th>
+                        <th>电脑故障数</th>
+                        <th>导线故障数</th>
+                        <th>电路箱故障数</th>
+                        <th>示波器故障数</th>
+                        <th>函数发生器故障数</th>
+                        <th>其他故障数</th>
+                    </tr>
+                    </thead>
+                    <?php if(is_array($list3)): $i = 0; $__LIST__ = $list3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td name="cla"><?php echo ($vo['schday']); ?></td>
+                            <td name="num"><?php echo ($vo['schtim']); ?></td>
+                            <td><?php echo ($vo['pc']); ?></td>
+                            <td><?php echo ($vo['wire']); ?></td>
+                            <td><?php echo ($vo['box']); ?></td>
+                            <td><?php echo ($vo['oscp']); ?></td>
+                            <td><?php echo ($vo['gen']); ?></td>
+                            <td><?php echo ($vo['oth']); ?></td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </table>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="type4">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-inverse">
+                    <tr>
+                        <th>设备号</th>
+                        <th>课室</th>
+                        <th>桌号</th>
+                        <th>类型</th>
+                        <th>数量</th>
+                    </tr>
+                    </thead>
+                    <?php if(is_array($list4)): $i = 0; $__LIST__ = $list4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td name="cla"><?php echo ($vo['sn']); ?></td>
+                            <td name="num"><?php echo ($vo['cla']); ?></td>
+                            <td><?php echo ($vo['num']); ?></td>
+                            <td><?php echo ($vo['typ']); ?></td>
+                            <td><?php echo ($vo['cnt']); ?></td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </table>
+            </div>
+        </div>
+
     </div>
+
+<!-- jQuery first, then Bootstrap JS. -->
+    <script src="/lab_sys/Public/lab_sys/assets/bootstrap.js"></script>
+    <script src="/lab_sys/Public/lab_sys/js/bootstrap-excpsta.js"></script>
 </body>
 
 </html>
