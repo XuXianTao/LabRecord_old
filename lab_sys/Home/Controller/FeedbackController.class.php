@@ -221,7 +221,7 @@ class FeedbackController extends Controller {
                 $this->assign('que',$que);
                 $this->assign('admin',$admin);
                 $this->display();
-            } else 
+            } else
                 $this->redirect('Login/logm','',0.01,'<script>alert(\'权限不足\');</script>');
         } else
             $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
@@ -264,13 +264,14 @@ class FeedbackController extends Controller {
                             unset($data['teanam']);
                             unset($data['id']);
                             unset($data['cretim']);
-                            dump($data);
                             $fbrls_id = $fbrls->add($data);
-                            dump($fbrls_id);
                             for ($i=0; $i<count($data_stu); $i++){
                                 $data_fill['stuId'] = $data_stu[$i]['id'];
                                 $data_fill['fbId'] = $fbrls_id;
                                 $data_fill['ddl'] = $data['ddl'];
+                                $data_fill['cla'] = cookie('cla');
+                                $data_fill['num'] = cookie('num');
+                                dump($data_fill);
                                 $fill->add($data_fill);
                             }
                             $this->redirect('Feedback/fbman2','',0.01,'<script>alert(\'问卷发布成功！\');</script>');
@@ -316,7 +317,7 @@ class FeedbackController extends Controller {
                         echo "<script>alert('修改问卷出现错误，请联系维护处理')</script>";
                 } else if (I('btn_back'))
                     $this->redirect('Feedback/fbman','',0.01,'页面跳转中');
-            } else 
+            } else
                 $this->redirect('Login/logm','',0.01,'<script>alert(\'权限不足\');</script>');
         } else
             $this->redirect('Login/logm','',0.01,'<script>alert(\'登陆失效，请重新输入学号/职工号\');</script>');
