@@ -8,15 +8,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/assets/bootstrap.css">
+    <link rel="stylesheet" href="/Public/lab_sys/assets/bootstrap.css">
     <!--  -->
     <title>lab_sys</title>
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excpsta.css">
-    <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/page_change.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
+    <link rel="stylesheet" href="/Public/lab_sys/css/header.css">
+    <link rel="stylesheet" href="/Public/lab_sys/css/nav.css">
+    <link rel="stylesheet" href="/Public/lab_sys/css/main_excpsta.css">
+    <script src="/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+    <script src="/Public/lab_sys/js/page_change.js"></script>
+    <script src="/Public/lab_sys/js/init.js"></script>
     <input id="num_list" name="num_list" type="hidden" value="<?php echo ($num_list); ?>" />
     <input id="uname" name="uname" type="hidden" value="<?php echo ($admin['nam']); ?>" />
     <style>
@@ -47,7 +47,7 @@
 <body onload="init()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
+            <div id="logo"><img src="/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>
@@ -192,8 +192,8 @@
     </div>
 
 <!-- jQuery first, then Bootstrap JS. -->
-    <script src="/lab_sys/Public/lab_sys/assets/bootstrap.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/bootstrap-excpsta.js"></script>
+    <script src="/Public/lab_sys/assets/bootstrap.js"></script>
+    <script src="/Public/lab_sys/js/bootstrap-excpsta.js"></script>
 </body>
 
 </html>

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>lab_sys</title>
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excpsts.css">
-    <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/cfm.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/disp.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/set_val.js"></script>
+    <link rel="stylesheet" href="/Public/lab_sys/css/header.css">
+    <link rel="stylesheet" href="/Public/lab_sys/css/nav.css">
+    <link rel="stylesheet" href="/Public/lab_sys/css/main_excpsts.css">
+    <script src="/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+    <script src="/Public/lab_sys/js/init.js"></script>
+    <script src="/Public/lab_sys/js/cfm.js"></script>
+    <script src="/Public/lab_sys/js/disp.js"></script>
+    <script src="/Public/lab_sys/js/set_val.js"></script>
     <input id="uname" name="uname" type="hidden" value="<?php echo ($admin['nam']); ?>">
     <style>
         html,
@@ -43,7 +43,7 @@
     <div id="main">
         <div id="header_wrapper">
             <div id="header">
-                <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
+                <div id="logo"><img src="/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
                 <div id="welcome">欢迎！</div>
             </div>
         </div>
@@ -79,13 +79,13 @@
                     <td><?php echo ($vo["delway"]); ?></td>
                     <td><?php echo ($vo["deltim"]); ?></td>
                     <td>
-                        <form action="/lab_sys/index.php/Home/Exception/deal_inc" method="POST" style="display: inline-block;">
+                        <form action="/index.php/Home/Exception/deal_inc" method="POST" style="display: inline-block;">
                             <input name="vo_id1" type="hidden">
                             <input name="vo_dat1" type="hidden">
                             <input name="delWay1" type="hidden">
                             <button name="btn1" type="submit" onclick="return cfm_inc(event);">处理不成功</button>
                         </form>
-                        <form action="/lab_sys/index.php/Home/Exception/deal_com" method="POST" style="display: inline-block;">
+                        <form action="/index.php/Home/Exception/deal_com" method="POST" style="display: inline-block;">
                             <input name="vo_id2" type="hidden">
                             <input name="vo_dat2" type="hidden">
                             <input name="delWay2" type="hidden">

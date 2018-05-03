@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>lab_sys</title>
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/header.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/nav.css">
-    <link rel="stylesheet" href="/lab_sys/Public/lab_sys/css/main_excp.css">
-    <script src="/lab_sys/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/init.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/input.js"></script>
-    <script src="/lab_sys/Public/lab_sys/js/dis_btn.js"></script>
+    <link rel="stylesheet" href="/Public/lab_sys/css/header.css">
+    <link rel="stylesheet" href="/Public/lab_sys/css/nav.css">
+    <link rel="stylesheet" href="/Public/lab_sys/css/main_excp.css">
+    <script src="/Public/lab_sys/js/jquery-1.11.1.min.js"></script>
+    <script src="/Public/lab_sys/js/init.js"></script>
+    <script src="/Public/lab_sys/js/input.js"></script>
+    <script src="/Public/lab_sys/js/dis_btn.js"></script>
     <input id="uname" name="uname" type="hidden" value="<?php echo ($user['nam']); ?>">
     <script>
         window.onbeforeunload = function() {
@@ -50,7 +50,7 @@
 <body onload="init();input()">
     <div id="header_wrapper">
         <div id="header">
-            <div id="logo"><img src="/lab_sys/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
+            <div id="logo"><img src="/Public/lab_sys/img/logo.jpg" alt="中山大学"></div>
             <div id="welcome">欢迎！</div>
         </div>
     </div>
